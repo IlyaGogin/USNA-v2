@@ -1,0 +1,23 @@
+const [situation, setSituation] = useState(scenarioVariants[0].situation);
+const [dilemma, setDilemma] = useState(scenarioVariants[0].dilemma);
+const [mission, setMission] = useState(scenarioVariants[0].mission);
+const [successCriteria, setSuccessCriteria] = useState(scenarioVariants[0].successCriteria);
+
+// Function to regenerate scenario with next variant
+const handleRegenerate = () => {
+  const nextVariant = (scenarioVariant + 1) % scenarioVariants.length;
+  setScenarioVariant(nextVariant);
+  const variant = scenarioVariants[nextVariant];
+  setScenarioTitle(variant.title);
+  setScenarioDescription(variant.description);
+  setLocation(variant.location);
+  setTime(variant.time);
+  setStudentRole(variant.studentRole);
+  setStudentRoleDesc(variant.studentRoleDesc);
+  setAiCharacterName(variant.aiCharacterName);
+  setAiCharacterRole(variant.aiCharacterRole);
+  setSituation(variant.situation);
+  setDilemma(variant.dilemma);
+  setMission(variant.mission);
+  setSuccessCriteria(variant.successCriteria);
+};
