@@ -236,8 +236,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 15,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added proficiency level filter with 4 semester options. Filter is contextually displayed (hidden when non-Language area selected). Selecting Semester 1 correctly shows only S1 scenarios. TypeScript build passes. UI verified with dev-browser."
     },
     {
       "id": "US-016",

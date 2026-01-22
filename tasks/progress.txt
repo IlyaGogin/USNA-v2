@@ -566,3 +566,49 @@ Added a Language filter to the MidshipmanScenarios sidebar, allowing midshipmen 
 - TypeScript build passes successfully with no errors
 - Existing filtering patterns (Area, Course, Search) continue to work unchanged
 
+
+---
+
+## Iteration 15 - US-015: Add proficiency level filter to scenario browser
+**Date:** 2026-01-22
+
+### What was implemented
+Added a Proficiency Level filter to the MidshipmanScenarios sidebar, allowing midshipmen to filter language scenarios by semester/ACTFL level. The filter is contextually displayed - only visible when no Area is selected OR when the "Language" area is selected.
+
+### Files changed
+- `src/components/MidshipmanScenarios.tsx` - Added proficiency level filter:
+  - Added `proficiencyLevels` constant array with 4 semester options (label includes ACTFL level)
+  - Added `selectedSemesters` state array: `useState<number[]>([])`
+  - Added `toggleSemester` function following existing toggle pattern
+  - Added `showProficiencyFilter` computed boolean based on selectedAreas
+  - Updated filtering logic to include `matchesSemester` condition
+  - Added conditional Proficiency Level filter section in sidebar (between Language and Course)
+  - Filter UI follows exact same pattern as other filters
+
+### Proficiency Level Options
+- Semester 1 (Novice Mid)
+- Semester 2 (Novice High)
+- Semester 3 (Intermediate Low)
+- Semester 4 (Intermediate Mid-High)
+
+### UI Verification
+- Screenshot: tmp/us-015-scenarios.png (scenarios page with proficiency filter visible)
+- Screenshot: tmp/us-015-semester1-filter.png (filtered to Semester 1 only)
+- Screenshot: tmp/us-015-ethics-filter.png (Ethics area selected, proficiency filter hidden)
+- Elements verified:
+  - Proficiency Level section visible in sidebar with 4 options
+  - Selected state highlighting works correctly
+  - Filter is contextually hidden when non-Language area is selected
+- Interactions tested:
+  - Clicking "Semester 1 (Novice Mid)" correctly shows only S1 scenarios (FJ-101, FC-101, etc.)
+  - Selecting "Ethics" area hides the Proficiency Level filter (contextual display works)
+  - ARIA snapshot confirms Proficiency Level section presence/absence
+
+### Learnings for future iterations
+- Contextual filter display uses computed boolean: `showProficiencyFilter = selectedAreas.length === 0 || selectedAreas.includes("Language")`
+- Proficiency filter only affects language scenarios (scenarios with `semester` field)
+- Non-language scenarios are unaffected by semester filter
+- The filter combines with language filter for precise targeting (e.g., Japanese + Semester 1)
+- TypeScript build passes successfully with no errors
+- Conditional rendering with `{showProficiencyFilter && (...)}` pattern works cleanly
+

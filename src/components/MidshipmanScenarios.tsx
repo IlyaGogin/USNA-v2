@@ -29,6 +29,14 @@ const languages = Array.from(
   new Set(scenarios.filter(s => s.language).map(s => s.language))
 ).sort() as string[];
 
+// Proficiency level options for language scenarios
+const proficiencyLevels = [
+  { semester: 1, label: "Semester 1 (Novice Mid)" },
+  { semester: 2, label: "Semester 2 (Novice High)" },
+  { semester: 3, label: "Semester 3 (Intermediate Low)" },
+  { semester: 4, label: "Semester 4 (Intermediate Mid-High)" },
+];
+
 export default function MidshipmanScenarios({
   onLogoClick,
   onTabChange,
@@ -39,6 +47,7 @@ export default function MidshipmanScenarios({
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
+  const [selectedSemesters, setSelectedSemesters] = useState<number[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [showProfileModal, setShowProfileModal] = useState(false);
 
@@ -60,18 +69,29 @@ export default function MidshipmanScenarios({
     );
   };
 
+  const toggleSemester = (semester: number) => {
+    setSelectedSemesters(prev =>
+      prev.includes(semester) ? prev.filter(s => s !== semester) : [...prev, semester]
+    );
+  };
+
+  // Check if Language area is selected (for conditional proficiency filter display)
+  const showProficiencyFilter = selectedAreas.length === 0 || selectedAreas.includes("Language");
+
   // Filter scenarios based on selected filters and search
   const filteredScenarios = scenarios.filter(scenario => {
     const matchesArea = selectedAreas.length === 0 || selectedAreas.includes(scenario.area);
     const matchesCourse = selectedCourses.length === 0 || selectedCourses.includes(scenario.courseCode);
     const matchesLanguage = selectedLanguages.length === 0 ||
       (scenario.language && selectedLanguages.includes(scenario.language));
+    const matchesSemester = selectedSemesters.length === 0 ||
+      (scenario.semester && selectedSemesters.includes(scenario.semester));
     const matchesSearch = searchQuery === "" ||
       scenario.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesArea && matchesCourse && matchesLanguage && matchesSearch;
+    return matchesArea && matchesCourse && matchesLanguage && matchesSemester && matchesSearch;
   });
 
   return (
@@ -208,6 +228,29 @@ export default function MidshipmanScenarios({
             ))}
           </div>
         </div>
+
+        {/* Proficiency Level Filter - contextual, shown when Language area is selected or no area filter */}
+        {showProficiencyFilter && (
+          <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+            <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Proficiency Level</p>
+            <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
+              {proficiencyLevels.map(level => (
+                <div key={level.semester} className="relative shrink-0 w-full">
+                  <div className="flex flex-row items-center size-full">
+                    <button
+                      onClick={() => toggleSemester(level.semester)}
+                      className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
+                        selectedSemesters.includes(level.semester) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                      }`}
+                    >
+                      <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{level.label}</p>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Course Filter */}
         <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
