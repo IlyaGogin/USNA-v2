@@ -1079,6 +1079,436 @@ export const scenarios: Scenario[] = [
       "Don't forget implementation matters as much as language",
       "Don't neglect relationship-building"
     ]
+  },
+
+  // ============================================
+  // ARABIC LANGUAGE SCENARIOS (FA)
+  // 8 scenarios across 4 semesters
+  // ============================================
+
+  // FA-101 (Semester 1, GSE 22-29, A1, Novice Mid)
+  {
+    id: "fa101-l01-001",
+    title: "Meeting at the Port",
+    subtitle: "Greetings & Basic Introductions",
+    course: "FA-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice basic Arabic greetings and introductions when meeting a Gulf partner nation naval officer during a port visit.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA101: Arabic I",
+    situation: "Your ship has arrived for a port visit. Captain Al-Rashid (الرشيد) from the UAE Navy will greet you. He speaks excellent English but appreciates when guests make an effort in Arabic. First impressions are crucial in Arab culture.",
+    dilemma: "You want to show respect by using Arabic, but you're uncertain of correct formal greetings and worry about making mistakes. Captain Al-Rashid will assess your effort and attitude.",
+    briefing: "This scenario tests basic Arabic greetings including appropriate religious phrases (السلام عليكم), honorific address, and the cultural importance of hospitality acceptance.",
+    frameworks: ["Arabic Greetings", "Hospitality Culture", "Gulf Naval Partnership", "Formal Address"],
+    primaryMission: "Execute appropriate Arabic greetings and introduction while accepting hospitality graciously and demonstrating respect for Arab culture.",
+    successCriteria: [
+      "Use correct greeting formula (السلام عليكم)",
+      "Respond appropriately to return greeting",
+      "Accept hospitality (coffee/dates) appropriately",
+      "Show genuine interest in host and their country",
+      "Avoid cultural mistakes"
+    ],
+    tags: ["FA-101", "Semester 1", "GSE 22-29", "A1", "Novice", "Greetings", "UAE", "Port Visit"],
+    language: "Arabic",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "السلام عليكم (as-salamu alaykum) - Peace be upon you",
+      "وعليكم السلام (wa alaykum as-salam) - And upon you peace",
+      "تشرفنا (tasharrafna) - Honored to meet you",
+      "أهلاً وسهلاً (ahlan wa sahlan) - Welcome",
+      "إن شاء الله (in sha'allah) - God willing"
+    ],
+    culturalTips: [
+      "Right hand over heart shows sincerity",
+      "Accept coffee/dates when offered (refuse politely after third offering)",
+      "Men may hold hands while walking - a sign of friendship",
+      "Don't rush greetings - take time for pleasantries",
+      "Ask about their family/well-being before business"
+    ],
+    culturalGotchas: [
+      "Don't use left hand for greetings or giving/receiving",
+      "Don't refuse hospitality directly (say \"thank you, I've had enough\")",
+      "Don't cross legs showing sole of foot toward host",
+      "Don't discuss alcohol or pork",
+      "Don't make negative comments about heat/region"
+    ]
+  },
+  {
+    id: "fa101-l01-002",
+    title: "The Souk Visit",
+    subtitle: "Basic Shopping & Negotiation",
+    course: "FA-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice basic Arabic for shopping transactions including numbers, prices, and polite negotiation.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA101: Arabic I",
+    situation: "You have free time to explore a traditional souk. A friendly shopkeeper, Abu Mohammed (أبو محمد), invites you to see his wares. Bargaining is expected and considered part of the social interaction.",
+    dilemma: "You want to buy something authentic as a gift, but you're unsure about appropriate prices and bargaining etiquette. The merchant will test to see if you understand the cultural game of negotiation.",
+    briefing: "This scenario tests survival Arabic for basic transactions including numbers, polite requests, and the cultural art of bargaining while maintaining friendly relations.",
+    frameworks: ["Numbers", "Bargaining", "Polite Transactions", "Cultural Shopping Norms"],
+    primaryMission: "Successfully navigate the souk, engage appropriately with the merchant, and complete a transaction using basic Arabic while demonstrating cultural awareness.",
+    successCriteria: [
+      "Use Arabic numbers correctly",
+      "Engage in appropriate bargaining",
+      "Maintain positive relationship with merchant",
+      "Accept hospitality offered during shopping",
+      "Complete transaction politely"
+    ],
+    tags: ["FA-101", "Semester 1", "GSE 22-29", "A1", "Novice", "Shopping", "Bargaining", "Souk"],
+    language: "Arabic",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "كم؟ (kam?) - How much?",
+      "غالي جداً (ghali jiddan) - Very expensive",
+      "آخر سعر (akhir si'r) - Final price?",
+      "تفضل (tafaddal) - Please (take/come/proceed)",
+      "شكراً (shukran) - Thank you",
+      "معليش (ma'alesh) - No problem/It's okay"
+    ],
+    culturalTips: [
+      "Bargaining is expected - start at 50% and negotiate up",
+      "Take your time - rushing is rude",
+      "Accept offered tea/coffee while browsing",
+      "Don't touch items you have no intention of buying",
+      "Compliment the shop/items sincerely"
+    ],
+    culturalGotchas: [
+      "Don't bargain if price is already clearly marked as fixed",
+      "Don't walk away as a tactic unless you mean it",
+      "Don't show too much enthusiasm for specific items",
+      "Don't criticize items (even to negotiate lower)",
+      "Don't forget to take offered business cards"
+    ]
+  },
+
+  // FA-102 (Semester 2, GSE 30-35, A2, Novice High)
+  {
+    id: "fa102-l02-001",
+    title: "The Majlis",
+    subtitle: "Traditional Hospitality & Conversation",
+    course: "FA-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Navigate an invitation to a traditional majlis (sitting room gathering), practicing extended hospitality rituals and polite conversation.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA102: Arabic II",
+    situation: "Lieutenant Ahmed (أحمد) has invited you to his family's majlis for coffee and dates. This is an honor and an opportunity to deepen the professional relationship. His father, who speaks limited English, will be host.",
+    dilemma: "You're uncertain about majlis etiquette - seating protocol, how long to stay, appropriate conversation topics, and how to politely depart. The family is judging whether Americans understand Arab hospitality.",
+    briefing: "This scenario tests your understanding of Arab hospitality culture, proper majlis behavior, and ability to conduct extended polite conversation in Arabic.",
+    frameworks: ["Majlis Protocol", "Arab Hospitality", "Extended Conversation", "Family Interaction"],
+    primaryMission: "Successfully participate in the majlis, demonstrating respect for Arab hospitality traditions and building deeper relationship with colleague's family.",
+    successCriteria: [
+      "Navigate coffee ritual correctly",
+      "Engage in appropriate conversation topics",
+      "Show respect for elder host",
+      "Express gratitude appropriately",
+      "Depart at appropriate time and manner"
+    ],
+    tags: ["FA-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Majlis", "Hospitality", "Family"],
+    language: "Arabic",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "الحمد لله (alhamdulillah) - Praise be to God (used frequently)",
+      "ما شاء الله (ma sha'allah) - What God has willed (for compliments)",
+      "كيف الحال (kayf al-hal) - How are you?",
+      "الله يعطيك العافية (allah ya'teek al-'afiya) - May God give you strength",
+      "بس، شكراً (bas, shukran) - Enough, thank you (to stop coffee)"
+    ],
+    culturalTips: [
+      "Shake the cup slightly to indicate you've had enough coffee",
+      "Sit lower than the eldest person when possible",
+      "Topics: family, travel, health, faith (positive) - not politics",
+      "Admire the home but don't over-compliment specific items",
+      "Leave when signaled (often after fruit is served)"
+    ],
+    culturalGotchas: [
+      "Don't sit with feet pointing at anyone",
+      "Don't ask about wife/daughters specifically (ask about \"family\")",
+      "Don't decline coffee first two times offered",
+      "Don't leave too quickly (minimum 30-45 mins)",
+      "Don't forget to praise the hospitality repeatedly"
+    ]
+  },
+  {
+    id: "fa102-l02-002",
+    title: "Religious Sensitivity",
+    subtitle: "Navigating Prayer Times & Ramadan",
+    course: "FA-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Navigate situations involving Islamic religious practices including prayer times and Ramadan observances.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA102: Arabic II",
+    situation: "You're working with Petty Officer Khalid (خالد) during Ramadan. It's near sunset, he hasn't eaten all day, and the call to prayer is approaching. You need to discuss something important but must be sensitive to his religious obligations.",
+    dilemma: "You have a deadline but must respect his need to break fast and pray. How do you navigate the timing respectfully while still accomplishing the mission?",
+    briefing: "This scenario tests understanding of Islamic religious practices and the ability to navigate work situations with appropriate cultural and religious sensitivity.",
+    frameworks: ["Islamic Practices", "Ramadan Etiquette", "Prayer Time Awareness", "Religious Sensitivity"],
+    primaryMission: "Successfully navigate the work situation while demonstrating respect for Islamic religious practices and maintaining positive relationship.",
+    successCriteria: [
+      "Show awareness of prayer time approach",
+      "Respect iftar and prayer needs",
+      "Find appropriate time to complete work",
+      "Use appropriate religious phrases",
+      "Demonstrate genuine respect, not just tolerance"
+    ],
+    tags: ["FA-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Ramadan", "Prayer", "Religious Sensitivity"],
+    language: "Arabic",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "رمضان كريم (Ramadan kareem) - Generous Ramadan (greeting)",
+      "صلاة (salat) - Prayer",
+      "إفطار (iftar) - Breaking the fast",
+      "إن شاء الله بعد الصلاة (in sha'allah ba'd al-salat) - God willing, after prayer",
+      "كل عام وأنتم بخير (kull 'am wa antum bikhair) - May you be well every year"
+    ],
+    culturalTips: [
+      "Don't eat/drink in front of fasting people",
+      "Schedule meetings around prayer times when possible",
+      "Offer Ramadan greetings appropriately",
+      "Understand work pace slows during Ramadan",
+      "Respect the call to prayer as sacred"
+    ],
+    culturalGotchas: [
+      "Never interrupt prayer",
+      "Don't suggest someone skip prayer \"this once\"",
+      "Don't assume Ramadan is a burden they resent",
+      "Don't forget night hours may be more productive",
+      "Don't schedule important meetings at prayer times"
+    ]
+  },
+
+  // FA-201 (Semester 3, GSE 36-50, B1, Intermediate Low-Mid)
+  {
+    id: "fa201-l03-001",
+    title: "Partner Nation Coordination",
+    subtitle: "Military Planning Discussion",
+    course: "FA-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Practice military coordination language in Arabic during joint planning sessions with Gulf partner nations.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA201: Arabic III",
+    situation: "You're participating in a coordination meeting with Saudi and Emirati naval officers to plan a joint patrol. Commander Saeed (سعيد) leads the discussion in Arabic with English interpretation available, but using Arabic will build trust.",
+    dilemma: "The discussion involves complex operational matters. You can follow general topics but may miss nuances. You must decide when to use Arabic to build rapport versus English for precision on critical matters.",
+    briefing: "This scenario tests military Arabic vocabulary and the judgment to code-switch appropriately between languages during professional military discussions.",
+    frameworks: ["Military Arabic", "Coalition Operations", "Meeting Protocols", "Code-Switching"],
+    primaryMission: "Participate effectively in the coordination meeting, building rapport through Arabic while ensuring operational clarity on critical matters.",
+    successCriteria: [
+      "Use military Arabic appropriately",
+      "Build rapport with partner officers",
+      "Navigate meeting protocols correctly",
+      "Switch to English when precision required",
+      "Leave with clear mutual understanding"
+    ],
+    tags: ["FA-201", "Semester 3", "GSE 36-50", "B1", "Intermediate", "Coalition", "Military Planning"],
+    language: "Arabic",
+    semester: 3,
+    actflLevel: "Intermediate Low",
+    ilrLevel: "1+",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "دورية (dawriyya) - Patrol",
+      "منطقة العمليات (mintaqat al-'amaliyyat) - Area of operations",
+      "التعاون البحري (al-ta'awun al-bahri) - Maritime cooperation",
+      "الأمن البحري (al-amn al-bahri) - Maritime security",
+      "قواعد الاشتباك (qawa'id al-ishitibak) - Rules of engagement"
+    ],
+    culturalTips: [
+      "Start meetings with extended greetings",
+      "Relationship comes before business",
+      "Direct \"no\" is rarely used - listen for hedges",
+      "\"In sha'allah\" may signal uncertainty, not just piety",
+      "Follow the lead of most senior officer"
+    ],
+    culturalGotchas: [
+      "Don't rush to agenda",
+      "Don't challenge directly in group settings",
+      "Don't mistake politeness for agreement",
+      "Don't forget side conversations are important",
+      "Don't underestimate partner capabilities"
+    ]
+  },
+  {
+    id: "fa201-l03-002",
+    title: "Community Coordination",
+    subtitle: "Understanding Local Decision-Making",
+    course: "FA-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Navigate a coordination meeting where understanding local community structures and relationships is essential for mission success.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA201: Arabic III",
+    situation: "You're assisting coordination for humanitarian relief. Sheikh Abdullah (عبدالله), a respected community leader, has concerns about how aid distribution will affect existing community relationships. Understanding local decision-making structures is critical to mission success.",
+    dilemma: "Different communities have different approaches to collective decision-making. You must listen carefully to understand local concerns and find solutions that work within established community structures.",
+    briefing: "This scenario tests your understanding of local community dynamics and ability to navigate complex stakeholder relationships while achieving operational objectives.",
+    frameworks: ["Tribal Dynamics", "Local Politics", "Humanitarian Operations", "Cultural Intelligence"],
+    primaryMission: "Understand tribal concerns, demonstrate appropriate respect, and find solutions that work within local cultural frameworks while achieving humanitarian objectives.",
+    successCriteria: [
+      "Listen actively to understand concerns",
+      "Show appropriate respect for tribal structures",
+      "Navigate competing interests diplomatically",
+      "Find culturally appropriate solutions",
+      "Build relationships for ongoing cooperation"
+    ],
+    tags: ["FA-201", "Semester 3", "GSE 36-50", "B1", "Intermediate", "Tribal", "Humanitarian", "Local Dynamics"],
+    language: "Arabic",
+    semester: 3,
+    actflLevel: "Intermediate Mid",
+    ilrLevel: "2",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "قبيلة (qabila) - Tribe/extended family",
+      "شيخ (sheikh) - Elder/leader",
+      "وجيه (wajih) - Notable/community leader",
+      "التوازن (al-tawazun) - Balance",
+      "الاحترام (al-ihtiram) - Respect"
+    ],
+    culturalTips: [
+      "Community and family networks are important in decision-making",
+      "Engaging respected community leaders builds trust",
+      "Decisions often require broader consultation",
+      "Public respect for leaders facilitates cooperation",
+      "Historical relationships between groups may affect current dynamics"
+    ],
+    culturalGotchas: [
+      "Don't bypass community leaders who have established trust",
+      "Understand local hierarchy and protocol",
+      "Learn about local decision-making processes",
+      "Don't make commitments without understanding who needs to be consulted",
+      "Build relationships with diverse community stakeholders"
+    ]
+  },
+
+  // FA-202 (Semester 4, GSE 51-58, B1+, Intermediate High)
+  {
+    id: "fa202-l04-001",
+    title: "Media Engagement",
+    subtitle: "Regional Press Interview",
+    course: "FA-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Practice handling media interviews in Arabic, communicating key messages while navigating sensitive questions.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA202: Arabic IV",
+    situation: "You've been asked to support a media interview in Arabic about US-Gulf naval cooperation. The reporter, Ms. Fatima (فاطمة), is professional but will ask challenging questions about US presence in the region.",
+    dilemma: "The interview will be broadcast across the Arab world. You must communicate positive messages about partnership while deflecting politically charged questions without appearing evasive.",
+    briefing: "This scenario tests advanced Arabic media skills including message discipline, bridging techniques, and maintaining composure under pressure while speaking a foreign language.",
+    frameworks: ["Media Relations", "Public Affairs", "Message Discipline", "Arabic Media Environment"],
+    primaryMission: "Complete a successful media interview that communicates key messages positively while handling difficult questions diplomatically.",
+    successCriteria: [
+      "Communicate partnership messages clearly",
+      "Bridge from difficult questions to key points",
+      "Maintain composure throughout",
+      "Avoid politically damaging statements",
+      "Leave positive impression with Arabic audience"
+    ],
+    tags: ["FA-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Media", "Public Affairs"],
+    language: "Arabic",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "التعاون الاستراتيجي (al-ta'awun al-istratiji) - Strategic cooperation",
+      "الأمن الإقليمي (al-amn al-iqlimi) - Regional security",
+      "الشراكة (al-sharaka) - Partnership",
+      "من المهم أن نذكر (min al-muhimm an nathkur) - It's important to mention",
+      "لن أتطرق للسياسة (lan atatarraq lil-siyasa) - I won't discuss politics"
+    ],
+    culturalTips: [
+      "Arabic media expects warmth and eloquence",
+      "Opening pleasantries matter even in interviews",
+      "Deflect gracefully, don't stonewall",
+      "Acknowledge legitimate concerns",
+      "Speak to the Arab audience, not just the reporter"
+    ],
+    culturalGotchas: [
+      "Don't criticize any Arab nation by name",
+      "Don't appear arrogant or dismissive",
+      "Don't forget religious sensitivities in language",
+      "Don't let frustration show",
+      "Don't go off message under pressure"
+    ]
+  },
+  {
+    id: "fa202-l04-002",
+    title: "Strategic Dialogue",
+    subtitle: "High-Level Discussion on Regional Issues",
+    course: "FA-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Participate in high-level strategic discussions about regional security in Arabic, engaging substantively with complex topics.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FA202: Arabic IV",
+    situation: "During a regional security conference, you have an opportunity for a sidebar discussion with Colonel Mansour (منصور), a senior Gulf military official. He wants to discuss US commitment to Gulf security and future cooperation.",
+    dilemma: "Colonel Mansour is testing whether Americans truly understand regional perspectives or just impose their views. You must engage substantively with Gulf concerns while maintaining appropriate boundaries on policy commitments.",
+    briefing: "This scenario tests advanced strategic discussion skills in Arabic, including understanding regional perspectives, engaging with complex arguments, and building trust through substantive dialogue.",
+    frameworks: ["Strategic Dialogue", "Regional Security", "Diplomatic Communication", "Trust Building"],
+    primaryMission: "Engage meaningfully in strategic dialogue that builds trust and demonstrates genuine understanding of regional perspectives while maintaining appropriate policy boundaries.",
+    successCriteria: [
+      "Demonstrate genuine understanding of Gulf concerns",
+      "Engage substantively with complex regional issues",
+      "Build personal trust with counterpart",
+      "Maintain appropriate policy boundaries",
+      "Leave door open for ongoing dialogue"
+    ],
+    tags: ["FA-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Strategic Dialogue", "Regional Security"],
+    language: "Arabic",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "الاستقرار الإقليمي (al-istiqrar al-iqlimi) - Regional stability",
+      "التهديدات المشتركة (al-tahdeedat al-mushtaraka) - Common threats",
+      "الالتزام (al-iltizam) - Commitment",
+      "التصور الاستراتيجي (al-tasawwur al-istratiji) - Strategic vision",
+      "المصالح المتبادلة (al-masalih al-mutabadila) - Mutual interests"
+    ],
+    culturalTips: [
+      "Listen more than speak",
+      "Acknowledge regional perspectives seriously",
+      "Find common ground before differences",
+      "Use \"we\" language for shared interests",
+      "Follow up with personal note"
+    ],
+    culturalGotchas: [
+      "Don't dismiss concerns about US reliability",
+      "Don't make policy commitments beyond your authority",
+      "Don't ignore historical context",
+      "Don't treat as just transactional",
+      "Don't forget the personal relationship aspect"
+    ]
   }
 ];
 

@@ -100,3 +100,41 @@ Added 8 Chinese language scenarios to src/data/scenarios.ts covering all 4 semes
 - Academic Chinese scenarios use hedging language and personal framing to avoid representing official policy
 - Area field uses "Language" (consistent with Japanese scenarios) for filtering purposes
 
+
+---
+
+## Iteration 4 - US-004: Add Arabic language scenarios (8 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 8 Arabic language scenarios to src/data/scenarios.ts covering all 4 semesters (FA-101 through FA-202), progressing from Novice Mid (S1) to Intermediate High (S4). Each scenario includes full language-specific metadata, cultural guidance, and operational contexts specific to Middle East/CENTCOM AOR.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 8 Arabic scenarios:
+  - fa101-l01-001: Meeting at the Port (S1, Novice Mid, A1, GSE 22-29) - Basic greetings at UAE port
+  - fa101-l01-002: The Souk Visit (S1, Novice Mid, A1, GSE 22-29) - Shopping and bargaining in traditional market
+  - fa102-l02-001: The Majlis (S2, Novice High, A2, GSE 30-35) - Traditional Arab hospitality gathering
+  - fa102-l02-002: Religious Sensitivity (S2, Novice High, A2, GSE 30-35) - Navigating Ramadan and prayer times
+  - fa201-l03-001: Partner Nation Coordination (S3, Intermediate Low, B1, GSE 36-50) - Coalition military planning
+  - fa201-l03-002: Community Coordination (S3, Intermediate Mid, B1, GSE 36-50) - Tribal dynamics in humanitarian ops
+  - fa202-l04-001: Media Engagement (S4, Intermediate High, B1+, GSE 51-58) - Regional press interview
+  - fa202-l04-002: Strategic Dialogue (S4, Intermediate High, B1+, GSE 51-58) - High-level security discussion
+
+### All scenarios include
+- Language-specific fields: language="Arabic", semester (1-4), actflLevel, ilrLevel, cefrLevel, gseRange
+- Cultural preparation: keyVocabulary arrays (5-6 essential phrases with transliteration and translation)
+- culturalTips arrays (5 do's for each scenario)
+- culturalGotchas arrays (5 don'ts to avoid cultural mistakes)
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+
+### Learnings for future iterations
+- Arabic scenarios emphasize hospitality (كرم الضيافة), religious sensitivity, and relationship-first communication
+- Proficiency progression realistic: S1/S2 focus on survival Arabic (greetings, shopping, hospitality), S3/S4 advance to professional contexts (coalition operations, tribal coordination, media, strategic dialogue)
+- Cultural content is operationally relevant for MENA/CENTCOM AOR (Gulf partners, tribal structures, Islamic practices, Arab media)
+- Difficulty levels scale appropriately: S1 is EASY (1/5), S2 is INT (2/5), S3 is INT (3/5), S4 is HARD (4/5)
+- ILR levels map correctly: 0+ (Novice Mid), 1 (Novice High), 1+/2 (Intermediate Low-Mid), 2+ (Intermediate High)
+- Arabic scenarios include religious practice awareness (Ramadan, prayer times) essential for Gulf region operations
+- S3 scenarios address cultural intelligence: code-switching in coalition meetings, understanding tribal decision-making structures
+- S4 scenarios test high-stakes communication: Arabic media environment, strategic dialogue on Gulf security
+- Area field uses "Language" (consistent with Japanese and Chinese scenarios)
+

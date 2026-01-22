@@ -63,8 +63,8 @@
         "Data source: docs/new-scenarios/01-foreign-languages/arabic/ARABIC_SCENARIOS.md"
       ],
       "priority": 4,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Arabic scenarios (FA-101 to FA-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and MENA/CENTCOM operational contexts. TypeScript build passes."
     },
     {
       "id": "US-005",
