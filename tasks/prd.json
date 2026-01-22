@@ -203,8 +203,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 13,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Imported scenarios from centralized file. Removed 200 lines of inline scenario data. Areas and courses arrays now dynamically generated from scenario data. All 112 scenarios now available. TypeScript build passes."
     },
     {
       "id": "US-014",
@@ -220,8 +220,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 14,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added language filter to sidebar with all 7 languages. Filter follows existing toggle pattern. Selecting Japanese correctly shows only 8 Japanese scenarios. TypeScript build passes. UI verified with dev-browser."
     },
     {
       "id": "US-015",

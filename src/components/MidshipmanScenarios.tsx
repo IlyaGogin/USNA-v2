@@ -24,6 +24,11 @@ const areas = Array.from(new Set(scenarios.map(s => s.area))).sort();
 // Extract unique course codes from scenarios
 const courses = Array.from(new Set(scenarios.map(s => s.courseCode))).sort();
 
+// Extract unique languages from scenarios (only for language scenarios)
+const languages = Array.from(
+  new Set(scenarios.filter(s => s.language).map(s => s.language))
+).sort() as string[];
+
 export default function MidshipmanScenarios({
   onLogoClick,
   onTabChange,
@@ -33,6 +38,7 @@ export default function MidshipmanScenarios({
 }: MidshipmanScenariosProps) {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [showProfileModal, setShowProfileModal] = useState(false);
 
@@ -48,16 +54,24 @@ export default function MidshipmanScenarios({
     );
   };
 
+  const toggleLanguage = (language: string) => {
+    setSelectedLanguages(prev =>
+      prev.includes(language) ? prev.filter(l => l !== language) : [...prev, language]
+    );
+  };
+
   // Filter scenarios based on selected filters and search
   const filteredScenarios = scenarios.filter(scenario => {
     const matchesArea = selectedAreas.length === 0 || selectedAreas.includes(scenario.area);
     const matchesCourse = selectedCourses.length === 0 || selectedCourses.includes(scenario.courseCode);
-    const matchesSearch = searchQuery === "" || 
+    const matchesLanguage = selectedLanguages.length === 0 ||
+      (scenario.language && selectedLanguages.includes(scenario.language));
+    const matchesSearch = searchQuery === "" ||
       scenario.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    return matchesArea && matchesCourse && matchesSearch;
+
+    return matchesArea && matchesCourse && matchesLanguage && matchesSearch;
   });
 
   return (
@@ -167,6 +181,27 @@ export default function MidshipmanScenarios({
                     }`}
                   >
                     <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{area}</p>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Language Filter */}
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+          <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Language</p>
+          <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
+            {languages.map(language => (
+              <div key={language} className="relative shrink-0 w-full">
+                <div className="flex flex-row items-center size-full">
+                  <button
+                    onClick={() => toggleLanguage(language)}
+                    className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
+                      selectedLanguages.includes(language) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                    }`}
+                  >
+                    <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{language}</p>
                   </button>
                 </div>
               </div>

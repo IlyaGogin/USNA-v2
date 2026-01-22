@@ -502,3 +502,67 @@ Added 8 ethics & philosophy elective scenarios to src/data/scenarios.ts, complet
 - TypeScript build passes successfully with all 8 scenarios added
 - **MILESTONE: 112 SCENARIOS COMPLETE!** (14 existing + 56 language + 9 communication + 12 cross-cultural + 13 leadership + 8 philosophy = 112 total)
 
+
+---
+
+## Iteration 13 - US-013: Update MidshipmanScenarios to use centralized data
+**Date:** 2026-01-22
+
+### What was implemented
+Updated MidshipmanScenarios.tsx component to import scenarios from the centralized data file (@/data/scenarios) instead of maintaining an inline scenarios array. The component now dynamically generates areas and courses arrays from the scenario data, making all 112 scenarios available with the new domain areas.
+
+### Files changed
+- `src/components/MidshipmanScenarios.tsx` - Updated to use centralized scenario data:
+  - Added import: `import { scenarios } from "../data/scenarios"`
+  - Removed inline scenarios array (200 lines removed)
+  - Changed areas array from hardcoded to dynamically generated: `Array.from(new Set(scenarios.map(s => s.area))).sort()`
+  - Changed courses array from hardcoded to dynamically generated: `Array.from(new Set(scenarios.map(s => s.courseCode))).sort()`
+  - Removed unused Figma image imports (images now come from centralized file)
+  - Existing filtering logic continues to work unchanged (filters by selectedAreas, selectedCourses, searchQuery)
+
+### Learnings for future iterations
+- Dynamic array generation from scenario data ensures filters automatically update when new scenarios are added
+- The component now has access to all 112 scenarios from the centralized file
+- New areas are now available in the filter: Language, Communication, Cross-Cultural, Philosophy (in addition to existing Ethics, Leadership)
+- New course codes automatically appear in the course filter: all foreign language courses (FJ101-FJ202, FC101-FC202, FA101-FA202, FR101-FR202, FF101-FF202, FG101-FG202, FS101-FS202), English communication courses (HE111, HE112, NL420), cross-cultural courses (NE203, NL360, FAS), additional leadership courses (NL110, NL310, NL400, NL425, NL311), and philosophy courses (NP232, NP350, NP410, NP430, NP440)
+- Removed 200 lines of code by eliminating inline scenario duplication
+- TypeScript build passes successfully with no errors
+- Existing component functionality preserved - no breaking changes to filtering, search, or display logic
+
+
+---
+
+## Iteration 14 - US-014: Add language filter dropdown to scenario browser
+**Date:** 2026-01-22
+
+### What was implemented
+Added a Language filter to the MidshipmanScenarios sidebar, allowing midshipmen to filter scenarios by specific language (Japanese, Chinese, Arabic, Russian, French, German, Spanish). The filter follows the same toggle pattern as Area and Course filters.
+
+### Files changed
+- `src/components/MidshipmanScenarios.tsx` - Added language filter functionality:
+  - Added `languages` array extraction from scenarios: `Array.from(new Set(scenarios.filter(s => s.language).map(s => s.language))).sort()`
+  - Added `selectedLanguages` state array: `useState<string[]>([])`
+  - Added `toggleLanguage` function following existing toggle pattern
+  - Updated filtering logic to include `matchesLanguage` condition
+  - Added Language filter section in sidebar between Area and Course filters
+  - Filter UI follows exact same pattern as Area and Course filters (toggle buttons with selected state highlighting)
+
+### UI Verification
+- Screenshot: tmp/us-014-scenarios.png (initial scenarios page)
+- Screenshot: tmp/us-014-japanese-filter.png (filtered to Japanese only)
+- Elements verified:
+  - Language filter section visible in sidebar with header "Language"
+  - All 7 languages present: Arabic, Chinese, French, German, Japanese, Russian, Spanish
+  - Selected state highlighting works (bg-[rgba(13,0,77,0.1)] when selected)
+- Interactions tested:
+  - Clicking Japanese filter correctly shows only 8 Japanese scenarios (FJ-101, FJ-102, FJ-201, FJ-202)
+  - Multi-select with other filters (Area, Course) continues to work
+
+### Learnings for future iterations
+- Language filter only applies to scenarios that have a `language` field (foreign language scenarios)
+- Non-language scenarios (Communication, Leadership, Ethics, Philosophy) are unaffected by language filter
+- The filter is always visible regardless of Area selection - this allows users to filter by language even if they haven't selected the "Language" area
+- Dynamic extraction of languages from scenario data ensures new languages would automatically appear if added
+- TypeScript build passes successfully with no errors
+- Existing filtering patterns (Area, Course, Search) continue to work unchanged
+
