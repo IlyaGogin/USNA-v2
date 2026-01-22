@@ -18,8 +18,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 1,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Created src/data/scenarios.ts with extended Scenario interface including language fields (gseRange, cefrLevel, actflLevel, semester), cultural fields (keyVocabulary, culturalTips, culturalGotchas), and detail fields. TypeScript build passes."
     },
     {
       "id": "US-002",
@@ -32,8 +32,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 2,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Combined with US-001 - all 14 existing scenarios moved to centralized file with image imports preserved. Helper functions added: getScenarioById, getScenariosByArea, getScenariosByCourse, getScenariosByLanguage, getScenariosBySemester."
     },
     {
       "id": "US-003",
@@ -66,8 +66,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 4,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/01-foreign-languages/japanese/JAPANESE_SCENARIOS.md"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Japanese scenarios (fj101-l01-001 through fj202-l04-002) with full language metadata, keyVocabulary, culturalTips, culturalGotchas. Covers S1-S4 (Novice Mid to Intermediate High)."
     },
     {
       "id": "US-005",
@@ -82,8 +82,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 5,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/01-foreign-languages/chinese/CHINESE_SCENARIOS.md - Read this file for scenario details"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Chinese scenarios with Indo-Pacific operational contexts. Includes face management, relationship building patterns."
     },
     {
       "id": "US-006",
@@ -98,8 +98,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 6,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/01-foreign-languages/arabic/ARABIC_SCENARIOS.md - Read this file for scenario details"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Arabic scenarios with CENTCOM AOR contexts. Includes hospitality, religious sensitivity, tribal dynamics."
     },
     {
       "id": "US-007",
@@ -114,8 +114,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 7,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/01-foreign-languages/russian/RUSSIAN_SCENARIOS.md - Read this file for scenario details"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Russian scenarios with Eurasia/Arctic contexts. Includes WWII history, arms control, deconfliction scenarios."
     },
     {
       "id": "US-008",
@@ -130,8 +130,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 8,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/01-foreign-languages/french/FRENCH_SCENARIOS.md - Read this file for scenario details"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 French scenarios with NATO and Francophone Africa contexts."
     },
     {
       "id": "US-009",
@@ -146,8 +146,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 9,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/01-foreign-languages/german/GERMAN_SCENARIOS.md - Read this file for scenario details"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 German scenarios with NATO Central Europe and Bundeswehr partnership contexts."
     },
     {
       "id": "US-010",
@@ -162,8 +162,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 10,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/01-foreign-languages/spanish/SPANISH_SCENARIOS.md - Read this file for scenario details"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Spanish scenarios with SOUTHCOM contexts (UNITAS, counter-narcotics, HA/DR)."
     },
     {
       "id": "US-011",
@@ -179,8 +179,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 11,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/02-english-communication/ENGLISH_COMMUNICATION_SCENARIOS.md"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 9 English communication scenarios (HE-111, HE-112, NL-420) focusing on oral communication skills: argumentation, debate, briefings, counseling, media."
     },
     {
       "id": "US-012",
@@ -196,8 +196,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 12,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/03-cross-cultural/CROSS_CULTURAL_SCENARIOS.md"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 12 cross-cultural scenarios across NE-203, NL-360, and 5 FAS regional tracks (East Asia, MENA, Latin America, Africa, Europe)."
     },
     {
       "id": "US-013",
@@ -213,8 +213,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 13,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/04-leadership-courses/LEADERSHIP_SCENARIOS.md"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 13 leadership scenarios across 4-year journey (NL-110, NL-310, NL-400) plus electives. Includes Farsi Island from multiple perspectives."
     },
     {
       "id": "US-014",
@@ -230,8 +230,8 @@
         "Typecheck passes (npm run build)"
       ],
       "priority": 14,
-      "passes": false,
-      "notes": "Source: docs/new-scenarios/05-ethics-philosophy/ETHICS_PHILOSOPHY_SCENARIOS.md"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 philosophy elective scenarios (NP-232, NP-350, NP-410, NP-430, NP-440). All HARD difficulty. 112 scenarios total complete."
     },
     {
       "id": "US-015",
@@ -246,8 +246,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 15,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. MidshipmanScenarios now imports from centralized data file. Inline scenarios array removed (~200 lines). All 112 scenarios accessible."
     },
     {
       "id": "US-016",
@@ -261,8 +261,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 16,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Areas and courses now dynamically extracted from scenario data using Array.from(new Set(...)). Auto-updates when new scenarios added."
     },
     {
       "id": "US-017",
@@ -279,8 +279,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 17,
-      "passes": false,
-      "notes": "Follow existing filter pattern from MidshipmanScenarios.tsx:373-391"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Language filter added to sidebar with all 7 languages. Toggle pattern matches existing filters. UI verified with screenshots."
     },
     {
       "id": "US-018",
@@ -297,8 +297,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 18,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Proficiency level filter added with 4 semester options. Contextually hidden when non-Language area selected. UI verified."
     },
     {
       "id": "US-019",
@@ -313,8 +313,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 19,
-      "passes": false,
-      "notes": "Badge pattern from docs/DESIGN-SYSTEM.md:119-121"
+      "passes": true,
+      "notes": "Completed 2026-01-22. Proficiency badge shows 'S{semester} - {actflLevel}' (e.g., 'S1 - Nov. Mid'). Uses design system badge colors. Only shows for language scenarios."
     },
     {
       "id": "US-020",
@@ -329,8 +329,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 20,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Combined with US-003. ScenarioPlaceholderImage integrated into card rendering. 98 scenarios use placeholder. UI verified."
     },
     {
       "id": "US-021",
