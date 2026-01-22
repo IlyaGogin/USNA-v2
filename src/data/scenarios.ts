@@ -4105,6 +4105,223 @@ export const scenarios: Scenario[] = [
       "Show intellectual humility"
     ],
     tags: ["NL-311", "Self-Awareness", "Leadership Development", "Psychology"]
+  },
+
+  // ============================================================================
+  // ETHICS & PHILOSOPHY ELECTIVE SCENARIOS (8 scenarios)
+  // ============================================================================
+  // Courses: NP-232, NP-350, NP-410, NP-430, NP-440
+  // Focus: Deep philosophical exploration of military ethics
+  // ============================================================================
+
+  // NP-232: Military Ethics - Code of the Warrior (2 scenarios)
+  {
+    id: "np232-w05-001",
+    title: "The Warrior's Code",
+    subtitle: "Honor Across Cultures",
+    course: "NP-232",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Explore what makes a warrior code ethical and how different cultures have approached warrior ethics.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP232: Military Ethics - Code of the Warrior",
+    situation: "Professor Morrison presents contrasting warrior codes - samurai bushido, medieval chivalry, Spartan agoge - and challenges you to identify what, if anything, is universal about warrior ethics. Are modern military ethics continuous with these traditions or fundamentally different?",
+    dilemma: "Some historical warrior codes included elements we now consider unethical (treatment of non-combatants, suicide requirements, etc.). How do we honor warrior traditions while recognizing their limitations?",
+    briefing: "This scenario tests deep philosophical engagement with the concept of warrior ethics across cultures and time. Requires distinguishing between cultural particulars and potential universals.",
+    frameworks: ["Warrior Ethics", "Comparative Philosophy", "Military Tradition", "Honor/Shame Cultures"],
+    primaryMission: "Engage philosophically with questions about warrior ethics, developing a defensible position on what makes a warrior code ethical.",
+    successCriteria: [
+      "Demonstrate knowledge of various warrior traditions",
+      "Identify common ethical threads",
+      "Critically evaluate historical codes",
+      "Connect to modern military ethics",
+      "Develop and defend personal position"
+    ],
+    tags: ["NP-232", "Warrior Code", "Comparative Ethics", "Military Tradition"]
+  },
+  {
+    id: "np232-w10-001",
+    title: "The Enemy Warrior",
+    subtitle: "Respect for the Adversary",
+    course: "NP-232",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Explore the warrior tradition of respect for the enemy and whether it applies to modern asymmetric conflict.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP232: Military Ethics - Code of the Warrior",
+    situation: "Historical warrior codes often demanded respect for the enemy warrior. But how does this apply to modern conflicts where adversaries may employ tactics that violate international humanitarian law? What obligations does a professional warrior have regardless of adversary behavior?",
+    dilemma: "If respect for the enemy was central to warrior codes, what happens when the enemy doesn't reciprocate? Does their behavior release us from our obligations?",
+    briefing: "This scenario tests the ability to engage philosophically with questions about martial respect and professional conduct regardless of adversary behavior.",
+    frameworks: ["Martial Respect", "Professional Conduct", "Asymmetric Warfare Ethics", "Reciprocity"],
+    primaryMission: "Develop and defend a nuanced position on warrior respect in modern asymmetric conflict, engaging seriously with counterarguments.",
+    successCriteria: [
+      "Understand historical traditions of martial respect",
+      "Analyze whether/how they apply to modern conflict",
+      "Distinguish between enemy and criminal",
+      "Develop nuanced position",
+      "Avoid both naive idealism and cynical abandonment"
+    ],
+    tags: ["NP-232", "Warrior Respect", "Asymmetric Warfare", "Professional Ethics"]
+  },
+
+  // NP-350: Philosopher and Fighter Pilot (2 scenarios)
+  {
+    id: "np350-w07-001",
+    title: "The Stockdale Questions",
+    subtitle: "Epictetus in the Hanoi Hilton",
+    course: "NP-350",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Apply Stoic philosophy to extreme circumstances as Admiral Stockdale did as a POW.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP350: Philosopher and Fighter Pilot",
+    situation: "Professor White presents Stockdale's application of Epictetus in captivity. 'What is up to us and what is not up to us?' How does this framework apply to torture, coerced statements, and maintaining integrity under extreme duress?",
+    dilemma: "Stockdale made difficult decisions about what he could control and what he couldn't. The optimists died - 'they were the ones who said, We're going to be out by Christmas.' What is the right relationship to hope in desperate circumstances?",
+    briefing: "This scenario tests engagement with Stoic philosophy in the most extreme circumstances, using Stockdale's experience as the case study.",
+    frameworks: ["Stoicism", "Epictetus", "Prisoner Resistance", "Mental Resilience"],
+    primaryMission: "Apply Stoic philosophy to understand Stockdale's POW experience and connect these insights to personal leadership development.",
+    successCriteria: [
+      "Demonstrate understanding of Stockdale's Stoic application",
+      "Apply dichotomy of control to POW scenarios",
+      "Grapple with 'Stockdale Paradox' about hope",
+      "Connect to personal leadership development",
+      "Show authentic philosophical engagement"
+    ],
+    tags: ["NP-350", "Stockdale", "Stoicism", "POW Ethics", "Resilience"]
+  },
+  {
+    id: "np350-w12-001",
+    title: "The Man in the Arena",
+    subtitle: "Philosophy Under Fire",
+    course: "NP-350",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Explore how philosophical preparation affects performance under extreme stress.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP350: Philosopher and Fighter Pilot",
+    situation: "Professor White asks: 'Stockdale said philosophy saved his life. How? What does philosophical preparation provide that other forms of preparation don't? And what are its limits?'",
+    dilemma: "Philosophy might seem abstract compared to tactical training. What makes it practically valuable for military leaders? And are there situations where it's not enough?",
+    briefing: "This scenario tests the ability to articulate the practical value of philosophical preparation for military leadership and its relationship to action.",
+    frameworks: ["Practical Philosophy", "Leadership Development", "Philosophy vs Action", "Stockdale's Example"],
+    primaryMission: "Develop a thoughtful position on the practical value and limits of philosophy for military leaders, grounded in Stockdale's example.",
+    successCriteria: [
+      "Connect philosophical study to practical leadership",
+      "Identify what philosophy provides uniquely",
+      "Recognize philosophy's limits",
+      "Articulate personal philosophy development",
+      "Commit to continued philosophical growth"
+    ],
+    tags: ["NP-350", "Practical Philosophy", "Leadership", "Stockdale"]
+  },
+
+  // NP-410: Philosophy of War (2 scenarios)
+  {
+    id: "np410-w06-001",
+    title: "The Just War Question",
+    subtitle: "Jus Ad Bellum Analysis",
+    course: "NP-410",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Apply Just War Theory (jus ad bellum) to evaluate whether a hypothetical military action is justified.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP410: Philosophy of War",
+    situation: "Professor Kim presents a hypothetical scenario: a non-state actor has obtained WMD capability and is threatening attacks. Options include preemptive strike, covert action, diplomatic pressure, or accepting the risk. Apply Just War criteria: just cause, right intention, legitimate authority, proportionality, last resort, reasonable chance of success.",
+    dilemma: "Different criteria pull in different directions. What happens when legitimate authority is unclear? When preemption conflicts with last resort?",
+    briefing: "This scenario tests sophisticated application of Just War Theory to contemporary security challenges.",
+    frameworks: ["Just War Theory", "Jus Ad Bellum", "Preemption", "Legitimate Authority"],
+    primaryMission: "Apply all jus ad bellum criteria to the scenario, navigate tensions between criteria, and develop a defensible position on the use of force.",
+    successCriteria: [
+      "Apply all relevant jus ad bellum criteria",
+      "Navigate tensions between criteria",
+      "Develop defensible position",
+      "Acknowledge counterarguments",
+      "Distinguish philosophical from policy analysis"
+    ],
+    tags: ["NP-410", "Just War", "Jus Ad Bellum", "Use of Force"]
+  },
+  {
+    id: "np410-w11-001",
+    title: "The Innocents",
+    subtitle: "Noncombatant Immunity and Proportionality",
+    course: "NP-410",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Explore the philosophical foundations of noncombatant immunity and proportionality in warfare.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP410: Philosophy of War",
+    situation: "Professor Kim asks: 'Why are innocent civilians protected in war? What makes them innocent? And when are unintended civilian casualties proportionate versus excessive?'",
+    dilemma: "The doctrine of double effect permits some civilian casualties as unintended side effects. But how many? And does the distinction between intention and foresight really hold up morally?",
+    briefing: "This scenario tests sophisticated engagement with jus in bello principles, particularly the foundations and limits of noncombatant immunity and proportionality.",
+    frameworks: ["Jus In Bello", "Noncombatant Immunity", "Doctrine of Double Effect", "Proportionality"],
+    primaryMission: "Engage philosophically with the hardest questions about noncombatant immunity and proportionality, developing defensible positions on doctrine of double effect.",
+    successCriteria: [
+      "Understand foundations of noncombatant immunity",
+      "Apply doctrine of double effect",
+      "Grapple with proportionality calculations",
+      "Challenge and defend relevant distinctions",
+      "Connect to real-world scenarios"
+    ],
+    tags: ["NP-410", "Jus In Bello", "Double Effect", "Proportionality", "Civilian Protection"]
+  },
+
+  // NP-430: Ethics and Irregular Warfare (1 scenario)
+  {
+    id: "np430-w08-001",
+    title: "The Enhanced Question",
+    subtitle: "Interrogation Ethics Redux",
+    course: "NP-430",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Deep philosophical examination of interrogation ethics beyond the NE-203 treatment of Abu Ghraib.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP430: Ethics and Irregular Warfare",
+    situation: "Professor Chen presents the most sophisticated defense of enhanced interrogation: necessity, effectiveness claims, category errors about torture, etc. Then challenges you to respond philosophically, not just legally or emotionally.",
+    dilemma: "Simply calling enhanced interrogation 'torture' doesn't engage the argument. What exactly is wrong with it, philosophically? What moral principles does it violate and why do they matter?",
+    briefing: "This scenario requires the most sophisticated ethical analysis, engaging charitably with difficult arguments before critiquing them.",
+    frameworks: ["Interrogation Ethics", "Torture Philosophy", "Enhanced Interrogation", "Moral Principles"],
+    primaryMission: "Engage charitably with the strongest arguments for enhanced interrogation, then develop and defend a rigorous philosophical critique.",
+    successCriteria: [
+      "Engage steelmanned arguments charitably",
+      "Identify precise moral violations",
+      "Distinguish legal from ethical arguments",
+      "Defend position under challenge",
+      "Maintain intellectual rigor without emotional deflection"
+    ],
+    tags: ["NP-430", "Interrogation Ethics", "Torture", "Enhanced Interrogation", "Advanced Ethics"]
+  },
+
+  // NP-440: Stoic Philosophy and Leadership (1 scenario)
+  {
+    id: "np440-w10-001",
+    title: "The Indifferent Things",
+    subtitle: "Stoic Value Theory",
+    course: "NP-440",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Explore the Stoic claim that external goods (including life itself) are 'indifferent' and only virtue matters.",
+    image: "placeholder",
+    area: "Philosophy",
+    courseCode: "NP440: Stoic Philosophy and Leadership",
+    situation: "Professor Adams presents the Stoic claim: 'Excellence is good, vice is evil, and all else is indifferent.' But military service requires caring about outcomes - winning battles, protecting people. How can a Stoic be a good warrior?",
+    dilemma: "If life and death are 'indifferent,' why fight? But if they're not indifferent, are the Stoics wrong? How do you reconcile Stoic detachment with military necessity?",
+    briefing: "This scenario tests deep engagement with Stoic ethics and their application to military service, particularly the apparent paradox of caring about outcomes while recognizing them as 'preferred indifferents.'",
+    frameworks: ["Stoic Value Theory", "Preferred Indifferents", "Virtue Ethics", "Military Service"],
+    primaryMission: "Develop a coherent resolution to the apparent paradox between Stoic detachment and military commitment to outcomes.",
+    successCriteria: [
+      "Understand Stoic value theory accurately",
+      "Identify the apparent paradox",
+      "Develop coherent resolution",
+      "Connect to leadership practice",
+      "Show how Stoicism can inform military service"
+    ],
+    tags: ["NP-440", "Stoicism", "Virtue Ethics", "Military Philosophy"]
   }
 ];
 

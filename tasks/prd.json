@@ -186,8 +186,8 @@
         "Data source: docs/new-scenarios/05-ethics-philosophy/ETHICS_PHILOSOPHY_SCENARIOS.md"
       ],
       "priority": 12,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 ethics & philosophy elective scenarios completing the 112-scenario library: NP-232 (2 scenarios on warrior codes and martial respect), NP-350 (2 scenarios on Stockdale's Stoic philosophy and practical philosophy for military leaders), NP-410 (2 scenarios on Just War Theory including jus ad bellum and jus in bello), NP-430 (1 scenario on interrogation ethics), NP-440 (1 scenario on Stoic value theory). All scenarios are HARD difficulty (4-5/5) for advanced philosophical engagement. All use Philosophy area and placeholder images. TypeScript build passes. MILESTONE: 112 SCENARIOS COMPLETE!"
     },
     {
       "id": "US-013",

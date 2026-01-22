@@ -450,3 +450,55 @@ Added 13 leadership course scenarios to src/data/scenarios.ts covering the four-
 - TypeScript build passes successfully with all 13 scenarios added
 - Total scenario count: 14 existing + 56 language + 9 communication + 12 cross-cultural + 13 leadership = 104 scenarios (8 more needed for 112 total)
 
+
+---
+
+## Iteration 12 - US-012: Add ethics & philosophy elective scenarios (8 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 8 ethics & philosophy elective scenarios to src/data/scenarios.ts, completing the 112-scenario library expansion. These scenarios provide deep philosophical exploration of military ethics for midshipmen who have completed the required NE-203 course and are ready for advanced ethical reasoning.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 8 philosophy elective scenarios:
+
+  **NP-232: Military Ethics - Code of the Warrior (2 scenarios)**
+  - np232-w05-001: The Warrior's Code (HARD 4/5) - Comparative warrior ethics across cultures (bushido, chivalry, agoge)
+  - np232-w10-001: The Enemy Warrior (HARD 4/5) - Respect for adversary in asymmetric conflict
+
+  **NP-350: Philosopher and Fighter Pilot (2 scenarios)**
+  - np350-w07-001: The Stockdale Questions (HARD 5/5) - Stoic philosophy in POW context (Epictetus, dichotomy of control)
+  - np350-w12-001: The Man in the Arena (HARD 4/5) - Practical value of philosophical preparation for military leaders
+
+  **NP-410: Philosophy of War (2 scenarios)**
+  - np410-w06-001: The Just War Question (HARD 5/5) - Jus ad bellum analysis (preemption, WMD, legitimate authority)
+  - np410-w11-001: The Innocents (HARD 5/5) - Jus in bello principles (noncombatant immunity, doctrine of double effect, proportionality)
+
+  **NP-430: Ethics and Irregular Warfare (1 scenario)**
+  - np430-w08-001: The Enhanced Question (HARD 5/5) - Philosophical examination of interrogation ethics (steelmanning difficult arguments)
+
+  **NP-440: Stoic Philosophy and Leadership (1 scenario)**
+  - np440-w10-001: The Indifferent Things (HARD 4/5) - Stoic value theory and military service (preferred indifferents paradox)
+
+### All scenarios include
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+- Area field: "Philosophy" (existing domain from original 14 scenarios)
+- Course codes: NP232, NP350, NP410, NP430, NP440
+- Placeholder images ("placeholder" for all scenarios without Figma assets)
+- Difficulty levels: All scenarios are HARD (4-5/5) reflecting advanced philosophical engagement
+
+### Learnings for future iterations
+- Philosophy elective scenarios assume completion of NE-203 and readiness for upper-level philosophical discussion
+- All philosophy scenarios are HARD difficulty (4-5/5) - appropriate for advanced ethical reasoning with faculty mentors
+- Scenarios emphasize Socratic dialogue rather than right/wrong answers - multiple defensible positions exist
+- NP-232 scenarios explore comparative warrior ethics: bushido, chivalry, Spartan traditions, and modern professional ethics
+- NP-350 scenarios focus on Stockdale's application of Stoic philosophy (Epictetus) as POW and practical value of philosophical preparation
+- NP-410 scenarios apply Just War Theory rigorously: jus ad bellum (criteria for going to war) and jus in bello (conduct in war)
+- NP-430 scenario requires most sophisticated ethical analysis - engaging charitably with strongest arguments before critiquing
+- NP-440 scenario addresses Stoic value theory paradox: how to care about military outcomes while viewing them as "preferred indifferents"
+- Frameworks array includes philosophical concepts: "Warrior Ethics", "Stoicism", "Epictetus", "Just War Theory", "Jus Ad Bellum", "Jus In Bello", "Doctrine of Double Effect", "Stoic Value Theory"
+- Philosophy scenarios do NOT use language-specific fields - those are only for foreign language scenarios
+- Area field uses "Philosophy" (existing domain from original 14 scenarios)
+- TypeScript build passes successfully with all 8 scenarios added
+- **MILESTONE: 112 SCENARIOS COMPLETE!** (14 existing + 56 language + 9 communication + 12 cross-cultural + 13 leadership + 8 philosophy = 112 total)
+
