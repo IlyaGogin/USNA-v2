@@ -2787,6 +2787,433 @@ export const scenarios: Scenario[] = [
       "Don't frame as US vs. Germany",
       "Don't forget historical sensitivities about sovereignty"
     ]
+  },
+
+  // Spanish Language Scenarios (FS-101 to FS-202)
+  // AOR Focus: SOUTHCOM, Latin America, Caribbean Operations, Counter-Narcotics
+
+  // FS-101 (Semester 1, GSE 22-29, A1, Novice Mid)
+  {
+    id: "fs101-l01-001",
+    title: "Naval Partner Meeting",
+    subtitle: "Latin American Naval Introduction",
+    course: "FS-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice formal Spanish introductions when meeting Latin American naval officers during a UNITAS exercise.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS101: Spanish I",
+    situation: "Capitán de Fragata García from the Colombian Navy welcomes your ship. Spanish-speaking ability demonstrates respect for partnership and will open doors for more meaningful interaction.",
+    dilemma: "You want to demonstrate respect through Spanish, but Latin American greetings are warmer and more extended than American norms. Rushing or being too businesslike could seem cold.",
+    briefing: "This scenario tests basic Spanish self-introduction and understanding of Latin American warmth and relationship-building customs.",
+    frameworks: ["Formal Introductions", "Latin American Warmth", "Relationship Building", "UNITAS Partnership"],
+    primaryMission: "Complete a proper Spanish introduction that demonstrates respect for Colombian culture and builds foundation for professional partnership.",
+    successCriteria: [
+      "Use formal \"usted\" forms correctly",
+      "Navigate warm greetings appropriately",
+      "Show appreciation for hospitality",
+      "Build personal rapport alongside professional",
+      "Leave positive impression"
+    ],
+    tags: ["FS-101", "Semester 1", "GSE 22-29", "A1", "Novice Mid", "UNITAS", "Formal Introduction", "Colombia"],
+    language: "Spanish",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "Mucho gusto - Pleased to meet you",
+      "Encantado/a - Delighted",
+      "¿Cómo está usted? - How are you (formal)",
+      "Gracias por su hospitalidad - Thank you for your hospitality",
+      "Es un honor estar aquí - It's an honor to be here"
+    ],
+    culturalTips: [
+      "Expect warm, somewhat longer greetings than US",
+      "Two-cheek kiss may be offered (men to women, women to women)",
+      "Physical proximity is closer than American norms",
+      "Take time for small talk before business",
+      "Family questions are appropriate and welcomed"
+    ],
+    culturalGotchas: [
+      "Don't be too business-focused too quickly",
+      "Don't pull away from close proximity (rude)",
+      "Don't refuse coffee or refreshments offered",
+      "Don't assume everyone wants to practice English",
+      "Don't confuse different countries' cultures"
+    ]
+  },
+  {
+    id: "fs101-l01-002",
+    title: "Cartagena Port Call",
+    subtitle: "Liberty and Local Interaction",
+    course: "FS-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Navigate a Colombian port city using basic Spanish for transportation, food, and simple interactions.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS101: Spanish I",
+    situation: "You have liberty in Cartagena's historic old city. You need to navigate transportation, find food, and interact with locals who may speak limited English.",
+    dilemma: "Colombians are warm and helpful, but your limited Spanish may lead to misunderstandings. You must communicate effectively while showing appreciation for their patience.",
+    briefing: "This scenario tests survival Spanish for navigation and transactions, with emphasis on Colombian warmth and hospitality culture.",
+    frameworks: ["Survival Spanish", "Navigation", "Transactions", "Colombian Hospitality"],
+    primaryMission: "Successfully navigate Cartagena using Spanish for directions and transactions while demonstrating appreciation for Colombian culture and hospitality.",
+    successCriteria: [
+      "Ask for and understand directions",
+      "Complete basic transactions",
+      "Order food politely",
+      "Handle communication gaps gracefully",
+      "Show appreciation for help received"
+    ],
+    tags: ["FS-101", "Semester 1", "GSE 22-29", "A1", "Novice Mid", "Survival Spanish", "Port Call", "Cartagena"],
+    language: "Spanish",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "¿Cuánto cuesta? - How much does it cost?",
+      "La cuenta, por favor - The bill, please",
+      "¿Dónde está...? - Where is...?",
+      "No entiendo - I don't understand",
+      "Más despacio, por favor - More slowly, please"
+    ],
+    culturalTips: [
+      "Colombians are warm and patient with learners",
+      "Greet everyone you interact with",
+      "Use polite forms (usted) with strangers",
+      "Tipping culture exists but is not excessive",
+      "Ask before taking photos of people"
+    ],
+    culturalGotchas: [
+      "Don't be excessively loud (ugly American stereotype)",
+      "Don't assume everyone speaks English",
+      "Don't compare Colombia to other Latin American countries",
+      "Don't discuss drugs/narcotics casually",
+      "Don't forget to say goodbye"
+    ]
+  },
+
+  // FS-102 (Semester 2, GSE 30-35, A2, Novice High)
+  {
+    id: "fs102-l02-001",
+    title: "Colombian Hospitality",
+    subtitle: "Social Gathering and Customs",
+    course: "FS-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Navigate a Colombian social gathering, understanding regional hospitality norms and appropriate behavior.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS102: Spanish II",
+    situation: "Your Colombian naval counterpart has invited you to Sunday lunch with his family. This is a significant honor that indicates developing friendship and trust.",
+    dilemma: "Colombian family gatherings are long and personal. You must participate fully without rushing, while navigating conversations that may get more personal than American norms.",
+    briefing: "This scenario tests understanding of Colombian hospitality culture and the ability to participate appropriately in extended family social events.",
+    frameworks: ["Colombian Hospitality", "Family Culture", "Personalismo", "Extended Social Events"],
+    primaryMission: "Navigate the family gathering successfully, demonstrating appreciation for Colombian hospitality while building deeper professional and personal relationships.",
+    successCriteria: [
+      "Participate in extended meal appropriately",
+      "Navigate personal conversations warmly",
+      "Show appreciation for food and hospitality",
+      "Build rapport with extended family",
+      "Leave at appropriate time"
+    ],
+    tags: ["FS-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Family Gathering", "Hospitality"],
+    language: "Spanish",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "Salud - Cheers (toast)",
+      "¡Qué rico! - How delicious!",
+      "Con mucho gusto - With pleasure",
+      "Gracias por invitarme - Thank you for inviting me",
+      "Me siento como en casa - I feel at home"
+    ],
+    culturalTips: [
+      "Expect extended meal times (lunch can be 3+ hours)",
+      "Second helpings show appreciation",
+      "Conversations may get personal (family, relationships)",
+      "Music and dancing may happen spontaneously",
+      "Leaving early is insulting"
+    ],
+    culturalGotchas: [
+      "Don't check your watch or seem rushed",
+      "Don't refuse food - take small portions if full",
+      "Don't be too reserved - warmth is expected",
+      "Don't discuss politics or violence",
+      "Don't leave without thanking everyone"
+    ]
+  },
+  {
+    id: "fs102-l02-002",
+    title: "The Faux Pas",
+    subtitle: "Recovering from Cultural Mistakes",
+    course: "FS-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Handle a situation where you've inadvertently caused offense and must apologize appropriately.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS102: Spanish II",
+    situation: "You made an offhand comment about Colombian coffee being \"almost as good as Starbucks\" - intended as a compliment but taken as an insult to Colombian national pride. Capitán Rodríguez's response is cool.",
+    dilemma: "Latin American national pride is significant, and comparing local products unfavorably to American brands is offensive. You must apologize sincerely without over-explaining.",
+    briefing: "This scenario tests the ability to recover from cultural missteps in Spanish, demonstrating genuine contrition and cultural appreciation.",
+    frameworks: ["Cultural Recovery", "Apology Culture", "National Pride", "Relationship Repair"],
+    primaryMission: "Apologize sincerely for the offense, demonstrate genuine appreciation for Colombian culture, and repair the professional relationship.",
+    successCriteria: [
+      "Recognize the nature of the offense",
+      "Apologize sincerely without over-explaining",
+      "Show genuine appreciation for Colombian culture",
+      "Repair the relationship warmly",
+      "Learn from the mistake"
+    ],
+    tags: ["FS-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Cultural Mistake", "Apology", "National Pride"],
+    language: "Spanish",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "Lo siento mucho - I'm very sorry",
+      "Fue un error - It was a mistake",
+      "No quise ofender - I didn't mean to offend",
+      "Tengo mucho que aprender - I have much to learn",
+      "Valoro mucho su cultura - I value your culture greatly"
+    ],
+    culturalTips: [
+      "Latin Americans take national pride seriously",
+      "Colombian coffee is a source of significant national pride",
+      "Sincere apologies are valued",
+      "Humor can help after apology is accepted",
+      "Personal relationships can recover from mistakes"
+    ],
+    culturalGotchas: [
+      "Don't make excuses or explain away the mistake",
+      "Don't minimize their feelings",
+      "Don't make it about American culture being 'different'",
+      "Don't repeat similar mistakes",
+      "Don't forget - Colombian coffee is world-class"
+    ]
+  },
+
+  // FS-201 (Semester 3, GSE 36-50, B1, Intermediate Low-Mid)
+  {
+    id: "fs201-l03-001",
+    title: "Counter-Narcotics Coordination",
+    subtitle: "Joint Operations Planning",
+    course: "FS-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Participate in counter-narcotics coordination meeting with Colombian and regional partners.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS201: Spanish III",
+    situation: "You're participating in a counter-narcotics coordination meeting with Colombian and regional partners. Spanish is the working language for building rapport, though English is available.",
+    dilemma: "Counter-narcotics is sensitive - partners want respect for their significant sacrifices. You must coordinate effectively while showing appreciation for their efforts and avoiding any appearance of condescension.",
+    briefing: "This scenario tests military Spanish vocabulary and the ability to participate respectfully in joint counter-narcotics coordination.",
+    frameworks: ["Counter-Narcotics", "Joint Operations", "Partner Respect", "SOUTHCOM Cooperation"],
+    primaryMission: "Contribute effectively to coordination meeting, using Spanish to build rapport and demonstrate respect for partner nation efforts.",
+    successCriteria: [
+      "Use counter-narcotics terminology correctly",
+      "Build rapport with regional partners",
+      "Show respect for partner sacrifices",
+      "Contribute useful information",
+      "Navigate sensitive topics appropriately"
+    ],
+    tags: ["FS-201", "Semester 3", "GSE 36-50", "B1", "Intermediate Low", "Counter-Narcotics", "Joint Operations"],
+    language: "Spanish",
+    semester: 3,
+    actflLevel: "Intermediate Low",
+    ilrLevel: "1+",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "El narcotráfico - Drug trafficking",
+      "La interdicción - Interdiction",
+      "El patrullaje marítimo - Maritime patrol",
+      "La inteligencia - Intelligence",
+      "La coordinación bilateral - Bilateral coordination"
+    ],
+    culturalTips: [
+      "Acknowledge partner nation sacrifices in drug war",
+      "Avoid appearing to dictate solutions",
+      "Show respect for their operational experience",
+      "Build personal rapport alongside professional",
+      "Understand sensitivities about US drug demand driving market"
+    ],
+    culturalGotchas: [
+      "Don't minimize partner nation efforts",
+      "Don't appear condescending about capabilities",
+      "Don't ignore US role in creating drug demand",
+      "Don't treat as purely US operation",
+      "Don't discuss operations in public spaces"
+    ]
+  },
+  {
+    id: "fs201-l03-002",
+    title: "Humanitarian Assistance",
+    subtitle: "HA/DR Operations Communication",
+    course: "FS-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Coordinate humanitarian assistance efforts with local authorities in a Spanish-speaking disaster zone.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS201: Spanish III",
+    situation: "Following a natural disaster, your ship is providing assistance. You must coordinate with local emergency management officials who speak limited English. Your Spanish is critical for effective operations.",
+    dilemma: "Disaster response requires urgent action, but local officials have established protocols and community relationships. You must coordinate effectively while respecting their leadership and local knowledge.",
+    briefing: "This scenario tests Spanish communication in humanitarian operations, with emphasis on respectful coordination with local authorities.",
+    frameworks: ["HA/DR Operations", "Local Coordination", "Respecting Local Leadership", "Emergency Spanish"],
+    primaryMission: "Coordinate humanitarian assistance effectively using Spanish, respecting local leadership while ensuring aid reaches those in need.",
+    successCriteria: [
+      "Communicate needs and capabilities clearly",
+      "Understand local priorities",
+      "Navigate bureaucratic requirements",
+      "Build trust with local officials",
+      "Coordinate logistics effectively"
+    ],
+    tags: ["FS-201", "Semester 3", "GSE 36-50", "B1", "Intermediate Mid", "HA/DR", "Humanitarian Assistance"],
+    language: "Spanish",
+    semester: 3,
+    actflLevel: "Intermediate Mid",
+    ilrLevel: "2",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "La asistencia humanitaria - Humanitarian assistance",
+      "La respuesta a desastres - Disaster response",
+      "Los suministros - Supplies",
+      "La coordinación local - Local coordination",
+      "Las prioridades - Priorities"
+    ],
+    culturalTips: [
+      "Respect local official authority and knowledge",
+      "Understand you are supporting, not taking over",
+      "Build trust through cultural respect",
+      "Acknowledge community resilience",
+      "Follow local protocols even if different"
+    ],
+    culturalGotchas: [
+      "Don't assume US way is better",
+      "Don't bypass local officials to 'be efficient'",
+      "Don't ignore community social structures",
+      "Don't make promises you can't keep",
+      "Don't forget to coordinate departure"
+    ]
+  },
+
+  // FS-202 (Semester 4, GSE 51-58, B1+, Intermediate High)
+  {
+    id: "fs202-l04-001",
+    title: "Media Relations",
+    subtitle: "Spanish-Language Press Interview",
+    course: "FS-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Handle a media interview in Spanish about US naval activities in Latin America.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS202: Spanish IV",
+    situation: "You're conducting a Spanish-language media interview about US naval cooperation in Latin America. The reporter will ask about partnership activities and may probe historical sensitivities.",
+    dilemma: "US history in Latin America is complex, and some questions may touch on historical interventions. You must stay on message while acknowledging legitimate regional perspectives.",
+    briefing: "This scenario tests Spanish media skills including message discipline, bridging from difficult questions, and maintaining composure on live television.",
+    frameworks: ["Media Relations", "Message Discipline", "Historical Sensitivity", "Public Affairs"],
+    primaryMission: "Complete a successful media interview that communicates partnership messages positively while handling difficult questions about US-Latin American relations.",
+    successCriteria: [
+      "Communicate partnership messages clearly",
+      "Bridge from difficult questions to key points",
+      "Acknowledge regional perspectives respectfully",
+      "Maintain composure throughout",
+      "Leave positive impression with Spanish-speaking audience"
+    ],
+    tags: ["FS-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Media Relations", "Public Affairs"],
+    language: "Spanish",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "La cooperación regional - Regional cooperation",
+      "La seguridad marítima - Maritime security",
+      "El compromiso estadounidense - US commitment",
+      "Las relaciones bilaterales - Bilateral relations",
+      "Respeto mutuo - Mutual respect"
+    ],
+    culturalTips: [
+      "Latin American media may be more confrontational than US",
+      "Acknowledge historical complexities honestly",
+      "Focus on mutual benefit and partnership",
+      "Show you've done homework on regional issues",
+      "Speaking Spanish itself demonstrates respect"
+    ],
+    culturalGotchas: [
+      "Don't be defensive about US history",
+      "Don't lecture on what's best for region",
+      "Don't ignore legitimate concerns",
+      "Don't speak only in talking points",
+      "Don't forget Monroe Doctrine is a sore point"
+    ]
+  },
+  {
+    id: "fs202-l04-002",
+    title: "Regional Security Discussion",
+    subtitle: "Latin American Perspectives",
+    course: "FS-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Engage in substantive discussion about regional security with Latin American counterparts.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FS202: Spanish IV",
+    situation: "You're participating in discussions about hemispheric security. Latin American officers have mixed views about US involvement in the region. You must engage substantively with their concerns while representing US interests.",
+    dilemma: "Historical US interventions in Latin America create sensitivities. You must engage with legitimate concerns while articulating current partnership approaches and mutual interests.",
+    briefing: "This scenario tests advanced strategic Spanish and the ability to engage diplomatically with complex historical and political dynamics in US-Latin American relations.",
+    frameworks: ["Hemispheric Security", "Historical Sensitivities", "Strategic Dialogue", "Inter-American Relations"],
+    primaryMission: "Engage meaningfully in hemispheric security discussions, demonstrating understanding of Latin American perspectives while articulating US partnership approach.",
+    successCriteria: [
+      "Engage substantively with regional concerns",
+      "Acknowledge historical sensitivities appropriately",
+      "Articulate mutual interests effectively",
+      "Build professional relationships",
+      "Represent US interests diplomatically"
+    ],
+    tags: ["FS-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Regional Security", "Strategic Dialogue"],
+    language: "Spanish",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "La seguridad hemisférica - Hemispheric security",
+      "La soberanía - Sovereignty",
+      "Los intereses mutuos - Mutual interests",
+      "El multilateralismo - Multilateralism",
+      "La cooperación de seguridad - Security cooperation"
+    ],
+    culturalTips: [
+      "Acknowledge historical sensitivities (Monroe Doctrine, interventions)",
+      "Frame partnership as mutual benefit",
+      "Show genuine interest in their perspectives",
+      "Avoid condescension",
+      "Build personal relationships alongside professional"
+    ],
+    culturalGotchas: [
+      "Don't minimize historical US interventions",
+      "Don't present US approach as only solution",
+      "Don't ignore sovereignty concerns",
+      "Don't forget US has made mistakes in region",
+      "Don't assume economic development = security"
+    ]
   }
 ];
 

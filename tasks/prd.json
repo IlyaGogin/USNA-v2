@@ -127,8 +127,8 @@
         "Data source: docs/new-scenarios/01-foreign-languages/spanish/SPANISH_SCENARIOS.md"
       ],
       "priority": 8,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Spanish scenarios (FS-101 to FS-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and SOUTHCOM/Latin America operational contexts including counter-narcotics and historical sensitivities. TypeScript build passes. ALL 7 FOREIGN LANGUAGES NOW COMPLETE (56 scenarios total)."
     },
     {
       "id": "US-009",
