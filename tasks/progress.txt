@@ -612,3 +612,49 @@ Added a Proficiency Level filter to the MidshipmanScenarios sidebar, allowing mi
 - TypeScript build passes successfully with no errors
 - Conditional rendering with `{showProficiencyFilter && (...)}` pattern works cleanly
 
+
+---
+
+## Iteration 16 - US-016: Add proficiency badge to language scenario cards
+**Date:** 2026-01-22
+
+### What was implemented
+Added a proficiency badge to language scenario cards that displays the semester and ACTFL level (e.g., "S1 - Nov. Mid"). The badge uses the design system's Difficulty badge color pattern and only appears on scenarios that have the `actflLevel` field populated.
+
+### Files changed
+- `src/components/MidshipmanScenarios.tsx` - Added proficiency badge to scenario cards:
+  - Added `abbreviateActfl` helper function to shorten ACTFL level names for badge display
+  - Added conditional badge rendering after title/subtitle section
+  - Badge uses design system colors: `bg-[#ffebd6] text-[#793c00]` (Difficulty badge pattern)
+  - Badge format: "S{semester} - {abbreviated actflLevel}"
+  - Uses SF Mono font for badge text (matching other badge patterns)
+
+### Abbreviation Mapping
+- "Novice Mid" → "Nov. Mid"
+- "Novice High" → "Nov. High"
+- "Intermediate Low" → "Int. Low"
+- "Intermediate Mid" → "Int. Mid"
+- "Intermediate High" → "Int. High"
+- "Advanced Low" → "Adv. Low"
+
+### UI Verification
+- Screenshot: tmp/us-016-proficiency-badge.png (Japanese scenarios with badges visible)
+- Screenshot: tmp/us-016-no-badge-ethics.png (Ethics scenarios without badges - confirms conditional display)
+- Elements verified:
+  - Badge appears with format "S1 - Nov. Mid" for Semester 1 Novice Mid scenarios
+  - Badge uses #ffebd6 background / #793c00 text colors (matching design system)
+  - Badge has rounded-[4px] border radius (matching badge standards)
+  - Non-language scenarios (Ethics, Leadership, etc.) do NOT show the badge
+- Interactions tested:
+  - Japanese filter shows scenarios with S1, S2, S3, S4 badges appropriately
+  - Ethics filter shows scenarios WITHOUT any proficiency badge
+
+### Learnings for future iterations
+- Proficiency badge only renders when scenario has BOTH `actflLevel` AND `semester` fields
+- `abbreviateActfl` helper uses simple string replacement for consistent abbreviation
+- Badge placement is between subtitle and description for visual hierarchy
+- Design system compliance: uses exact badge colors from DESIGN-SYSTEM.md
+- Badge pattern is reusable: same structure could be used for other scenario metadata
+- SF Mono font keeps badge text monospaced and compact
+- TypeScript build passes successfully with no errors
+

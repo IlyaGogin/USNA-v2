@@ -37,6 +37,14 @@ const proficiencyLevels = [
   { semester: 4, label: "Semester 4 (Intermediate Mid-High)" },
 ];
 
+// Helper to abbreviate ACTFL levels for badge display
+const abbreviateActfl = (actflLevel: string): string => {
+  return actflLevel
+    .replace("Intermediate", "Int.")
+    .replace("Novice", "Nov.")
+    .replace("Advanced", "Adv.");
+};
+
 export default function MidshipmanScenarios({
   onLogoClick,
   onTabChange,
@@ -353,6 +361,16 @@ export default function MidshipmanScenarios({
                         <p className="leading-[28px] text-[#171717] text-[20px] tracking-[-0.4px] text-left">{scenario.title}</p>
                         <p className="leading-[16px] text-[#0074dd] text-[14px] text-left">{scenario.subtitle}</p>
                       </div>
+                      {/* Proficiency Badge - only for language scenarios with actflLevel */}
+                      {scenario.actflLevel && scenario.semester && (
+                        <div className="content-stretch flex items-center gap-[8px] relative shrink-0">
+                          <div className="bg-[#ffebd6] content-stretch flex items-center px-[6px] py-[2px] relative rounded-[4px] shrink-0">
+                            <p className="font-['SF_Mono:Regular',sans-serif] leading-[16px] text-[#793c00] text-[12px] text-nowrap">
+                              S{scenario.semester} - {abbreviateActfl(scenario.actflLevel)}
+                            </p>
+                          </div>
+                        </div>
+                      )}
                       <p className="font-normal leading-[22px] text-[#5d5d5d] text-[14px] text-left line-clamp-4">{scenario.description}</p>
                     </div>
                   </div>
