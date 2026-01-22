@@ -3449,6 +3449,319 @@ export const scenarios: Scenario[] = [
       "Maintain your credibility"
     ],
     tags: ["NL-420", "Town Hall", "Leadership Communication", "Morale", "Transparency"]
+  },
+
+  // ============================================================================
+  // CROSS-CULTURAL COMMUNICATION SCENARIOS (12 scenarios)
+  // ============================================================================
+  // Courses: NE-203 Week 1, NL-360, FAS (Foreign Area Studies Major)
+  // Focus: Operational Cultural Proficiency (OCP)
+  // ============================================================================
+
+  // NE-203 Week 1: Moral Perception Across Cultures (2 scenarios)
+  {
+    id: "ne203-cc-001",
+    title: "The Tunnel",
+    subtitle: "Cross-Cultural Ethical Perception",
+    course: "NE-203",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Navigate a situation where American moral intuitions may conflict with local cultural norms and practices.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "NE203: Ethics and Moral Reasoning",
+    situation: "Your patrol has discovered what appears to be a tunnel system near a village. The village elder claims no knowledge, but his responses are indirect and evasive by American communication standards. Your partner nation counterpart explains that the elder's behavior reflects cultural norms around family protection and indirect communication, not necessarily deception.",
+    dilemma: "What seems like evasion from your cultural perspective may reflect different communication norms and legitimate family concerns. How do you gather needed information while respecting cultural differences and maintaining ethical standards?",
+    briefing: "This scenario tests whether you can recognize that moral intuitions vary across cultures, distinguish between moral relativism and moral perception, and navigate situations where cultural differences complicate ethical decision-making.",
+    frameworks: ["Moral Perception", "Cultural Relativism", "Operational Ethics", "Partner Nation Dynamics"],
+    primaryMission: "Navigate the situation in a way that accomplishes the mission while respecting cultural differences and maintaining your ethical boundaries.",
+    successCriteria: [
+      "Recognize cultural factors affecting the situation",
+      "Distinguish cultural differences from ethical violations",
+      "Navigate partner force dynamics appropriately",
+      "Make decisions you can justify morally",
+      "Maintain relationships for future operations"
+    ],
+    tags: ["NE-203", "Week 1", "Cross-Cultural Ethics", "Moral Perception", "Partner Nations"]
+  },
+  {
+    id: "ne203-cc-002",
+    title: "The Informant",
+    subtitle: "Trust Across Cultural Boundaries",
+    course: "NE-203",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Navigate trust-building with a local informant whose cultural background creates different expectations about relationships and obligations.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "NE203: Ethics and Moral Reasoning",
+    situation: "A local civilian has approached offering information. Their cultural expectations about relationships involve long-term obligations, family involvement, and indirect communication. Your institutional expectations involve formal agreements, clear boundaries, and direct communication.",
+    dilemma: "Building trust requires meeting cultural expectations, but you have institutional boundaries. You must navigate between relationship-building and appropriate professional limits.",
+    briefing: "This scenario tests the ability to build cross-cultural trust while maintaining appropriate professional boundaries and institutional requirements.",
+    frameworks: ["Cross-Cultural Trust", "Professional Boundaries", "Relationship Building", "Institutional Ethics"],
+    primaryMission: "Navigate the initial meeting successfully, building appropriate trust while maintaining proper professional boundaries.",
+    successCriteria: [
+      "Recognize cultural expectations at play",
+      "Build appropriate trust within boundaries",
+      "Communicate clearly across cultural gaps",
+      "Navigate competing institutional and cultural demands",
+      "Maintain ethical standards"
+    ],
+    tags: ["NE-203", "Week 1", "Cross-Cultural Ethics", "Trust Building", "Intelligence"]
+  },
+
+  // NL-360: Culture and Leadership (5 scenarios)
+  {
+    id: "nl360-w04-001",
+    title: "The Coalition Partner",
+    subtitle: "Leading Multinational Teams",
+    course: "NL-360",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Lead a multinational team where different cultural approaches to leadership, time, and decision-making create friction.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "NL360: Culture and Leadership",
+    situation: "You're leading a planning team with members from the US, UK, Germany, and Japan. The British member thinks the Americans rush decisions. The German member insists on thorough process. The Japanese member hasn't spoken but you sense disagreement. Deadline is in two hours.",
+    dilemma: "Cultural differences in communication style, decision-making process, and relationship to authority are creating friction. You must lead effectively across these differences while meeting the deadline.",
+    briefing: "This scenario tests your ability to recognize different cultural approaches to teamwork and adapt your leadership style to a multicultural context.",
+    frameworks: ["Cultural Leadership", "Multinational Teamwork", "Communication Styles", "Time Management"],
+    primaryMission: "Lead the multinational team to produce a quality product on time while maintaining team cohesion across cultural differences.",
+    successCriteria: [
+      "Recognize different cultural work styles",
+      "Adapt leadership approach appropriately",
+      "Create space for diverse input styles",
+      "Meet the deadline without steamrolling",
+      "Build team cohesion across cultures"
+    ],
+    tags: ["NL-360", "Coalition", "Multinational Teams", "Cultural Leadership"]
+  },
+  {
+    id: "nl360-w06-001",
+    title: "The Host Nation Commander",
+    subtitle: "Partnership and Respect",
+    course: "NL-360",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Navigate a relationship with a host nation military commander whose leadership style and expectations differ significantly from yours.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "NL360: Culture and Leadership",
+    situation: "Colonel Rahman is your counterpart in a partner nation military. His leadership style is more hierarchical and relationship-focused than yours. He's offended by what he sees as American impatience and lack of respect for his experience. But you're also under pressure to show progress.",
+    dilemma: "You need to repair the relationship while still meeting your mission requirements. Rushing will make things worse, but you have real deadlines.",
+    briefing: "This scenario tests the ability to adapt your leadership and communication style to work effectively with partners from hierarchical, relationship-focused cultures.",
+    frameworks: ["Partnership", "Hierarchical Leadership", "Relationship Building", "Cultural Adaptation"],
+    primaryMission: "Rebuild the relationship with Colonel Rahman while finding a way to meet mission objectives through culturally appropriate engagement.",
+    successCriteria: [
+      "Understand his cultural framework",
+      "Adapt your approach appropriately",
+      "Build genuine relationship",
+      "Still accomplish mission objectives",
+      "Maintain your integrity"
+    ],
+    tags: ["NL-360", "Partnership", "Military Advisors", "Relationship Focus"]
+  },
+  {
+    id: "nl360-w08-001",
+    title: "Professional Adaptation",
+    subtitle: "Navigating Different Workplace Norms",
+    course: "NL-360",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Navigate a situation where host nation professional norms differ from American expectations, requiring creative approaches to mission accomplishment.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "NL360: Culture and Leadership",
+    situation: "Local professional norms and protocols differ from American expectations. Some community members have specific preferences about how meetings are conducted and who participates in certain discussions. Your diverse team brings essential capabilities to the mission.",
+    dilemma: "How do you accomplish the mission while respecting local protocols and ensuring your entire team can contribute their expertise?",
+    briefing: "This scenario tests the ability to find creative solutions when local norms and your team's needs don't immediately align, requiring cultural sensitivity and problem-solving.",
+    frameworks: ["Cultural Protocols", "Team Inclusion", "Creative Problem-Solving", "Mission Accomplishment"],
+    primaryMission: "Find an approach that accomplishes the mission while respecting local protocols and enabling all team members to contribute effectively.",
+    successCriteria: [
+      "Understand the local context and protocols",
+      "Find creative, mutually respectful solutions",
+      "Maintain mission effectiveness",
+      "Ensure all team members can contribute",
+      "Build sustainable relationships"
+    ],
+    tags: ["NL-360", "Cultural Protocols", "Inclusion", "Problem-Solving"]
+  },
+  {
+    id: "nl360-w10-001",
+    title: "The Interpreting Challenge",
+    subtitle: "Working Through Interpreters",
+    course: "NL-360",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Navigate a critical negotiation where your interpreter may be adding their own cultural lens or bias.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "NL360: Culture and Leadership",
+    situation: "You're negotiating with a village elder through an interpreter. You're noticing that the elder's reactions don't always match what the interpreter tells you was said. The interpreter is local and has their own relationships in play.",
+    dilemma: "You suspect filtering or bias in interpretation, but you can't verify it directly. Questioning the interpreter could damage that relationship too.",
+    briefing: "This scenario tests the ability to work effectively through interpreters while recognizing that interpretation can be filtered by local relationships and cultural lenses.",
+    frameworks: ["Interpreter Dynamics", "Verification Strategies", "Cultural Filtering", "Negotiation"],
+    primaryMission: "Navigate the negotiation successfully while developing strategies to verify meaning and build direct rapport where possible.",
+    successCriteria: [
+      "Recognize interpretation may be filtered",
+      "Develop strategies to verify meaning",
+      "Navigate the relationship with the interpreter",
+      "Accomplish communication objectives",
+      "Build direct rapport where possible"
+    ],
+    tags: ["NL-360", "Interpreters", "Negotiation", "Communication"]
+  },
+  {
+    id: "nl360-w12-001",
+    title: "The Ceremony",
+    subtitle: "Participating in Cultural Rituals",
+    course: "NL-360",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Participate appropriately in a host nation cultural or religious ceremony.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "NL360: Culture and Leadership",
+    situation: "You've been invited to participate in a national day ceremony that includes religious elements. Your participation shows respect; incorrect participation shows disrespect. You're uncertain of the protocols.",
+    dilemma: "You want to participate respectfully but don't want to make mistakes that could cause offense. You're uncertain whether to ask questions or just observe and follow.",
+    briefing: "This scenario tests the ability to navigate unfamiliar cultural and religious ceremonies with dignity and respect.",
+    frameworks: ["Cultural Ceremonies", "Religious Sensitivity", "Protocol Navigation", "Respectful Participation"],
+    primaryMission: "Participate in the ceremony appropriately, showing genuine respect while navigating unfamiliar protocols gracefully.",
+    successCriteria: [
+      "Prepare appropriately",
+      "Participate with dignity",
+      "Navigate unfamiliar rituals gracefully",
+      "Show genuine respect",
+      "Represent US Navy positively"
+    ],
+    tags: ["NL-360", "Ceremonies", "Cultural Protocol", "Religious Sensitivity"]
+  },
+
+  // FAS Major: Regional Expertise (5 scenarios)
+  {
+    id: "fas-ea-001",
+    title: "The Consensus",
+    subtitle: "Japanese Decision-Making",
+    course: "FAS (East Asia Track)",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Navigate Japanese consensus-building (nemawashi) in an alliance coordination context.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "FAS: Foreign Area Studies (East Asia)",
+    situation: "A proposal is being discussed. Your Japanese counterparts seem to agree in the meeting but nothing moves forward. You're frustrated by lack of apparent decision-making.",
+    dilemma: "Pushing for immediate decisions will be counterproductive, but you have genuine time pressures. You need to understand and work within Japanese consensus processes.",
+    briefing: "This scenario tests understanding of Japanese nemawashi (consensus-building) and the ability to achieve outcomes through culturally appropriate processes.",
+    frameworks: ["Nemawashi", "Consensus Building", "Japanese Decision-Making", "Alliance Coordination"],
+    primaryMission: "Navigate Japanese decision-making processes effectively, achieving outcomes through relationship-building and appropriate pre-meeting groundwork.",
+    successCriteria: [
+      "Understand nemawashi process",
+      "Identify where real decisions happen",
+      "Build relationships for pre-meeting consensus",
+      "Exercise patience while maintaining urgency",
+      "Achieve outcomes through appropriate process"
+    ],
+    tags: ["FAS", "East Asia", "Japan", "Nemawashi", "Consensus"]
+  },
+  {
+    id: "fas-mena-001",
+    title: "The Honor Code",
+    subtitle: "Navigating Professional Reputation",
+    course: "FAS (MENA Track)",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Navigate a situation where professional reputation and saving face are central to the interaction.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "FAS: Foreign Area Studies (MENA)",
+    situation: "A joint operation had a problem that, from your perspective, was clearly the partner nation's error. But addressing it directly would cause your counterpart to lose face. The error needs to be corrected for future operations.",
+    dilemma: "You need to fix the problem to prevent future issues, but direct blame would damage the relationship and your counterpart's standing.",
+    briefing: "This scenario tests understanding of honor/shame dynamics and the ability to address problems through face-saving approaches.",
+    frameworks: ["Honor Culture", "Face-Saving", "Indirect Communication", "Partnership"],
+    primaryMission: "Find a way to address the operational issue effectively while preserving your counterpart's dignity and the partnership relationship.",
+    successCriteria: [
+      "Understand honor/shame dynamics",
+      "Find face-saving approaches",
+      "Correct the problem effectively",
+      "Preserve the relationship",
+      "Maintain your integrity"
+    ],
+    tags: ["FAS", "MENA", "Honor Culture", "Face-Saving", "Partnership"]
+  },
+  {
+    id: "fas-la-001",
+    title: "The Personalismo",
+    subtitle: "Relationship-Centered Business",
+    course: "FAS (Latin America Track)",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Navigate a business relationship where personal connection (personalismo) is essential to professional success.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "FAS: Foreign Area Studies (Latin America)",
+    situation: "You're trying to coordinate a joint exercise but your counterpart seems more interested in extended social conversation than getting to the agenda. Your timeline is pressing, but rushing is clearly counterproductive.",
+    dilemma: "Rushing to business would be rude and counterproductive, but you have real deadlines. You must invest in relationship while still achieving your objectives.",
+    briefing: "This scenario tests understanding of personalismo culture and the ability to achieve results through relationship investment rather than task-focus alone.",
+    frameworks: ["Personalismo", "Relationship Building", "Task vs Relationship", "Latin American Culture"],
+    primaryMission: "Build the personal relationship required for effective partnership while still making progress on exercise coordination.",
+    successCriteria: [
+      "Understand personalismo culture",
+      "Invest in relationship appropriately",
+      "Find balance between social and business",
+      "Achieve objectives through relationship",
+      "Build long-term partnership foundation"
+    ],
+    tags: ["FAS", "Latin America", "Personalismo", "Relationship Building"]
+  },
+  {
+    id: "fas-af-001",
+    title: "The Community",
+    subtitle: "Collective Decision Structures",
+    course: "FAS (Africa Track)",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Navigate decision-making in a context where community consultation and collective agreement are important parts of the process.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "FAS: Foreign Area Studies (Africa)",
+    situation: "You've been meeting with a respected community leader about a partnership initiative. He explains that important decisions involve consultation with other community stakeholders before commitments can be made. Your timeline anticipated faster decision-making.",
+    dilemma: "Your timeline assumed individual decision-making authority, but this context requires broader consultation. Pushing will undermine trust; patience may exceed your flexibility.",
+    briefing: "This scenario tests understanding of collective decision-making processes and the ability to adapt approaches to achieve sustainable outcomes.",
+    frameworks: ["Collective Decision-Making", "Community Consultation", "African Leadership", "Sustainable Partnerships"],
+    primaryMission: "Engage appropriately with the community decision-making process, adapting your approach to achieve sustainable outcomes through proper channels.",
+    successCriteria: [
+      "Understand local decision-making processes",
+      "Engage appropriate stakeholders respectfully",
+      "Adapt timeline expectations appropriately",
+      "Build relationships that support the initiative",
+      "Achieve sustainable outcomes through proper process"
+    ],
+    tags: ["FAS", "Africa", "Community Decision-Making", "Stakeholder Engagement"]
+  },
+  {
+    id: "fas-eu-001",
+    title: "The Directness",
+    subtitle: "European Communication Styles",
+    course: "FAS (Europe Track)",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Navigate different communication styles across European allies in a multinational meeting.",
+    image: "placeholder",
+    area: "Cross-Cultural",
+    courseCode: "FAS: Foreign Area Studies (Europe)",
+    situation: "You're in a meeting with colleagues from several European allied nations. You notice significant variation in communication styles - some colleagues are very direct in their feedback, others communicate more indirectly or use humor that may have hidden meanings. All are committed allies working toward common goals.",
+    dilemma: "Different communication styles can create friction or misunderstanding even among allies. You must interpret various styles accurately and adapt your own communication for clarity.",
+    briefing: "This scenario tests the ability to work effectively across varied European communication styles within the alliance context.",
+    frameworks: ["European Communication", "Direct vs Indirect", "Alliance Dynamics", "Cultural Interpretation"],
+    primaryMission: "Navigate the meeting successfully, building cohesion across different communication styles while ensuring clear understanding and progress.",
+    successCriteria: [
+      "Recognize that communication styles vary across individuals and cultures",
+      "Avoid taking different styles personally",
+      "Pay attention to both direct and indirect communication",
+      "Adapt your own communication for clarity",
+      "Build cohesive alliance team"
+    ],
+    tags: ["FAS", "Europe", "NATO", "Communication Styles", "Alliance"]
   }
 ];
 

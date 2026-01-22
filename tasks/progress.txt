@@ -338,3 +338,55 @@ Added 9 English communication scenarios to src/data/scenarios.ts covering oral c
 - TypeScript build passes successfully with all 9 scenarios added
 - Total scenario count: 14 existing + 56 language + 9 communication = 79 scenarios (33 more needed for 112 total)
 
+
+---
+
+## Iteration 10 - US-010: Add cross-cultural communication scenarios (12 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 12 cross-cultural communication scenarios to src/data/scenarios.ts covering operational cultural proficiency (OCP) across three course areas: NE-203 Week 1 (Cross-Cultural Ethics), NL-360 (Culture and Leadership), and FAS (Foreign Area Studies Major with 5 regional tracks).
+
+### Files changed
+- `src/data/scenarios.ts` - Added 12 cross-cultural scenarios:
+
+  **NE-203 Week 1: Moral Perception Across Cultures (2 scenarios)**
+  - ne203-cc-001: The Tunnel (INT 3/5) - Navigating moral perception differences in partner nation operations
+  - ne203-cc-002: The Informant (INT 3/5) - Building trust across cultural boundaries with local sources
+
+  **NL-360: Culture and Leadership (5 scenarios)**
+  - nl360-w04-001: The Coalition Partner (INT 3/5) - Leading multinational teams (US/UK/Germany/Japan)
+  - nl360-w06-001: The Host Nation Commander (HARD 4/5) - Partnership with hierarchical, relationship-focused leader
+  - nl360-w08-001: Professional Adaptation (HARD 4/5) - Creative solutions when local norms differ
+  - nl360-w10-001: The Interpreting Challenge (INT 3/5) - Working through potentially biased interpreters
+  - nl360-w12-001: The Ceremony (INT 2/5) - Participating in host nation cultural/religious ceremonies
+
+  **FAS Major: Regional Expertise (5 scenarios)**
+  - fas-ea-001: The Consensus (HARD 4/5) - Japanese nemawashi (consensus-building) in US-Japan alliance
+  - fas-mena-001: The Honor Code (HARD 4/5) - Honor/shame dynamics and face-saving in Gulf partnerships
+  - fas-la-001: The Personalismo (INT 3/5) - Relationship-centered business in Latin America
+  - fas-af-001: The Community (HARD 4/5) - Collective decision-making in African partner nations
+  - fas-eu-001: The Directness (INT 3/5) - Varied European communication styles in NATO context
+
+### All scenarios include
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+- Area field: "Cross-Cultural" (new domain for scenario filtering)
+- Course codes: NE203, NL360, FAS (East Asia), FAS (MENA), FAS (Latin America), FAS (Africa), FAS (Europe)
+- Placeholder images ("placeholder" for all scenarios without Figma assets)
+- Appropriate difficulty progression: NE-203 scenarios INT (3/5), NL-360 scenarios range INT (2-3/5) to HARD (4/5), FAS scenarios range INT (3/5) to HARD (4/5)
+
+### Learnings for future iterations
+- Cross-cultural scenarios focus on Operational Cultural Proficiency (OCP) - critical for lethality, force protection, and maneuverability
+- NE-203 scenarios address cross-cultural ethics: moral perception differences, trust-building across cultural boundaries
+- NL-360 scenarios emphasize leadership across cultures: multinational teams, partnership adaptation, interpreters, ceremonies
+- FAS scenarios test regional expertise across 5 AORs: East Asia (nemawashi), MENA (honor/shame), Latin America (personalismo), Africa (collective decision-making), Europe (communication styles)
+- Cross-cultural scenarios do NOT use language-specific fields (no semester, actflLevel, etc.) - those are only for foreign language scenarios
+- Cross-cultural competency framework includes: Knowledge (cultural facts), Awareness (recognizing factors), Attitudes (respect), Skills (adaptability)
+- Difficulty levels appropriately reflect cultural complexity: basic ceremonies (INT 2/5), relationship-building (INT 3/5), navigating honor/shame or consensus processes (HARD 4/5)
+- Frameworks array includes cultural concepts: "Nemawashi", "Honor Culture", "Personalismo", "Moral Perception", "Cultural Protocols"
+- Regional FAS scenarios authentically represent cultural patterns: Japanese consensus, MENA face-saving, Latin American relationship focus, African collective decision-making, European communication variation
+- All scenarios address English-speaking cross-cultural contexts (culture without language barriers) or situations requiring pure cultural navigation
+- Area field uses "Cross-Cultural" (new domain, different from "Language", "Communication", "Ethics", "Leadership", "Philosophy")
+- TypeScript build passes successfully with all 12 scenarios added
+- Total scenario count: 14 existing + 56 language + 9 communication + 12 cross-cultural = 91 scenarios (21 more needed for 112 total)
+
