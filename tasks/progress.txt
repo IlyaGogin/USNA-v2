@@ -214,3 +214,42 @@ Added 8 French language scenarios to src/data/scenarios.ts covering all 4 semest
 - S4 scenarios address high-stakes communication: crisis coordination, alliance burden-sharing dialogue, French strategic independence within NATO
 - Area field uses "Language" (consistent with previous language scenarios)
 
+
+---
+
+## Iteration 7 - US-007: Add German language scenarios (8 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 8 German language scenarios to src/data/scenarios.ts covering all 4 semesters (FG-101 through FG-202), progressing from Novice Mid (S1) to Intermediate High (S4). Each scenario includes full language-specific metadata, cultural guidance, and operational contexts specific to NATO Central Europe, Germany partnership, and historical understanding.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 8 German scenarios:
+  - fg101-l01-001: Bundeswehr Welcome (S1, Novice Mid, A1, GSE 22-29) - Formal German military introduction
+  - fg101-l01-002: Berlin Exploration (S1, Novice Mid, A1, GSE 22-29) - Survival German for U-Bahn and transactions
+  - fg102-l02-001: Bavarian Culture (S2, Novice High, A2, GSE 30-35) - Regional customs and Gemütlichkeit
+  - fg102-l02-002: Hosting German Guests (S2, Novice High, A2, GSE 30-35) - Reverse cultural exchange at USNA
+  - fg201-l03-001: NATO Staff Meeting (S3, Intermediate Low, B1, GSE 36-50) - Multilateral military planning
+  - fg201-l03-002: Historical Reconciliation (S3, Intermediate Mid, B1, GSE 36-50) - WWII legacy discussion (Vergangenheitsbewältigung)
+  - fg202-l04-001: Diplomatic Incident (S4, Intermediate High, B1+, GSE 51-58) - Community relations crisis management
+  - fg202-l04-002: Energy Security Debate (S4, Intermediate High, B1+, GSE 51-58) - Strategic policy discussion
+
+### All scenarios include
+- Language-specific fields: language="German", semester (1-4), actflLevel, ilrLevel, cefrLevel, gseRange
+- Cultural preparation: keyVocabulary arrays (5 essential phrases with translations)
+- culturalTips arrays (5 do's for each scenario)
+- culturalGotchas arrays (5 don'ts to avoid cultural mistakes)
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+
+### Learnings for future iterations
+- German scenarios emphasize directness as respect, punctuality, substance over style, and historical consciousness
+- Proficiency progression realistic: S1/S2 focus on survival German (greetings, navigation, social customs), S3/S4 advance to professional/strategic contexts (NATO planning, historical reconciliation, crisis management, energy security)
+- Cultural content is operationally relevant for NATO Central Europe, Bundeswehr partnership, and German-American alliance relations
+- Difficulty levels scale appropriately: S1 is EASY (1/5), S2 is INT (2/5), S3 is INT (3/5), S4 is HARD (4/5)
+- ILR levels map correctly: 0+ (Novice Mid), 1 (Novice High), 1+/2 (Intermediate Low-Mid), 2+ (Intermediate High)
+- German scenarios highlight unique cultural elements: Sie/du distinction, German directness, Gemütlichkeit, regional pride (Bavaria), Vergangenheitsbewältigung (coming to terms with the past)
+- S2 scenarios differentiate between Northern German formality and Bavarian relaxed atmosphere
+- S3 scenario on historical reconciliation addresses sensitive WWII legacy topics with appropriate depth and respect
+- S4 scenarios address high-stakes communication: community relations crisis, European energy security policy debate
+- Area field uses "Language" (consistent with previous language scenarios)
+

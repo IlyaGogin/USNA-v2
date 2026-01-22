@@ -1938,6 +1938,855 @@ export const scenarios: Scenario[] = [
       "Don't let frustration show",
       "Don't forget they want safe resolution too"
     ]
+  },
+
+  // ========================================
+  // FRENCH LANGUAGE SCENARIOS (FF)
+  // 8 scenarios across 4 semesters (FF-101 to FF-202)
+  // ========================================
+
+  {
+    id: "ff101-l01-001",
+    title: "NATO Welcome",
+    subtitle: "Meeting French Naval Officers",
+    course: "FF-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice formal French introductions when meeting French Navy officers at a NATO event.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF101: French I",
+    situation: "Capitaine de Frégate Dubois from the French Navy approaches you. He appreciates Americans who make an effort in French and will test whether you've prepared.",
+    dilemma: "You want to demonstrate respect through French language effort, but you're uncertain about formality levels. French officers value precision and correctness in language.",
+    briefing: "This scenario tests basic French self-introduction and the ability to navigate formal Allied interactions with appropriate etiquette.",
+    frameworks: ["Formal Introductions", "NATO Protocol", "French Formality", "Allied Relations"],
+    primaryMission: "Complete a proper French introduction that demonstrates cultural awareness and appropriate formality with a NATO ally.",
+    successCriteria: [
+      "Use \"vous\" forms correctly",
+      "Navigate formal greetings appropriately",
+      "Show respect for French precision",
+      "Demonstrate NATO partnership awareness",
+      "Leave positive impression"
+    ],
+    tags: ["FF-101", "Semester 1", "GSE 22-29", "A1", "Novice", "NATO", "Formal Introduction"],
+    language: "French",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "Enchanté(e) - Pleased to meet you",
+      "Je suis... - I am...",
+      "Très bien, merci - Very well, thank you",
+      "S'il vous plaît - Please",
+      "Je ne comprends pas - I don't understand"
+    ],
+    culturalTips: [
+      "Shake hands with everyone (one firm shake)",
+      "Use \"vous\" until invited to \"tu\"",
+      "Don't start with first names",
+      "Expect directness balanced with formality",
+      "\"Bonjour Monsieur/Madame\" before any conversation"
+    ],
+    culturalGotchas: [
+      "Don't use informal \"tu\" with strangers or superiors",
+      "Don't skip greetings before making requests",
+      "Don't be overly familiar immediately",
+      "Don't forget the handshake",
+      "Don't mispronounce their rank or name"
+    ]
+  },
+  {
+    id: "ff101-l01-002",
+    title: "Paris Navigation",
+    subtitle: "Metro and Basic Transactions",
+    course: "FF-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Navigate Paris using basic French for directions, tickets, and simple transactions.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF101: French I",
+    situation: "You have a free afternoon during your Language Summer Study Abroad Program. You need to purchase Metro tickets, navigate to your destination, and order food at a café.",
+    dilemma: "Your French is limited, and Parisians expect politeness (\"Bonjour\" before any interaction). Poor etiquette may result in curt responses, even if your language is correct.",
+    briefing: "This scenario tests survival French for navigation and transactions, with emphasis on the critical importance of French politeness norms.",
+    frameworks: ["Survival French", "Politeness Norms", "Navigation", "Transactions"],
+    primaryMission: "Successfully navigate Paris using French for directions and transactions while demonstrating appropriate French politeness conventions.",
+    successCriteria: [
+      "Purchase Metro ticket using French",
+      "Ask for and understand basic directions",
+      "Order food/drink politely",
+      "Handle communication gaps gracefully",
+      "Thank people appropriately"
+    ],
+    tags: ["FF-101", "Semester 1", "GSE 22-29", "A1", "Novice", "Survival French", "LSAP"],
+    language: "French",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "Bonjour - Hello/Good day",
+      "Un billet, s'il vous plaît - A ticket, please",
+      "Où est...? - Where is...?",
+      "Je voudrais... - I would like...",
+      "Merci beaucoup - Thank you very much"
+    ],
+    culturalTips: [
+      "Always say \"Bonjour\" before any interaction",
+      "Use \"s'il vous plaît\" and \"merci\" liberally",
+      "Parisians appreciate effort, even if imperfect",
+      "Maintain polite formality in service interactions",
+      "Small talk is minimal in transactions"
+    ],
+    culturalGotchas: [
+      "Don't skip \"Bonjour\" - it's considered rude",
+      "Don't use \"tu\" with service workers or strangers",
+      "Don't speak English first without asking",
+      "Don't be loud or overly casual",
+      "Don't forget to say goodbye (\"Au revoir\")"
+    ]
+  },
+  {
+    id: "ff102-l02-001",
+    title: "Diplomatic Reception",
+    subtitle: "French Social Protocol",
+    course: "FF-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Navigate a French diplomatic reception including proper greetings, conversation topics, and farewell protocols.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF102: French II",
+    situation: "You've been invited to the Bastille Day reception at the French Embassy. You'll meet diplomats, military officers, and cultural figures, all expecting sophisticated social interaction.",
+    dilemma: "French social protocol includes subtle expectations about greetings, conversation topics, and departure etiquette. Missteps can create lasting negative impressions.",
+    briefing: "This scenario tests understanding of French diplomatic social norms and the ability to conduct extended social conversation in French.",
+    frameworks: ["Diplomatic Protocol", "Social Conversation", "French Etiquette", "Embassy Events"],
+    primaryMission: "Navigate the diplomatic reception successfully, demonstrating understanding of French social protocols while building positive relationships.",
+    successCriteria: [
+      "Execute proper French greetings and introductions",
+      "Engage in appropriate social conversation",
+      "Navigate sensitive topics gracefully",
+      "Demonstrate cultural appreciation",
+      "Say goodbye to host before leaving"
+    ],
+    tags: ["FF-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Diplomacy", "Social Protocol"],
+    language: "French",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "Je vous en prie - You're welcome / Please go ahead",
+      "C'est très gentil - That's very kind",
+      "Mes félicitations - Congratulations",
+      "À votre santé - To your health (toast)",
+      "Bonsoir - Good evening"
+    ],
+    culturalTips: [
+      "La bise (cheek kisses) may be offered - follow their lead",
+      "Don't discuss money or salaries",
+      "Politics is acceptable if intellectual, not personal",
+      "Food and wine are serious topics - show appreciation",
+      "Always say goodbye to the host before leaving"
+    ],
+    culturalGotchas: [
+      "Don't ask about salary or personal finances",
+      "Don't be overly enthusiastic or loud",
+      "Don't leave without saying goodbye to host",
+      "Don't criticize French culture or cuisine",
+      "Don't refuse offered food or drink without good reason"
+    ]
+  },
+  {
+    id: "ff102-l02-002",
+    title: "The Misunderstanding",
+    subtitle: "Clarifying and Apologizing",
+    course: "FF-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Handle a cultural misunderstanding during study abroad and apologize appropriately in French.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF102: French II",
+    situation: "Due to a miscommunication, you missed a scheduled meeting with your French counterpart, Lieutenant Moreau. The French value punctuality and reliability highly, and you need to apologize.",
+    dilemma: "A simple \"sorry\" won't suffice in French culture. You must demonstrate genuine contrition while explaining what happened without making excuses.",
+    briefing: "This scenario tests the ability to apologize appropriately in French and recover from a social misstep in a way that repairs the relationship.",
+    frameworks: ["Apology Protocols", "Relationship Repair", "French Directness", "Professional Standards"],
+    primaryMission: "Apologize appropriately for the missed meeting, clarify the misunderstanding, and repair the professional relationship.",
+    successCriteria: [
+      "Apologize sincerely using appropriate French expressions",
+      "Explain situation without making excuses",
+      "Demonstrate understanding of why punctuality matters",
+      "Propose remedy or follow-up",
+      "Leave relationship intact"
+    ],
+    tags: ["FF-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Apology", "Relationship Repair"],
+    language: "French",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "Je suis vraiment désolé(e) - I am truly sorry",
+      "Je m'excuse - I apologize",
+      "C'était ma faute - It was my fault",
+      "Comment puis-je réparer? - How can I make it right?",
+      "Pardonnez-moi - Forgive me"
+    ],
+    culturalTips: [
+      "French value sincerity over elaborate apologies",
+      "Take responsibility directly without hedging",
+      "Explain briefly without lengthy excuses",
+      "Propose concrete remedy or follow-up",
+      "Maintain professional dignity while apologizing"
+    ],
+    culturalGotchas: [
+      "Don't make elaborate excuses",
+      "Don't deflect responsibility to others",
+      "Don't minimize the importance of punctuality",
+      "Don't over-apologize to the point of weakness",
+      "Don't leave without proposing a remedy"
+    ]
+  },
+  {
+    id: "ff201-l03-001",
+    title: "Joint Exercise Planning",
+    subtitle: "Franco-American Naval Coordination",
+    course: "FF-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Participate in planning discussions for a joint Franco-American naval exercise, using military French.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF201: French III",
+    situation: "You're part of the planning team for a joint Franco-American exercise. French officers appreciate when Americans make an effort to work in French, but precision matters for operational matters.",
+    dilemma: "You must balance using French to build rapport with ensuring complete clarity on operational details where miscommunication could be dangerous.",
+    briefing: "This scenario tests military French vocabulary and the judgment to code-switch appropriately between languages during joint planning.",
+    frameworks: ["Military French", "Joint Operations", "Code-Switching", "NATO Standards"],
+    primaryMission: "Contribute effectively to exercise planning, using French to build rapport while ensuring operational clarity.",
+    successCriteria: [
+      "Use military French terminology correctly",
+      "Build rapport with French counterparts",
+      "Ensure clarity on critical operational matters",
+      "Navigate French meeting protocols",
+      "Demonstrate professional competence"
+    ],
+    tags: ["FF-201", "Semester 3", "GSE 36-50", "B1", "Intermediate Low", "Military", "Joint Ops"],
+    language: "French",
+    semester: 3,
+    actflLevel: "Intermediate Low",
+    ilrLevel: "1+",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "L'exercice conjoint - Joint exercise",
+      "La manœuvre - Maneuver",
+      "Les règles d'engagement - Rules of engagement",
+      "Le commandement - Command",
+      "La coordination - Coordination"
+    ],
+    culturalTips: [
+      "French appreciate effort to use French in planning",
+      "Be direct and precise in operational discussions",
+      "Show respect for French military professionalism",
+      "Code-switch to English for critical safety matters if needed",
+      "French officers value substantive contributions"
+    ],
+    culturalGotchas: [
+      "Don't assume English is always preferred",
+      "Don't let language pride compromise safety",
+      "Don't patronize French military capabilities",
+      "Don't forget formal meeting protocols",
+      "Don't confuse politeness with lack of rigor"
+    ]
+  },
+  {
+    id: "ff201-l03-002",
+    title: "African Partner Meeting",
+    subtitle: "Francophone Africa Engagement",
+    course: "FF-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Engage with French-speaking African naval officers during a maritime security initiative.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF201: French III",
+    situation: "You're meeting with Senegalese naval officers to discuss maritime security cooperation. French is the working language, and demonstrating fluency builds respect for American commitment to partnership.",
+    dilemma: "Francophone Africa has distinct norms from France. You must demonstrate respect for African perspectives and partnerships while using French appropriately for the regional context.",
+    briefing: "This scenario tests the ability to use French in a Francophone African context, recognizing that cultural norms differ from metropolitan France.",
+    frameworks: ["Francophone Africa", "Partnership", "Maritime Security", "Regional Context"],
+    primaryMission: "Engage effectively with Senegalese partners using French, demonstrating respect for their perspectives and building lasting professional relationships.",
+    successCriteria: [
+      "Use French appropriately for African context",
+      "Show respect for partner capabilities",
+      "Build genuine professional rapport",
+      "Navigate cultural differences from France",
+      "Establish foundation for ongoing cooperation"
+    ],
+    tags: ["FF-201", "Semester 3", "GSE 36-50", "B1", "Intermediate Mid", "Africa", "Partnership"],
+    language: "French",
+    semester: 3,
+    actflLevel: "Intermediate Mid",
+    ilrLevel: "2",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "Le partenariat - Partnership",
+      "La sécurité maritime - Maritime security",
+      "La coopération - Cooperation",
+      "Les capacités - Capabilities",
+      "L'engagement - Commitment/engagement"
+    ],
+    culturalTips: [
+      "Francophone Africa has distinct norms from France",
+      "Extended greetings are important - don't rush",
+      "Respect for hierarchy is paramount",
+      "Personal relationship building precedes business",
+      "Acknowledge colonial history sensitivities"
+    ],
+    culturalGotchas: [
+      "Don't assume French norms apply in Africa",
+      "Don't rush through greetings to get to business",
+      "Don't patronize or treat as lesser partners",
+      "Don't ignore colonial history context",
+      "Don't compare unfavorably to European standards"
+    ]
+  },
+  {
+    id: "ff202-l04-001",
+    title: "Crisis Communication",
+    subtitle: "Emergency Coordination",
+    course: "FF-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Coordinate emergency response with French naval forces during a maritime crisis.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF202: French IV",
+    situation: "A maritime emergency requires immediate coordination with French naval forces. Time is critical, and French counterparts are responding rapidly. Clear communication is essential.",
+    dilemma: "Emergency situations require speed and clarity. You must communicate effectively in French under pressure while ensuring no critical information is lost in translation.",
+    briefing: "This scenario tests crisis communication skills in French, emphasizing clarity, urgency, and the ability to coordinate effectively under pressure.",
+    frameworks: ["Crisis Communication", "Emergency Response", "Coordination Under Pressure", "Clarity"],
+    primaryMission: "Coordinate emergency response effectively with French forces, using French to maintain clear communication during the crisis.",
+    successCriteria: [
+      "Communicate emergency information clearly",
+      "Respond appropriately to French transmissions",
+      "Maintain composure under pressure",
+      "Achieve effective coordination",
+      "Use appropriate emergency protocols"
+    ],
+    tags: ["FF-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Crisis", "Emergency"],
+    language: "French",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "Urgence - Emergency",
+      "Assistance immédiate - Immediate assistance",
+      "Coordonnées - Coordinates/contact info",
+      "Procédure d'urgence - Emergency procedure",
+      "Confirmer - Confirm"
+    ],
+    culturalTips: [
+      "French appreciate calm professionalism in crisis",
+      "Be direct and concise - no time for elaborate politeness",
+      "Confirm understanding of critical information",
+      "Trust French professional competence",
+      "Clear communication saves lives"
+    ],
+    culturalGotchas: [
+      "Don't let politeness slow critical communication",
+      "Don't assume they understand without confirmation",
+      "Don't panic or show excessive emotion",
+      "Don't hesitate to clarify if uncertain",
+      "Don't forget to thank partners after resolution"
+    ]
+  },
+  {
+    id: "ff202-l04-002",
+    title: "Bilateral Negotiation",
+    subtitle: "Alliance Burden-Sharing Discussion",
+    course: "FF-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Engage in sensitive discussions about alliance cooperation and burden-sharing.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FF202: French IV",
+    situation: "You're participating in bilateral discussions on NATO cooperation. French officials have concerns about burden-sharing and want substantive engagement on alliance issues.",
+    dilemma: "France has an independent strategic tradition and complex views on NATO. You must engage substantively with French perspectives while representing US interests diplomatically.",
+    briefing: "This scenario tests advanced diplomatic French and the ability to engage with complex alliance politics while maintaining positive bilateral relationships.",
+    frameworks: ["Bilateral Diplomacy", "Alliance Politics", "Burden-Sharing", "Strategic Dialogue"],
+    primaryMission: "Participate meaningfully in bilateral discussions, demonstrating understanding of French strategic perspectives while advancing common alliance interests.",
+    successCriteria: [
+      "Navigate sensitive alliance topics diplomatically",
+      "Present US perspectives without appearing demanding",
+      "Understand French strategic concerns",
+      "Find common ground for cooperation",
+      "Maintain strong bilateral relationship"
+    ],
+    tags: ["FF-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "NATO", "Diplomacy"],
+    language: "French",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "L'alliance - The alliance",
+      "Le partage du fardeau - Burden-sharing",
+      "L'autonomie stratégique - Strategic autonomy",
+      "Les intérêts communs - Common interests",
+      "La souveraineté - Sovereignty"
+    ],
+    culturalTips: [
+      "France values strategic autonomy within alliances",
+      "Acknowledge French military history and capabilities",
+      "Be substantive - French respect intellectual engagement",
+      "Find historical touchpoints (Lafayette, WWI, WWII)",
+      "Respect French pride in independent strategic thinking"
+    ],
+    culturalGotchas: [
+      "Don't lecture on burden-sharing",
+      "Don't dismiss French strategic concerns",
+      "Don't assume France will follow US lead automatically",
+      "Don't forget France is a nuclear power",
+      "Don't ignore historical alliance contributions"
+    ]
+  },
+
+  // German Language Scenarios (FG-101 to FG-202)
+  // AOR Focus: NATO Central Europe, Germany Partnership, Historical Understanding
+
+  // FG-101 (Semester 1, GSE 22-29, A1, Novice Mid)
+  {
+    id: "fg101-l01-001",
+    title: "Bundeswehr Welcome",
+    subtitle: "German Military Introduction",
+    course: "FG-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice formal German introductions when meeting Bundeswehr officers during an exchange visit.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG101: German I",
+    situation: "Kapitänleutnant Schneider welcomes you to the German Naval Academy. Germans value punctuality, directness, and professional demeanor. Your German effort will be appreciated but correctness matters.",
+    dilemma: "Germans appreciate directness and substance over excessive friendliness. You must calibrate your communication style to match German professional norms while showing genuine effort.",
+    briefing: "This scenario tests basic German self-introduction and understanding of German professional culture, particularly the value placed on directness and substance.",
+    frameworks: ["Formal Introductions", "German Professional Culture", "Directness", "Military Exchange"],
+    primaryMission: "Complete a proper German introduction that demonstrates respect for German professional culture and appropriate use of formal language.",
+    successCriteria: [
+      "Use formal \"Sie\" forms correctly",
+      "Navigate formal greetings appropriately",
+      "Show respect for German directness",
+      "Demonstrate professional demeanor",
+      "Leave positive impression"
+    ],
+    tags: ["FG-101", "Semester 1", "GSE 22-29", "A1", "Novice Mid", "Bundeswehr", "Formal Introduction"],
+    language: "German",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "Guten Tag - Good day",
+      "Freut mich, Sie kennenzulernen - Pleased to meet you (formal)",
+      "Ich bin... - I am...",
+      "Danke schön - Thank you very much",
+      "Auf Wiedersehen - Goodbye"
+    ],
+    culturalTips: [
+      "Punctuality is valued - arrive exactly on time",
+      "Handshake is firm, brief, and professional",
+      "Use titles (Herr Kapitän, Frau Doktor)",
+      "Professional demeanor is valued; rapport builds through substance",
+      "Direct communication is appreciated - be clear and concise"
+    ],
+    culturalGotchas: [
+      "Don't use first names without invitation",
+      "Don't make jokes about German efficiency/stereotypes",
+      "Don't be offended by directness - it's respect, not rudeness",
+      "Don't expect small talk before business",
+      "Don't compare German military to WWII Wehrmacht"
+    ]
+  },
+  {
+    id: "fg101-l01-002",
+    title: "Berlin Exploration",
+    subtitle: "Navigating a German City",
+    course: "FG-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Navigate Berlin using basic German for transportation, dining, and simple interactions.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG101: German I",
+    situation: "You have a free day during your Language Summer Study Abroad Program. You need to navigate Berlin's U-Bahn, find a restaurant, and handle basic transactions.",
+    dilemma: "Germans appreciate when foreigners make an effort in German, but they also value efficiency. You must balance using German with not wasting people's time if your skills are limited.",
+    briefing: "This scenario tests survival German for navigation and transactions, with emphasis on German expectations for directness and efficiency.",
+    frameworks: ["Survival German", "Navigation", "Efficiency", "Transactions"],
+    primaryMission: "Successfully navigate Berlin using German for directions and transactions while demonstrating appropriate German communication style.",
+    successCriteria: [
+      "Purchase U-Bahn ticket using German",
+      "Ask for and understand basic directions",
+      "Order food at a restaurant",
+      "Handle transactions efficiently",
+      "Thank people appropriately"
+    ],
+    tags: ["FG-101", "Semester 1", "GSE 22-29", "A1", "Novice Mid", "Survival German", "LSAP", "Berlin"],
+    language: "German",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "Entschuldigung - Excuse me",
+      "Wo ist...? - Where is...?",
+      "Die Rechnung, bitte - The bill, please",
+      "Ich möchte... - I would like...",
+      "Sprechen Sie Englisch? - Do you speak English?"
+    ],
+    culturalTips: [
+      "Germans appreciate language effort",
+      "Be direct and efficient in requests",
+      "Use polite forms (Sie) with strangers",
+      "Maintain professional demeanor",
+      "Punctuality matters for reservations"
+    ],
+    culturalGotchas: [
+      "Don't expect excessive friendliness from service workers",
+      "Don't be offended by directness",
+      "Don't waste time with excessive pleasantries",
+      "Don't jaywalk - Germans follow traffic rules",
+      "Don't assume everyone speaks English"
+    ]
+  },
+
+  // FG-102 (Semester 2, GSE 30-35, A2, Novice High)
+  {
+    id: "fg102-l02-001",
+    title: "Bavarian Culture",
+    subtitle: "Regional Customs and Hospitality",
+    course: "FG-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Navigate Bavarian social customs including toasting, regional pride, and hospitality norms.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG102: German II",
+    situation: "Your German naval colleagues have invited you to a traditional Bavarian gathering. The atmosphere is more relaxed than formal Northern German events, with emphasis on \"Gemütlichkeit\" (comfortable conviviality).",
+    dilemma: "Bavarian culture differs from North German culture. You must adapt to the more relaxed atmosphere while still demonstrating respect and avoiding stereotypical assumptions.",
+    briefing: "This scenario tests understanding of German regional differences and the ability to participate appropriately in Bavarian social traditions.",
+    frameworks: ["Regional Culture", "Bavarian Hospitality", "Gemütlichkeit", "Social Customs"],
+    primaryMission: "Participate authentically in the Bavarian gathering, demonstrating appreciation for regional culture while building rapport with German colleagues.",
+    successCriteria: [
+      "Use appropriate Bavarian greetings/toasts",
+      "Participate in toasting culture correctly",
+      "Show genuine interest without stereotyping",
+      "Build rapport with colleagues",
+      "Navigate regional customs appropriately"
+    ],
+    tags: ["FG-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Bavaria", "Social Customs"],
+    language: "German",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "Prost! - Cheers!",
+      "Gemütlichkeit - Coziness/comfort (important concept)",
+      "Servus - Hello/Goodbye (Bavarian)",
+      "Auf Ihr Wohl - To your health",
+      "Das ist sehr lecker - That is very tasty"
+    ],
+    culturalTips: [
+      "Bavarians are more relaxed than Northern Germans",
+      "Eye contact during toasts is important",
+      "Gemütlichkeit is a core value - embrace comfort and conviviality",
+      "Regional pride is strong - show genuine appreciation",
+      "Food and beer culture are serious topics"
+    ],
+    culturalGotchas: [
+      "Don't make lederhosen/dirndl jokes",
+      "Don't refuse toasts - participate fully",
+      "Don't assume all Germans are like Bavarians",
+      "Don't criticize the beer",
+      "Don't break eye contact during toasts"
+    ]
+  },
+  {
+    id: "fg102-l02-002",
+    title: "Hosting German Guests",
+    subtitle: "Reverse Cultural Exchange",
+    course: "FG-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Host German naval cadets visiting USNA, explaining American culture while speaking German.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG102: German II",
+    situation: "German naval cadets are visiting USNA, and you've been selected as a host due to your German skills. They're curious about American naval education and culture.",
+    dilemma: "You must explain American culture and USNA traditions in German while being sensitive to German perspectives and avoiding assumptions about what they know.",
+    briefing: "This scenario tests the ability to serve as a cultural ambassador, explaining American institutions in German while demonstrating cross-cultural awareness.",
+    frameworks: ["Cultural Ambassador", "Explaining American Culture", "Cross-Cultural Awareness", "Hosting Skills"],
+    primaryMission: "Successfully host German visitors, using German to explain USNA and American culture while building positive international relationships.",
+    successCriteria: [
+      "Explain USNA traditions clearly in German",
+      "Answer questions about American culture",
+      "Show interest in their perspectives",
+      "Handle comparisons diplomatically",
+      "Build genuine rapport"
+    ],
+    tags: ["FG-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Hosting", "Cultural Exchange", "USNA"],
+    language: "German",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "Die Tradition - Tradition",
+      "Die Marineakademie - Naval Academy",
+      "Der Unterschied - Difference",
+      "Die Ausbildung - Training/Education",
+      "Das Verständnis - Understanding"
+    ],
+    culturalTips: [
+      "Germans appreciate substantive explanations",
+      "Be prepared for direct questions and comparisons",
+      "Show genuine interest in their system",
+      "Acknowledge differences without judgment",
+      "Use humor carefully - Germans prefer substance"
+    ],
+    culturalGotchas: [
+      "Don't assume superiority of American system",
+      "Don't be defensive about differences",
+      "Don't oversimplify or condescend",
+      "Don't avoid difficult comparisons",
+      "Don't forget to ask about their experiences"
+    ]
+  },
+
+  // FG-201 (Semester 3, GSE 36-50, B1, Intermediate Low-Mid)
+  {
+    id: "fg201-l03-001",
+    title: "NATO Staff Meeting",
+    subtitle: "Multilateral Military Planning",
+    course: "FG-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Participate in NATO staff meeting conducted partially in German.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG201: German III",
+    situation: "You're participating in a NATO staff meeting where German is frequently used alongside English. German officers appreciate when Americans participate in German where possible.",
+    dilemma: "NATO meetings require precision, but using German demonstrates commitment to alliance partnership. You must balance rapport-building with ensuring clarity on critical matters.",
+    briefing: "This scenario tests military German vocabulary and the ability to participate in multinational planning sessions using appropriate military terminology.",
+    frameworks: ["NATO Operations", "Military German", "Alliance Partnership", "Multilateral Coordination"],
+    primaryMission: "Contribute effectively to NATO planning, using German where appropriate while ensuring operational clarity and building allied relationships.",
+    successCriteria: [
+      "Use military German terminology correctly",
+      "Participate actively in discussions",
+      "Build rapport with German colleagues",
+      "Ensure clarity on critical matters",
+      "Demonstrate professionalism throughout"
+    ],
+    tags: ["FG-201", "Semester 3", "GSE 36-50", "B1", "Intermediate Low", "NATO", "Military Terminology"],
+    language: "German",
+    semester: 3,
+    actflLevel: "Intermediate Low",
+    ilrLevel: "1+",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "Die Einsatzbereitschaft - Operational readiness",
+      "Der Einsatzbefehl - Operations order",
+      "Die Lagebeurteilung - Situation assessment",
+      "Die Zusammenarbeit - Cooperation",
+      "Der Befehlshaber - Commander"
+    ],
+    culturalTips: [
+      "Germans value precision in operational contexts",
+      "Using German shows alliance commitment",
+      "Direct communication is expected in military contexts",
+      "Acknowledge German military expertise",
+      "Substance matters more than style"
+    ],
+    culturalGotchas: [
+      "Don't oversimplify complex operational matters",
+      "Don't assume US approach is always best",
+      "Don't make WWII references in military context",
+      "Don't miss critical details due to language barriers",
+      "Don't confuse German directness with rudeness"
+    ]
+  },
+  {
+    id: "fg201-l03-002",
+    title: "Historical Reconciliation",
+    subtitle: "Discussing WWII Legacy Sensitively",
+    course: "FG-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Navigate discussions about Germany's WWII history and the modern German military's relationship to that past.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG201: German III",
+    situation: "During a memorial event, German counterparts discuss Vergangenheitsbewältigung (coming to terms with the past). You must engage thoughtfully with this sensitive topic while showing understanding of German historical consciousness.",
+    dilemma: "WWII history remains emotionally significant for Germans. You must show genuine respect for their commitment to historical responsibility without creating awkward comparisons or appearing to lecture.",
+    briefing: "This scenario tests the ability to engage sensitively with German historical consciousness in German, demonstrating understanding of how the modern Bundeswehr relates to its past.",
+    frameworks: ["Historical Consciousness", "Vergangenheitsbewältigung", "Reconciliation", "Modern German Identity"],
+    primaryMission: "Engage meaningfully in discussion of German historical memory, showing respect for German commitment to \"never again\" while building professional rapport.",
+    successCriteria: [
+      "Engage respectfully with historical topics",
+      "Show understanding of German perspective",
+      "Avoid awkward comparisons or stereotypes",
+      "Express genuine appreciation for reconciliation",
+      "Build professional relationship"
+    ],
+    tags: ["FG-201", "Semester 3", "GSE 36-50", "B1", "Intermediate Mid", "WWII", "Historical Memory", "Reconciliation"],
+    language: "German",
+    semester: 3,
+    actflLevel: "Intermediate Mid",
+    ilrLevel: "2",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "Die Vergangenheitsbewältigung - Coming to terms with the past",
+      "Die Verantwortung - Responsibility",
+      "Die Versöhnung - Reconciliation",
+      "Die Erinnerungskultur - Culture of remembrance",
+      "Nie wieder - Never again"
+    ],
+    culturalTips: [
+      "Germans take historical responsibility seriously",
+      "Don't compare modern Germany to Nazi era",
+      "Acknowledge German contributions to NATO/peace",
+      "Be aware that this topic evokes genuine emotion",
+      "Respect their commitment to \"never again\""
+    ],
+    culturalGotchas: [
+      "Don't make light of WWII history",
+      "Don't draw facile parallels to current events",
+      "Don't lecture on historical responsibility",
+      "Don't avoid the topic if Germans raise it",
+      "Don't conflate Wehrmacht with modern Bundeswehr"
+    ]
+  },
+
+  // FG-202 (Semester 4, GSE 51-58, B1+, Intermediate High)
+  {
+    id: "fg202-l04-001",
+    title: "Diplomatic Incident",
+    subtitle: "Managing Sensitive Situation",
+    course: "FG-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Handle a sensitive situation involving US forces in Germany requiring diplomatic German communication.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG202: German IV",
+    situation: "An incident involving US military personnel has upset the local German community. You must address concerns with local officials and community leaders, using German to demonstrate respect and good faith.",
+    dilemma: "Community relations are critical for continued US presence in Germany. You must acknowledge concerns genuinely while representing your command appropriately and not making unauthorized commitments.",
+    briefing: "This scenario tests crisis communication skills in German and the ability to manage community relations under difficult circumstances.",
+    frameworks: ["Crisis Communication", "Community Relations", "Diplomatic German", "Accountability"],
+    primaryMission: "Address community concerns effectively using German, demonstrating respect for local perspectives while maintaining appropriate command representation.",
+    successCriteria: [
+      "Communicate empathetically in German",
+      "Address concerns without being defensive",
+      "Commit only to what you can deliver",
+      "Maintain positive community relationship",
+      "Represent command appropriately"
+    ],
+    tags: ["FG-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Crisis Communication", "Community Relations"],
+    language: "German",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "Die Besorgnis - Concern",
+      "Die Verantwortlichkeit - Accountability",
+      "Das Vertrauen - Trust",
+      "Die Lösung - Solution",
+      "Die Zusammenarbeit - Cooperation"
+    ],
+    culturalTips: [
+      "Germans expect accountability, not excuses",
+      "Using German shows respect and good faith",
+      "Direct acknowledgment of problems is valued",
+      "Community relationships matter for long-term presence",
+      "Follow through is critical"
+    ],
+    culturalGotchas: [
+      "Don't make excuses or minimize concerns",
+      "Don't make promises you can't keep",
+      "Don't blame individuals without full information",
+      "Don't be defensive about US presence",
+      "Don't forget to follow up as promised"
+    ]
+  },
+  {
+    id: "fg202-l04-002",
+    title: "Energy Security Debate",
+    subtitle: "Strategic Policy Discussion",
+    course: "FG-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Engage in sophisticated discussion about European energy security and NATO implications.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FG202: German IV",
+    situation: "You're participating in a policy conference on European energy security. German experts want substantive engagement on how energy dependencies affect alliance security.",
+    dilemma: "Energy security is a sensitive topic touching on German domestic politics and alliance burden-sharing. You must engage substantively without appearing to lecture or dictate policy to allies.",
+    briefing: "This scenario tests advanced policy German and the ability to engage with complex strategic topics while maintaining positive alliance relationships.",
+    frameworks: ["Energy Security", "Alliance Politics", "Strategic Policy", "Diplomatic Engagement"],
+    primaryMission: "Participate meaningfully in strategic discussion, demonstrating understanding of German energy policy perspectives while articulating alliance interests diplomatically.",
+    successCriteria: [
+      "Use policy vocabulary appropriately",
+      "Engage substantively with German perspectives",
+      "Articulate US views diplomatically",
+      "Find common ground where possible",
+      "Build professional relationships"
+    ],
+    tags: ["FG-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Energy Security", "Strategic Policy", "Alliance"],
+    language: "German",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "Die Energiesicherheit - Energy security",
+      "Die Abhängigkeit - Dependency",
+      "Die Bündnissolidarität - Alliance solidarity",
+      "Der Kompromiss - Compromise",
+      "Die strategische Partnerschaft - Strategic partnership"
+    ],
+    culturalTips: [
+      "Germans value substantive policy engagement",
+      "Energy policy touches on domestic politics",
+      "Acknowledge complexity of German position",
+      "Find common strategic interests",
+      "Respect German sovereignty on domestic policy"
+    ],
+    culturalGotchas: [
+      "Don't lecture on German energy policy",
+      "Don't oversimplify complex policy tradeoffs",
+      "Don't ignore legitimate German concerns",
+      "Don't frame as US vs. Germany",
+      "Don't forget historical sensitivities about sovereignty"
+    ]
   }
 ];
 

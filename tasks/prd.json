@@ -111,8 +111,8 @@
         "Data source: docs/new-scenarios/01-foreign-languages/german/GERMAN_SCENARIOS.md"
       ],
       "priority": 7,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 German scenarios (FG-101 to FG-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and NATO/Bundeswehr operational contexts including historical reconciliation topics. TypeScript build passes."
     },
     {
       "id": "US-008",
