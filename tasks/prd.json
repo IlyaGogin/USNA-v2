@@ -47,8 +47,8 @@
         "Data source: docs/new-scenarios/01-foreign-languages/chinese/CHINESE_SCENARIOS.md"
       ],
       "priority": 3,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Chinese scenarios (FC-101 to FC-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and Indo-Pacific military contexts. TypeScript build passes."
     },
     {
       "id": "US-004",

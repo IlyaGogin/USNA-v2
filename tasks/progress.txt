@@ -62,3 +62,41 @@ Added 8 Japanese language scenarios to src/data/scenarios.ts covering all 4 seme
 - ILR levels map correctly: 0+ (Novice), 1 (Novice High), 1+/2 (Intermediate), 2+ (Intermediate High)
 - Area field uses "Language" (not "Foreign Languages") to match expected domain naming
 
+
+---
+
+## Iteration 3 - US-003: Add Chinese language scenarios (8 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 8 Chinese language scenarios to src/data/scenarios.ts covering all 4 semesters (FC-101 through FC-202), progressing from Novice Mid (S1) to Intermediate High (S4). Each scenario includes full language-specific metadata, cultural guidance, and operational military contexts specific to Indo-Pacific engagement.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 8 Chinese scenarios:
+  - fc101-l01-001: First Meeting at the Embassy (S1, Novice Mid, A1, GSE 22-29) - Diplomatic reception self-introduction
+  - fc101-l01-002: Navigating Beijing (S1, Novice Mid, A1, GSE 22-29) - Survival Chinese for directions and transactions
+  - fc102-l02-001: The Banquet (S2, Novice High, A2, GSE 30-35) - Chinese banquet etiquette and toasting culture
+  - fc102-l02-002: The Misunderstanding (S2, Novice High, A2, GSE 30-35) - Apology culture and face management
+  - fc201-l03-001: The Naval Port Visit (S3, Intermediate Low, B1, GSE 36-50) - Military diplomacy at PLAN base
+  - fc201-l03-002: Regional Security Discussion (S3, Intermediate Mid, B1, GSE 36-50) - Academic security conference participation
+  - fc202-l04-001: Community Relations Crisis (S4, Intermediate High, B1+, GSE 51-58) - De-escalating community tensions
+  - fc202-l04-002: Bilateral Negotiation (S4, Intermediate High, B1+, GSE 51-58) - Maritime incident prevention negotiation
+
+### All scenarios include
+- Language-specific fields: language="Chinese", semester (1-4), actflLevel, ilrLevel, cefrLevel, gseRange
+- Cultural preparation: keyVocabulary arrays (5-7 essential phrases with pinyin romanization and translation)
+- culturalTips arrays (5 do's for each scenario)
+- culturalGotchas arrays (5 don'ts to avoid cultural mistakes)
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+
+### Learnings for future iterations
+- Placeholder images used consistently ("placeholder") for scenarios without Figma assets
+- Chinese scenarios emphasize face management (面子), relationship building (关系), and indirect communication patterns
+- Proficiency progression realistic: S1/S2 focus on survival Chinese (greetings, navigation, dining), S3/S4 advance to professional/diplomatic contexts (military exchanges, academic discourse, crisis management, negotiation)
+- Cultural content is operationally relevant for Indo-Pacific AOR (PLAN interactions, regional security, community relations)
+- Difficulty levels scale appropriately: S1 is EASY (1/5), S2 is INT (2/5), S3 is INT (3/5), S4 is HARD (4/5)
+- ILR levels map correctly: 0+ (Novice Mid), 1 (Novice High), 1+/2 (Intermediate Low-Mid), 2+ (Intermediate High)
+- Chinese scenarios include sensitive topic navigation (Taiwan, South China Sea) with diplomatic redirection language
+- Academic Chinese scenarios use hedging language and personal framing to avoid representing official policy
+- Area field uses "Language" (consistent with Japanese scenarios) for filtering purposes
+

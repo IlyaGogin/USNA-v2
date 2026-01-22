@@ -648,6 +648,437 @@ export const scenarios: Scenario[] = [
       "Don't let frustration show",
       "Don't forget to follow up after the meeting"
     ]
+  },
+
+  // ============================================
+  // CHINESE LANGUAGE SCENARIOS (FC)
+  // 8 scenarios across 4 semesters
+  // ============================================
+
+  // FC-101 (Semester 1, GSE 22-29, A1, Novice Mid)
+  {
+    id: "fc101-l01-001",
+    title: "First Meeting at the Embassy",
+    subtitle: "Self-Introduction & Formal Greetings",
+    course: "FC-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice basic self-introduction (自我介绍) and formal greetings when meeting Chinese officials at a diplomatic reception.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC101: Chinese I",
+    situation: "You are attending a diplomatic reception at the Chinese Embassy as part of a USNA international affairs program. Colonel Li (李上校) from the Chinese Naval Attaché office will introduce himself and expect a proper response.",
+    dilemma: "You must balance showing respect through formal language while not being overly familiar. Colonel Li will assess whether American military students understand Chinese customs. The interaction sets the tone for the entire visit.",
+    briefing: "This scenario tests whether you can execute a proper Chinese self-introduction including appropriate address forms, exchange of pleasantries, and basic small talk about studies and interests.",
+    frameworks: ["Self-Introduction", "Formal Greetings", "Diplomatic Etiquette", "Address Forms"],
+    primaryMission: "Complete a proper Chinese self-introduction that demonstrates cultural awareness and appropriate respect for Chinese customs in a diplomatic setting.",
+    successCriteria: [
+      "Use correct self-introduction structure and formal pronouns",
+      "Respond appropriately to questions about background",
+      "Display proper physical etiquette (handshake, card exchange)",
+      "Navigate small talk with appropriate formality",
+      "Show interest in Chinese culture without being obsequious"
+    ],
+    tags: ["FC-101", "Semester 1", "GSE 22-29", "A1", "Novice", "Self-Introduction", "Diplomatic Reception"],
+    language: "Chinese",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "您好 (nín hǎo) - Hello (formal)",
+      "我叫... (wǒ jiào...) - I am called...",
+      "很高兴认识您 (hěn gāoxìng rènshi nín) - Pleased to meet you",
+      "幸会幸会 (xìnghuì xìnghuì) - Honored to meet you (formal)",
+      "请多关照 (qǐng duō guānzhào) - Please take care of me / I'm in your hands"
+    ],
+    culturalTips: [
+      "Use 您 (nín) instead of 你 (nǐ) with officials and elders",
+      "Offer and receive business cards with both hands",
+      "A slight bow or nod shows respect",
+      "Avoid overly firm handshakes",
+      "Accept tea if offered even if you don't want it"
+    ],
+    culturalGotchas: [
+      "Don't call someone by their first name unless invited",
+      "Don't refuse hospitality (tea, snacks) directly",
+      "Don't point with your index finger",
+      "Don't discuss sensitive political topics",
+      "Don't compliment objects too enthusiastically (host may feel obligated to give them)"
+    ]
+  },
+  {
+    id: "fc101-l01-002",
+    title: "Navigating Beijing",
+    subtitle: "Asking for Directions & Basic Transactions",
+    course: "FC-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice asking for directions and completing basic transactions while navigating a Chinese city.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC101: Chinese I",
+    situation: "You have free time during your Language Summer Study Abroad Program in Beijing. You need to find a specific bookstore to buy study materials, then navigate to a restaurant to meet your group. A helpful local shop owner will assist you.",
+    dilemma: "Your language skills are limited, and signage is in Chinese characters. You must communicate effectively despite vocabulary gaps and understand directions that may include unfamiliar landmarks.",
+    briefing: "This scenario tests practical survival Chinese for navigation and basic purchasing. Success requires using polite request forms and understanding common directional vocabulary.",
+    frameworks: ["Navigation", "Transactions", "Polite Requests", "Survival Chinese"],
+    primaryMission: "Successfully navigate to your destination by asking for and understanding directions, then complete a simple purchase using appropriate Chinese.",
+    successCriteria: [
+      "Ask for directions using correct question structures",
+      "Understand and respond to directional information",
+      "Complete a transaction with appropriate politeness",
+      "Handle communication breakdowns gracefully",
+      "Express gratitude appropriately"
+    ],
+    tags: ["FC-101", "Semester 1", "GSE 22-29", "A1", "Novice", "Directions", "Transactions", "LSAP"],
+    language: "Chinese",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "请问 (qǐng wèn) - May I ask...",
+      "...在哪儿? (...zài nǎr?) - Where is...?",
+      "往左/右走 (wǎng zuǒ/yòu zǒu) - Go left/right",
+      "一直走 (yīzhí zǒu) - Go straight",
+      "多少钱? (duōshao qián?) - How much?",
+      "谢谢 (xièxie) - Thank you",
+      "不客气 (bú kèqi) - You're welcome"
+    ],
+    culturalTips: [
+      "Start with \"请问\" to politely get attention",
+      "Expect people to physically point and gesture",
+      "Bargaining is expected at markets, not fixed-price stores",
+      "Saying \"太贵了\" (too expensive) is normal, not rude",
+      "Thank people warmly for help"
+    ],
+    culturalGotchas: [
+      "Don't assume English will work",
+      "Don't get frustrated if initial communication fails",
+      "Don't skip polite openers",
+      "Don't hand money with one hand (use both for large amounts)",
+      "Don't refuse help when offered"
+    ]
+  },
+
+  // FC-102 (Semester 2, GSE 30-35, A2, Novice High)
+  {
+    id: "fc102-l02-001",
+    title: "The Banquet",
+    subtitle: "Navigating Chinese Dining Culture",
+    course: "FC-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Navigate the complex social protocols of a Chinese banquet including toasting culture (敬酒), seating arrangements, and food etiquette.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC102: Chinese II",
+    situation: "You are a guest at a formal banquet hosted by Shanghai Maritime University. Professor Wang (王教授) is your host and will guide the evening, but you must participate appropriately in toasts and conversation. Your behavior reflects on USNA.",
+    dilemma: "Chinese banquet culture includes multiple toasts with baijiu (strong liquor), elaborate food serving rituals, and complex seating politics. You must participate appropriately while managing alcohol consumption and demonstrating cultural respect.",
+    briefing: "This scenario tests your understanding of Chinese hospitality culture, toasting etiquette, and the ability to participate in extended social situations with appropriate language and behavior.",
+    frameworks: ["Banquet Etiquette", "Toasting Culture", "Face and Hospitality", "Relationship Building"],
+    primaryMission: "Successfully navigate the banquet while participating appropriately in toasts, demonstrating respect for the host, and building positive relationships with Chinese colleagues.",
+    successCriteria: [
+      "Participate appropriately in toasting culture",
+      "Navigate food etiquette correctly",
+      "Make appropriate small talk with various guests",
+      "Handle alcohol expectations diplomatically",
+      "Express gratitude to the host appropriately"
+    ],
+    tags: ["FC-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Banquet", "Toasting", "Hospitality"],
+    language: "Chinese",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "干杯 (gān bēi) - Bottoms up / Cheers (requires finishing drink)",
+      "随意 (suí yì) - At will / Drink what you like",
+      "请先吃 (qǐng xiān chī) - Please eat first",
+      "太客气了 (tài kèqi le) - You're too kind",
+      "我不太能喝酒 (wǒ bú tài néng hē jiǔ) - I can't drink much"
+    ],
+    culturalTips: [
+      "Wait for host to start eating before you begin",
+      "Serve others before serving yourself",
+      "Toast the host and honored guests",
+      "It's polite to leave a little food on your plate",
+      "Use 随意 to toast without requiring full drink"
+    ],
+    culturalGotchas: [
+      "Don't refuse the first toast",
+      "Don't tap chopsticks on bowls (begging association)",
+      "Don't stick chopsticks upright in rice",
+      "Don't fill your own glass (let others do it)",
+      "Don't say \"干杯\" unless you plan to empty the glass"
+    ]
+  },
+  {
+    id: "fc102-l02-002",
+    title: "The Misunderstanding",
+    subtitle: "Clarifying Communication Errors",
+    course: "FC-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Practice clarifying misunderstandings and offering appropriate apologies when communication errors occur.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC102: Chinese II",
+    situation: "Due to a language misunderstanding, you arrived at the wrong time for a meeting with Professor Chen (陈教授). She waited for an hour and is understandably frustrated. You must apologize appropriately and clarify what happened without making excuses.",
+    dilemma: "In Chinese culture, taking responsibility is valued over explaining reasons (which can sound like excuses). However, you also need to clarify the misunderstanding to prevent future issues. You must balance sincere apology with face-saving for both parties.",
+    briefing: "This scenario tests your ability to navigate the complex Chinese apology culture, take appropriate responsibility, and recover from a social mishap while maintaining the relationship.",
+    frameworks: ["Apology Culture", "Face Management", "Misunderstanding Resolution", "Relationship Repair"],
+    primaryMission: "Successfully apologize for the misunderstanding, clarify what happened without making excuses, and repair the relationship with Professor Chen.",
+    successCriteria: [
+      "Open with sincere, appropriate apology",
+      "Take responsibility without over-explaining",
+      "Clarify the misunderstanding diplomatically",
+      "Propose a solution or make-up action",
+      "End with relationship intact"
+    ],
+    tags: ["FC-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Apology", "Misunderstanding", "Face"],
+    language: "Chinese",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "对不起 (duìbuqǐ) - I'm sorry",
+      "真不好意思 (zhēn bù hǎoyìsi) - I'm really embarrassed/sorry",
+      "是我的错 (shì wǒ de cuò) - It was my mistake",
+      "我误解了 (wǒ wùjiě le) - I misunderstood",
+      "下次一定注意 (xià cì yīdìng zhùyì) - I'll definitely be careful next time"
+    ],
+    culturalTips: [
+      "Apologize sincerely before explaining",
+      "Take full responsibility even if not fully at fault",
+      "Offer to make amends concretely",
+      "Don't over-explain (sounds like excuses)",
+      "Follow up with another apology later"
+    ],
+    culturalGotchas: [
+      "Don't defend yourself immediately",
+      "Don't blame the language barrier (though true)",
+      "Don't minimize the inconvenience caused",
+      "Don't expect immediate forgiveness",
+      "Don't forget to thank them for their patience"
+    ]
+  },
+
+  // FC-201 (Semester 3, GSE 36-50, B1, Intermediate Low-Mid)
+  {
+    id: "fc201-l03-001",
+    title: "The Naval Port Visit",
+    subtitle: "Military Exchange Protocols",
+    course: "FC-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Practice military diplomatic language during a naval port visit, navigating protocol while building professional relationships.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC201: Chinese III",
+    situation: "Your ship is conducting a port visit to Qingdao. You are assigned to attend an official reception with your CO. Commander Zhang (张少校) is your counterpart and will discuss the visit program. You must communicate professionally while avoiding politically sensitive topics.",
+    dilemma: "The conversation naturally drifts toward topics that could be sensitive - South China Sea, Taiwan, military capabilities. You must redirect diplomatically while maintaining rapport and demonstrating professionalism.",
+    briefing: "This scenario tests your ability to use military diplomatic language in Chinese, navigate sensitive topics gracefully, and build professional relationships within appropriate boundaries.",
+    frameworks: ["Military Diplomacy", "Sensitive Topic Navigation", "Cross-Military Relationships", "Protocol"],
+    primaryMission: "Successfully engage in professional military diplomatic conversation, building rapport while navigating sensitive topics appropriately.",
+    successCriteria: [
+      "Use appropriate military diplomatic language",
+      "Redirect sensitive topics gracefully",
+      "Build genuine professional rapport",
+      "Demonstrate cultural respect",
+      "Maintain appropriate boundaries"
+    ],
+    tags: ["FC-201", "Semester 3", "GSE 36-50", "B1", "Intermediate", "Military Diplomacy", "Port Visit"],
+    language: "Chinese",
+    semester: 3,
+    actflLevel: "Intermediate Low",
+    ilrLevel: "1+",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "军事交流 (jūnshì jiāoliú) - Military exchange",
+      "友好访问 (yǒuhǎo fǎngwèn) - Friendly visit",
+      "增进了解 (zēngjìn liǎojiě) - Enhance understanding",
+      "这个问题很复杂 (zhège wèntí hěn fùzá) - This issue is complex",
+      "互相尊重 (hùxiāng zūnzhòng) - Mutual respect"
+    ],
+    culturalTips: [
+      "Focus on shared professional interests",
+      "Express appreciation for hospitality",
+      "Ask about their naval traditions and history",
+      "Redirect political questions to positive topics",
+      "Note common challenges (maritime safety, disaster response)"
+    ],
+    culturalGotchas: [
+      "Don't discuss Taiwan, South China Sea directly",
+      "Don't compare navies in ways that imply superiority",
+      "Don't photograph anything without permission",
+      "Don't discuss intelligence or capabilities",
+      "Don't make political statements even if prompted"
+    ]
+  },
+  {
+    id: "fc201-l03-002",
+    title: "Regional Security Discussion",
+    subtitle: "Academic Conference Participation",
+    course: "FC-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Practice participating in an academic discussion about regional security using appropriate academic Chinese and diplomatic framing.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC201: Chinese III",
+    situation: "You are participating in an academic panel on Indo-Pacific maritime security. Chinese scholars are present and one, Dr. Liu (刘博士), engages you directly about US naval presence in the region. You must articulate positions diplomatically in Chinese.",
+    dilemma: "Dr. Liu is pressing you on US policy in ways that require careful diplomatic language. You must express viewpoints professionally without being argumentative or representing official policy beyond your standing.",
+    briefing: "This scenario tests your ability to engage in substantive discussion on complex topics in Chinese while maintaining academic courtesy and diplomatic precision.",
+    frameworks: ["Academic Chinese", "Diplomatic Framing", "Security Studies Vocabulary", "Cross-Cultural Dialogue"],
+    primaryMission: "Engage productively in academic security discussion while maintaining diplomatic appropriateness and building positive intellectual rapport.",
+    successCriteria: [
+      "Articulate viewpoints in academic Chinese",
+      "Navigate provocative questions diplomatically",
+      "Demonstrate intellectual engagement",
+      "Maintain appropriate role boundaries",
+      "Build positive impression of USNA"
+    ],
+    tags: ["FC-201", "Semester 3", "GSE 36-50", "B1", "Intermediate", "Academic Conference", "Security Discussion"],
+    language: "Chinese",
+    semester: 3,
+    actflLevel: "Intermediate Mid",
+    ilrLevel: "2",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "从学术角度来看 (cóng xuéshù jiǎodù lái kàn) - From an academic perspective",
+      "和平与稳定 (hépíng yǔ wěndìng) - Peace and stability",
+      "共同利益 (gòngtóng lìyì) - Common interests",
+      "以我个人理解 (yǐ wǒ gèrén lǐjiě) - In my personal understanding",
+      "这是个有趣的问题 (zhè shì ge yǒuqù de wèntí) - That's an interesting question"
+    ],
+    culturalTips: [
+      "Frame as personal views, not official policy",
+      "Acknowledge complexity of issues",
+      "Find common ground where possible",
+      "Use academic hedging language",
+      "Show genuine interest in their perspective"
+    ],
+    culturalGotchas: [
+      "Don't get drawn into debate mode",
+      "Don't speak for US government",
+      "Don't dismiss Chinese perspectives",
+      "Don't become defensive",
+      "Don't forget you're building relationships, not winning arguments"
+    ]
+  },
+
+  // FC-202 (Semester 4, GSE 51-58, B1+, Intermediate High)
+  {
+    id: "fc202-l04-001",
+    title: "Community Relations Crisis",
+    subtitle: "Addressing Local Concerns",
+    course: "FC-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Practice handling community relations challenges in Chinese, addressing local concerns while representing the US Navy appropriately.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC202: Chinese IV",
+    situation: "An incident involving US military personnel has upset the local Chinese-speaking community (in a Pacific partner nation). You are the most fluent Chinese speaker on staff and must address community concerns at an emergency meeting. Speaking Chinese demonstrates respect and may help de-escalate tensions.",
+    dilemma: "Community members are upset and speaking rapidly. Some concerns are legitimate, others are based on rumors. You must listen empathetically, address what you can, and promise follow-up without making unauthorized commitments.",
+    briefing: "This scenario tests advanced interpersonal skills in Chinese under pressure, including active listening, empathetic response, and managing expectations while representing your command appropriately.",
+    frameworks: ["Crisis Communication", "Community Relations", "Active Listening", "De-escalation"],
+    primaryMission: "De-escalate community tensions through empathetic, professional communication in Chinese while representing the command appropriately.",
+    successCriteria: [
+      "Demonstrate genuine listening and empathy",
+      "Address concerns with appropriate specificity",
+      "Manage expectations without dismissing",
+      "Make only promises you can keep",
+      "Leave community feeling heard and respected"
+    ],
+    tags: ["FC-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Community Relations", "Crisis"],
+    language: "Chinese",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "我们非常重视 (wǒmen fēicháng zhòngshì) - We take this very seriously",
+      "我理解您的担忧 (wǒ lǐjiě nín de dānyōu) - I understand your concerns",
+      "我们正在调查 (wǒmen zhèngzài diàochá) - We are investigating",
+      "我个人承诺 (wǒ gèrén chéngnuò) - I personally promise",
+      "保持沟通 (bǎochí gōutōng) - Maintain communication"
+    ],
+    culturalTips: [
+      "Listen fully before responding",
+      "Acknowledge emotions before facts",
+      "Use Chinese to show respect",
+      "Be specific about next steps",
+      "Follow up on every promise"
+    ],
+    culturalGotchas: [
+      "Don't become defensive",
+      "Don't blame the community for misunderstanding",
+      "Don't make promises beyond your authority",
+      "Don't dismiss rumors without addressing the underlying concern",
+      "Don't forget face considerations for community leaders"
+    ]
+  },
+  {
+    id: "fc202-l04-002",
+    title: "Bilateral Negotiation",
+    subtitle: "Complex Multi-Party Discussion",
+    course: "FC-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Practice complex negotiation in Chinese, working toward mutually acceptable outcomes on practical matters.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FC202: Chinese IV",
+    situation: "You are part of a working group developing procedures to prevent maritime incidents. Your Chinese counterpart, Lieutenant Commander Wei (韦少校), has different interpretations of key terms. You must negotiate language that both sides can accept without compromising core interests.",
+    dilemma: "Both sides have legitimate interests and constraints. Direct confrontation won't work, but neither will simply accepting their language. You must find creative solutions that address both sides' needs.",
+    briefing: "This scenario tests advanced negotiation skills in Chinese, including understanding underlying interests, proposing creative solutions, and building consensus through language choices.",
+    frameworks: ["Negotiation", "Interest-Based Bargaining", "Face Management", "Bilateral Relations"],
+    primaryMission: "Achieve mutually acceptable language that advances both sides' interests while building a professional relationship for ongoing cooperation.",
+    successCriteria: [
+      "Identify underlying interests on both sides",
+      "Propose creative solutions that address both needs",
+      "Use appropriate negotiation language in Chinese",
+      "Maintain positive relationship throughout",
+      "Achieve concrete progress on key issues"
+    ],
+    tags: ["FC-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Negotiation", "Bilateral"],
+    language: "Chinese",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "共同语言 (gòngtóng yǔyán) - Common ground/language",
+      "互利共赢 (hùlì gòng yíng) - Mutual benefit, win-win",
+      "我们能否这样表述 (wǒmen néng fǒu zhèyàng biǎoshù) - Could we phrase it this way",
+      "考虑到双方 (kǎolǜ dào shuāngfāng) - Considering both sides",
+      "灵活处理 (línghuó chǔlǐ) - Handle flexibly"
+    ],
+    culturalTips: [
+      "Focus on interests, not positions",
+      "Use indirect language to test ideas",
+      "Allow face-saving revisions",
+      "Acknowledge their constraints",
+      "Build personal rapport separately from official positions"
+    ],
+    culturalGotchas: [
+      "Don't treat it as zero-sum",
+      "Don't back them into corners",
+      "Don't underestimate their flexibility in private",
+      "Don't forget implementation matters as much as language",
+      "Don't neglect relationship-building"
+    ]
   }
 ];
 
