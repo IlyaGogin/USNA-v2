@@ -1,0 +1,30 @@
+# Ralph Progress Log - Scenario Library Expansion
+
+Branch: ralph/epic1-scenario-library
+Feature: Expand scenario library from 14 to 112 scenarios across 5 domains
+Started: 2026-01-22
+
+---
+
+## Iteration 1 - US-001: Create centralized scenario data file with extended interface
+**Date:** 2026-01-22
+
+### What was implemented
+Created a centralized scenario data file (`src/data/scenarios.ts`) with an extended TypeScript interface that supports all 112 scenarios across 5 domains (Foreign Languages, English Communication, Cross-Cultural Communication, Leadership, Ethics & Philosophy).
+
+### Files changed
+- `src/data/scenarios.ts` - **NEW FILE** Created centralized scenario data file with:
+  - Extended Scenario interface with core fields (id, title, subtitle, course, difficulty, difficultyLevel, description, image, area, courseCode)
+  - Common new fields (situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags)
+  - Language-specific fields (language, semester, actflLevel, ilrLevel, cefrLevel, gseRange, keyVocabulary, culturalTips, culturalGotchas)
+  - Moved all 14 existing scenarios from MidshipmanScenarios.tsx to centralized file
+  - Exported `scenarios` array and `Scenario` type
+  - Added helper functions: getScenarioById, getScenariosByArea, getScenariosByCourse, getScenariosByLanguage, getScenariosBySemester
+
+### Learnings for future iterations
+- The Scenario type was previously not exported from App.tsx despite being imported by mockScenarios.ts and other components - this created a silent TypeScript issue
+- The new centralized file provides a single source of truth for scenario data structure
+- Optional fields (using `?`) allow backward compatibility with existing 14 scenarios while supporting new language-specific fields
+- Helper functions make it easy to filter scenarios by various dimensions (area, course, language, semester)
+- Build passes successfully with no TypeScript errors
+
