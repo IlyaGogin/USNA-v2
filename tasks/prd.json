@@ -95,8 +95,8 @@
         "Data source: docs/new-scenarios/01-foreign-languages/french/FRENCH_SCENARIOS.md"
       ],
       "priority": 6,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 French scenarios (FF-101 to FF-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and NATO/Francophone Africa operational contexts. TypeScript build passes."
     },
     {
       "id": "US-007",
