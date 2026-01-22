@@ -8,6 +8,7 @@ import imgRectangle12176 from "figma:asset/4cc0eab7cce4bc40b38d346117c0b34c9a705
 import imgImage17 from "figma:asset/bd3e6860d674ba070b2d1ca41444463fc811f56d.png";
 import imgFrame2043682546 from "figma:asset/241d003cbb5e1b8c9408ea2d5ed8d6aee35e0646.png";
 import StudentProfileModal from "./StudentProfileModal";
+import ScenarioPlaceholderImage from "./ScenarioPlaceholderImage";
 import { scenarios } from "../data/scenarios";
 
 type MidshipmanScenariosProps = {
@@ -325,8 +326,13 @@ export default function MidshipmanScenarios({
                 className="bg-white content-stretch flex flex-col items-start overflow-clip relative rounded-[12px] shadow-[0px_1px_3px_0px_rgba(13,0,77,0.05),0px_1px_1px_0px_rgba(13,0,77,0.1),0px_2px_1px_-1px_rgba(13,0,77,0.15)] shrink-0 hover:shadow-[0px_4px_6px_0px_rgba(13,0,77,0.1)] transition-shadow w-[288px] h-[380px]"
               >
                 <div className="aspect-[288/180] relative shrink-0 w-full">
+                  {/* Background: either actual image or placeholder */}
                   <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-                    <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={scenario.image} />
+                    {scenario.image === "placeholder" ? (
+                      <ScenarioPlaceholderImage title={scenario.title} className="size-full rounded-none" />
+                    ) : (
+                      <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={scenario.image} />
+                    )}
                     <div className="absolute bg-gradient-to-b from-[rgba(21,34,56,0)] inset-0 to-[93.536%] to-[rgba(21,34,56,0.93)]" />
                   </div>
                   <div className="flex flex-col justify-end overflow-clip rounded-[inherit] size-full">
@@ -341,7 +347,7 @@ export default function MidshipmanScenarios({
                           </div>
                           <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0">
                             {Array.from({ length: 5 }).map((_, i) => (
-                              <div 
+                              <div
                                 key={i}
                                 className={`${i < scenario.difficultyLevel ? 'bg-[#fcc32b]' : 'bg-[rgba(252,195,43,0.3)]'} col-end-auto col-start-1 h-[12px] mt-0 rounded-[1px] row-end-auto row-start-1 w-[2px]`}
                                 style={{ marginLeft: `${i * 5}px` }}

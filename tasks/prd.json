@@ -1,285 +1,298 @@
 {
-  "project": "USNA Leadership Training Platform",
-  "branchName": "ralph/epic1-scenario-library",
-  "description": "Expand scenario library from 14 to 112 scenarios across 5 domains: Foreign Languages (7 languages), English Communication, Cross-Cultural Communication, Leadership Courses, and Ethics & Philosophy Electives",
+  "project": "USNA Agentic Avatar Simulation Platform",
+  "branchName": "ralph/scenario-library-expansion",
+  "description": "Expand scenario library from 14 to 112 scenarios covering Foreign Languages, English Communication, Cross-Cultural, Leadership, and Ethics & Philosophy domains. Add language-specific filters and cultural briefing UI.",
   "userStories": [
     {
       "id": "US-001",
       "title": "Create centralized scenario data file with extended interface",
-      "description": "As a developer, I need a centralized scenario data file with the extended TypeScript interface so that 112 scenarios can be managed in one place.",
+      "description": "As a developer, I need a centralized scenario data file with extended TypeScript interface so scenarios can be managed in one place.",
       "acceptanceCriteria": [
-        "Create `src/data/scenarios.ts` with extended Scenario interface including: id, title, subtitle, course, difficulty, difficultyLevel, description, image, area, courseCode (existing) plus situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags (new common) plus language, semester, actflLevel, ilrLevel, cefrLevel, gseRange, keyVocabulary, culturalTips, culturalGotchas (language-specific)",
-        "Move existing 14 scenarios from MidshipmanScenarios.tsx to new file",
-        "Export `scenarios` array and `Scenario` type",
+        "Create src/data/scenarios.ts file",
+        "Define Scenario interface with existing fields: id, title, subtitle, course, difficulty, difficultyLevel, description, image, area, courseCode",
+        "Add optional language fields: gseLevel (number), cefrLevel (string), actflLevel (string)",
+        "Add optional cultural fields: keyVocabulary (string[]), culturalTips (string[]), culturalGotchas (string[])",
+        "Add optional detail fields: situation (string), dilemma (string), briefing (string), frameworks (string[]), primaryMission (string), successCriteria (string[]), tags (string[])",
+        "Add optional metadata: location (string), role (string), time (string)",
+        "Export Scenario type and empty scenarios array",
         "Typecheck passes (npm run build)"
       ],
       "priority": 1,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Created src/data/scenarios.ts with extended interface supporting all fields. All 14 existing scenarios moved. TypeScript build passes."
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-002",
-      "title": "Add Japanese language scenarios (8 scenarios)",
-      "description": "As a midshipman studying Japanese, I want scenarios at each proficiency level so I can practice language skills in realistic military contexts.",
+      "title": "Migrate existing 14 scenarios to centralized data file",
+      "description": "As a developer, I need to move existing scenarios from MidshipmanScenarios.tsx to the new centralized file.",
       "acceptanceCriteria": [
-        "Add 8 Japanese scenarios to src/data/scenarios.ts with IDs: fj101-l01-001, fj101-l01-002, fj102-l02-001, fj102-l02-002, fj201-l03-001, fj201-l03-002, fj202-l04-001, fj202-l04-002",
-        "Each scenario includes language: 'Japanese', semester, actflLevel, ilrLevel",
-        "Each scenario includes crosswalk fields: cefrLevel, gseRange",
-        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays",
-        "Use placeholder image pattern for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/01-foreign-languages/japanese/JAPANESE_SCENARIOS.md"
+        "Copy all 14 existing scenarios from MidshipmanScenarios.tsx:39-208 to src/data/scenarios.ts",
+        "Ensure all image imports are preserved (import from figma:asset paths)",
+        "Export scenarios array with all 14 scenarios",
+        "Typecheck passes (npm run build)"
       ],
       "priority": 2,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 Japanese scenarios (FJ-101 to FJ-202) with all language-specific fields, proficiency crosswalks, and cultural preparation content. TypeScript build passes."
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-003",
-      "title": "Add Chinese language scenarios (8 scenarios)",
-      "description": "As a midshipman studying Chinese, I want scenarios at each proficiency level so I can practice language skills in realistic military contexts.",
+      "title": "Create placeholder image component",
+      "description": "As a developer, I need a placeholder image component for scenarios without Figma assets.",
       "acceptanceCriteria": [
-        "Add 8 Chinese scenarios to src/data/scenarios.ts",
-        "Each scenario includes all proficiency fields (ACTFL/ILR primary, CEFR/GSE crosswalk)",
-        "Each scenario includes cultural preparation content (keyVocabulary, culturalTips, culturalGotchas)",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/01-foreign-languages/chinese/CHINESE_SCENARIOS.md"
+        "Create src/components/ScenarioPlaceholderImage.tsx",
+        "Component accepts title prop (string)",
+        "Uses #E8E6F3 background color",
+        "Uses white text (#FFFFFF) centered vertically and horizontally",
+        "Uses Plus Jakarta Sans Medium font",
+        "Has 288x180 aspect ratio (use aspect-[288/180])",
+        "Has rounded-[8px] border radius",
+        "Typecheck passes (npm run build)"
       ],
       "priority": 3,
       "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 Chinese scenarios (FC-101 to FC-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and Indo-Pacific military contexts. TypeScript build passes."
+      "notes": "Completed 2026-01-22. Created ScenarioPlaceholderImage component with #E8E6F3 background, white centered title, 288x180 aspect ratio, rounded-[8px]. Integrated into MidshipmanScenarios.tsx. 98 scenarios use placeholder images. TypeScript build passes. UI verified with dev-browser."
     },
     {
       "id": "US-004",
+      "title": "Add Japanese language scenarios (8 scenarios)",
+      "description": "As a midshipman studying Japanese, I want scenarios at each proficiency level.",
+      "acceptanceCriteria": [
+        "Add 8 Japanese scenarios to src/data/scenarios.ts with IDs: fj101-l01-001, fj101-l01-002, fj102-l02-001, fj102-l02-002, fj201-l03-001, fj201-l03-002, fj202-l04-001, fj202-l04-002",
+        "Each scenario has area: 'Language', course: 'FJ-101' through 'FJ-202' as appropriate",
+        "Each scenario includes gseLevel, cefrLevel (A1/A2/B1/B1+), actflLevel fields",
+        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays from docs/new-scenarios/01-foreign-languages/japanese/JAPANESE_SCENARIOS.md",
+        "Use null for image field (placeholder will be used)",
+        "Typecheck passes (npm run build)"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/01-foreign-languages/japanese/JAPANESE_SCENARIOS.md"
+    },
+    {
+      "id": "US-005",
+      "title": "Add Chinese language scenarios (8 scenarios)",
+      "description": "As a midshipman studying Chinese, I want scenarios at each proficiency level.",
+      "acceptanceCriteria": [
+        "Add 8 Chinese scenarios to src/data/scenarios.ts",
+        "Each scenario has area: 'Language', course codes FC-101 through FC-202",
+        "Each scenario includes gseLevel, cefrLevel, actflLevel fields",
+        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/01-foreign-languages/chinese/CHINESE_SCENARIOS.md - Read this file for scenario details"
+    },
+    {
+      "id": "US-006",
       "title": "Add Arabic language scenarios (8 scenarios)",
       "description": "As a midshipman studying Arabic, I want scenarios at each proficiency level.",
       "acceptanceCriteria": [
         "Add 8 Arabic scenarios to src/data/scenarios.ts",
-        "Each scenario includes all proficiency fields",
-        "Each scenario includes cultural preparation content",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/01-foreign-languages/arabic/ARABIC_SCENARIOS.md"
+        "Each scenario has area: 'Language', course codes FA-101 through FA-202",
+        "Each scenario includes gseLevel, cefrLevel, actflLevel fields",
+        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
-      "priority": 4,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 Arabic scenarios (FA-101 to FA-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and MENA/CENTCOM operational contexts. TypeScript build passes."
+      "priority": 6,
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/01-foreign-languages/arabic/ARABIC_SCENARIOS.md - Read this file for scenario details"
     },
     {
-      "id": "US-005",
+      "id": "US-007",
       "title": "Add Russian language scenarios (8 scenarios)",
       "description": "As a midshipman studying Russian, I want scenarios at each proficiency level.",
       "acceptanceCriteria": [
         "Add 8 Russian scenarios to src/data/scenarios.ts",
-        "Each scenario includes all proficiency fields",
-        "Each scenario includes cultural preparation content",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/01-foreign-languages/russian/RUSSIAN_SCENARIOS.md"
+        "Each scenario has area: 'Language', course codes FR-101 through FR-202",
+        "Each scenario includes gseLevel, cefrLevel, actflLevel fields",
+        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
-      "priority": 5,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 Russian scenarios (FR-101 to FR-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and Eurasia/Arctic operational contexts. TypeScript build passes."
+      "priority": 7,
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/01-foreign-languages/russian/RUSSIAN_SCENARIOS.md - Read this file for scenario details"
     },
     {
-      "id": "US-006",
+      "id": "US-008",
       "title": "Add French language scenarios (8 scenarios)",
       "description": "As a midshipman studying French, I want scenarios at each proficiency level.",
       "acceptanceCriteria": [
         "Add 8 French scenarios to src/data/scenarios.ts",
-        "Each scenario includes all proficiency fields",
-        "Each scenario includes cultural preparation content",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/01-foreign-languages/french/FRENCH_SCENARIOS.md"
+        "Each scenario has area: 'Language', course codes FF-101 through FF-202",
+        "Each scenario includes gseLevel, cefrLevel, actflLevel fields",
+        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
-      "priority": 6,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 French scenarios (FF-101 to FF-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and NATO/Francophone Africa operational contexts. TypeScript build passes."
+      "priority": 8,
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/01-foreign-languages/french/FRENCH_SCENARIOS.md - Read this file for scenario details"
     },
     {
-      "id": "US-007",
+      "id": "US-009",
       "title": "Add German language scenarios (8 scenarios)",
       "description": "As a midshipman studying German, I want scenarios at each proficiency level.",
       "acceptanceCriteria": [
         "Add 8 German scenarios to src/data/scenarios.ts",
-        "Each scenario includes all proficiency fields",
-        "Each scenario includes cultural preparation content",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/01-foreign-languages/german/GERMAN_SCENARIOS.md"
+        "Each scenario has area: 'Language', course codes FG-101 through FG-202",
+        "Each scenario includes gseLevel, cefrLevel, actflLevel fields",
+        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
-      "priority": 7,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 German scenarios (FG-101 to FG-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and NATO/Bundeswehr operational contexts including historical reconciliation topics. TypeScript build passes."
+      "priority": 9,
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/01-foreign-languages/german/GERMAN_SCENARIOS.md - Read this file for scenario details"
     },
     {
-      "id": "US-008",
+      "id": "US-010",
       "title": "Add Spanish language scenarios (8 scenarios)",
       "description": "As a midshipman studying Spanish, I want scenarios at each proficiency level.",
       "acceptanceCriteria": [
         "Add 8 Spanish scenarios to src/data/scenarios.ts",
-        "Each scenario includes all proficiency fields",
-        "Each scenario includes cultural preparation content",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/01-foreign-languages/spanish/SPANISH_SCENARIOS.md"
-      ],
-      "priority": 8,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 Spanish scenarios (FS-101 to FS-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and SOUTHCOM/Latin America operational contexts including counter-narcotics and historical sensitivities. TypeScript build passes. ALL 7 FOREIGN LANGUAGES NOW COMPLETE (56 scenarios total)."
-    },
-    {
-      "id": "US-009",
-      "title": "Add English communication scenarios (9 scenarios)",
-      "description": "As a midshipman, I want scenarios to practice oral communication skills including briefings, persuasion, and difficult conversations.",
-      "acceptanceCriteria": [
-        "Add 9 English communication scenarios to src/data/scenarios.ts",
-        "Scenarios cover HE-111, HE-112, and NL-420 courses",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/02-english-communication/ENGLISH_COMMUNICATION_SCENARIOS.md"
-      ],
-      "priority": 9,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 9 English communication scenarios: 3 from HE-111/112 (Rhetoric & Literature) covering persuasive argument, debate rebuttal, and literary analysis presentation; 6 from NL-420 (Communicating as a Leader) covering SITREP, decision brief, bad news delivery, counseling session, media interview, and town hall. All scenarios use Communication area and placeholder images. TypeScript build passes."
-    },
-    {
-      "id": "US-010",
-      "title": "Add cross-cultural communication scenarios (12 scenarios)",
-      "description": "As a midshipman, I want scenarios to practice cross-cultural competence in operational contexts.",
-      "acceptanceCriteria": [
-        "Add 12 cross-cultural scenarios to src/data/scenarios.ts",
-        "Scenarios cover NE-203 Week 1, NL-360, and FAS tracks",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/03-cross-cultural/CROSS_CULTURAL_SCENARIOS.md"
+        "Each scenario has area: 'Language', course codes FS-101 through FS-202",
+        "Each scenario includes gseLevel, cefrLevel, actflLevel fields",
+        "Each scenario includes keyVocabulary, culturalTips, culturalGotchas arrays",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
       "priority": 10,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 12 cross-cultural communication scenarios covering NE-203 Week 1 (2 scenarios on cross-cultural ethics), NL-360 (5 scenarios on culture and leadership), and FAS Major with 5 regional tracks (East Asia nemawashi, MENA honor culture, Latin America personalismo, Africa collective decision-making, Europe communication styles). All scenarios use Cross-Cultural area and placeholder images. TypeScript build passes."
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/01-foreign-languages/spanish/SPANISH_SCENARIOS.md - Read this file for scenario details"
     },
     {
       "id": "US-011",
-      "title": "Add leadership course scenarios (13 scenarios)",
-      "description": "As a midshipman, I want leadership scenarios across the four-year development journey (NL-110, NL-310, NL-400, electives).",
+      "title": "Add English communication scenarios (9 scenarios)",
+      "description": "As a midshipman, I want scenarios to practice oral communication skills.",
       "acceptanceCriteria": [
-        "Add 13 leadership scenarios to src/data/scenarios.ts",
-        "Scenarios include Farsi Island from multiple perspectives",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/04-leadership-courses/LEADERSHIP_SCENARIOS.md"
+        "Add 9 English communication scenarios to src/data/scenarios.ts",
+        "IDs: he111-w05-001, he111-w08-001, he112-w10-001, nl420-w03-001, nl420-w05-001, nl420-w07-001, nl420-w09-001, nl420-w11-001, nl420-w13-001",
+        "Each scenario has area: 'Communication'",
+        "Course codes: HE-111, HE-112, NL-420 as appropriate",
+        "Include all fields: title, subtitle, description, situation, dilemma, briefing, primaryMission, successCriteria, tags",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
       "priority": 11,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 13 leadership scenarios covering four-year development journey: NL-110 (4 scenarios on self-knowledge and followership including Farsi Island enlisted perspective), NL-310 (4 scenarios on leading others including climate surveys, counseling, toxic leadership, change management), NL-400 (3 scenarios on leading organizations including Captain's Mast, LOAC targeting, Farsi Island legal analysis), and leadership electives NL-425 and NL-311 (2 scenarios on engineering leadership and self-reflection). All scenarios use Leadership area and placeholder images. TypeScript build passes."
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/02-english-communication/ENGLISH_COMMUNICATION_SCENARIOS.md"
     },
     {
       "id": "US-012",
-      "title": "Add ethics & philosophy elective scenarios (8 scenarios)",
-      "description": "As a midshipman in philosophy electives, I want scenarios for deeper ethical exploration (NP-232, NP-350, NP-410, NP-430, NP-440).",
+      "title": "Add cross-cultural communication scenarios (12 scenarios)",
+      "description": "As a midshipman, I want scenarios to practice cross-cultural competence.",
       "acceptanceCriteria": [
-        "Add 8 philosophy scenarios to src/data/scenarios.ts",
-        "Use placeholder image for all scenarios",
-        "Typecheck passes (npm run build)",
-        "Data source: docs/new-scenarios/05-ethics-philosophy/ETHICS_PHILOSOPHY_SCENARIOS.md"
+        "Add 12 cross-cultural scenarios to src/data/scenarios.ts",
+        "IDs from doc: ne203-cc-001, ne203-cc-002, nl360-w04-001, nl360-w06-001, nl360-w08-001, nl360-w10-001, nl360-w12-001, fas-ea-001, fas-mena-001, fas-la-001, fas-af-001, fas-eu-001",
+        "Each scenario has area: 'Cross-Cultural'",
+        "Course codes: NE-203, NL-360, FAS as appropriate",
+        "Include frameworks array for each scenario",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
       "priority": 12,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added 8 ethics & philosophy elective scenarios completing the 112-scenario library: NP-232 (2 scenarios on warrior codes and martial respect), NP-350 (2 scenarios on Stockdale's Stoic philosophy and practical philosophy for military leaders), NP-410 (2 scenarios on Just War Theory including jus ad bellum and jus in bello), NP-430 (1 scenario on interrogation ethics), NP-440 (1 scenario on Stoic value theory). All scenarios are HARD difficulty (4-5/5) for advanced philosophical engagement. All use Philosophy area and placeholder images. TypeScript build passes. MILESTONE: 112 SCENARIOS COMPLETE!"
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/03-cross-cultural/CROSS_CULTURAL_SCENARIOS.md"
     },
     {
       "id": "US-013",
-      "title": "Update MidshipmanScenarios to use centralized data",
-      "description": "As a developer, I need to update MidshipmanScenarios.tsx to import from the centralized data file.",
+      "title": "Add leadership course scenarios (13 scenarios)",
+      "description": "As a midshipman, I want leadership scenarios across the four-year journey.",
       "acceptanceCriteria": [
-        "Import scenarios from @/data/scenarios",
-        "Remove inline scenarios array from component",
-        "Update areas array to include: 'Language', 'Communication', 'Cross-Cultural', 'Philosophy'",
-        "Update courses array to include all new course codes from added scenarios",
-        "Existing filtering logic continues to work",
-        "Typecheck passes (npm run build)",
-        "UI verified with dev-browser"
+        "Add 13 leadership scenarios to src/data/scenarios.ts",
+        "IDs include: nl110-w03-001, nl110-w05-001, nl110-w08-001, nl110-w12-001, nl310-w06-001, nl310-w09-001, nl310-w11-001, nl310-w14-001, nl400-w04-001, nl400-w08-001, nl400-w12-001, nl425-w10-001, nl311-w08-001",
+        "Each scenario has area: 'Leadership'",
+        "Course codes: NL-110, NL-310, NL-400, NL-311, NL-425 as appropriate",
+        "Include Farsi Island scenarios from multiple perspectives",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
       "priority": 13,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Imported scenarios from centralized file. Removed 200 lines of inline scenario data. Areas and courses arrays now dynamically generated from scenario data. All 112 scenarios now available. TypeScript build passes."
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/04-leadership-courses/LEADERSHIP_SCENARIOS.md"
     },
     {
       "id": "US-014",
-      "title": "Add language filter dropdown to scenario browser",
-      "description": "As a midshipman, I want to filter scenarios by language so I can find scenarios for my specific language course.",
+      "title": "Add ethics & philosophy elective scenarios (8 scenarios)",
+      "description": "As a midshipman in philosophy electives, I want scenarios for deeper ethical exploration.",
       "acceptanceCriteria": [
-        "Add selectedLanguages state array to MidshipmanScenarios.tsx",
-        "Add language filter section after Area filter in sidebar",
-        "Languages: Japanese, Chinese, Arabic, Russian, French, German, Spanish",
-        "Filter shows only when Language area is selected or always visible",
-        "Filtering correctly shows only scenarios matching selected language(s)",
-        "Typecheck passes (npm run build)",
-        "UI verified with dev-browser"
+        "Add 8 philosophy scenarios to src/data/scenarios.ts",
+        "IDs: np232-w05-001, np232-w10-001, np350-w07-001, np350-w12-001, np410-w06-001, np410-w11-001, np430-w08-001, np440-w10-001",
+        "Each scenario has area: 'Philosophy'",
+        "Course codes: NP-232, NP-350, NP-410, NP-430, NP-440 as appropriate",
+        "Include frameworks array for each scenario",
+        "Use null for image field",
+        "Typecheck passes (npm run build)"
       ],
       "priority": 14,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added language filter to sidebar with all 7 languages. Filter follows existing toggle pattern. Selecting Japanese correctly shows only 8 Japanese scenarios. TypeScript build passes. UI verified with dev-browser."
+      "passes": false,
+      "notes": "Source: docs/new-scenarios/05-ethics-philosophy/ETHICS_PHILOSOPHY_SCENARIOS.md"
     },
     {
       "id": "US-015",
-      "title": "Add proficiency level filter to scenario browser",
-      "description": "As a midshipman, I want to filter language scenarios by semester or ACTFL level so I can find scenarios appropriate for my course level.",
+      "title": "Update MidshipmanScenarios to import from centralized data",
+      "description": "As a developer, I need MidshipmanScenarios.tsx to use the centralized scenario data.",
       "acceptanceCriteria": [
-        "Add selectedSemesters state array",
-        "Add proficiency filter section with options: Semester 1 (Novice Mid), Semester 2 (Novice High), Semester 3 (Intermediate Low), Semester 4 (Intermediate Mid-High), Elective (Advanced)",
-        "Filter appears contextually when Language area is selected",
-        "Filtering correctly shows only scenarios matching selected level(s)",
+        "Add import statement: import { scenarios, type Scenario } from '@/data/scenarios'",
+        "Remove the inline scenarios array (lines ~39-208)",
+        "Keep existing image imports at top of file for now",
+        "Existing filtering logic continues to work with imported data",
         "Typecheck passes (npm run build)",
         "UI verified with dev-browser"
       ],
       "priority": 15,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added proficiency level filter with 4 semester options. Filter is contextually displayed (hidden when non-Language area selected). Selecting Semester 1 correctly shows only S1 scenarios. TypeScript build passes. UI verified with dev-browser."
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-016",
-      "title": "Add proficiency badge to language scenario cards",
-      "description": "As a user, I want to see the proficiency level badge on language scenario cards so I can quickly identify appropriate scenarios.",
+      "title": "Update areas and courses filter arrays for new domains",
+      "description": "As a user, I need the filter options to include all new scenario domains.",
       "acceptanceCriteria": [
-        "Language scenario cards display badge in format: S{semester} - {actflLevel} (e.g., 'S2 - Novice High')",
-        "Badge uses existing Difficulty badge color pattern from design system (#ffebd6/#793c00)",
-        "Badge appears only for scenarios with actflLevel field populated",
-        "Abbreviate ACTFL for space: 'Int. Low' instead of 'Intermediate Low'",
+        "Update areas array in MidshipmanScenarios.tsx to include: 'Ethics', 'Leadership', 'Philosophy', 'Language', 'Communication', 'Cross-Cultural'",
+        "Update courses array to include new course codes: FJ-101, FJ-102, FJ-201, FJ-202 (and similar for FC, FA, FR, FF, FG, FS), HE-111, HE-112, NL-420, NL-360, FAS, NP-232, NP-350, NP-410, NP-430, NP-440",
+        "Filter logic continues to work correctly",
         "Typecheck passes (npm run build)",
         "UI verified with dev-browser"
       ],
       "priority": 16,
-      "passes": true,
-      "notes": "Completed 2026-01-22. Added proficiency badge showing 'S1 - Nov. Mid' format. Badge uses #ffebd6/#793c00 colors from design system. ACTFL abbreviated (Int. for Intermediate, Nov. for Novice). Badge only appears on language scenarios with actflLevel. TypeScript build passes. UI verified with dev-browser."
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-017",
-      "title": "Create placeholder image component for scenarios",
-      "description": "As a developer, I need a placeholder image component for scenarios without Figma assets.",
+      "title": "Add language filter dropdown to scenario browser",
+      "description": "As a midshipman, I want to filter scenarios by language.",
       "acceptanceCriteria": [
-        "Create ScenarioPlaceholderImage component in src/components/",
-        "Uses design system specs: #E8E6F3 background, white text, centered",
-        "Displays scenario title centered",
-        "Supports 288x180 aspect ratio (1.6:1) with border-radius rounded-[8px]",
+        "Add selectedLanguages state array using useState<string[]>([])",
+        "Add Language filter section after Course filter in sidebar",
+        "Languages list: Japanese, Chinese, Arabic, Russian, French, German, Spanish",
+        "Add toggleLanguage function similar to toggleArea/toggleCourse pattern",
+        "Update filteredScenarios logic to filter by language when selectedLanguages is not empty",
+        "Language filter uses same UI pattern as existing course filter",
         "Typecheck passes (npm run build)",
         "UI verified with dev-browser"
       ],
       "priority": 17,
       "passes": false,
-      "notes": ""
+      "notes": "Follow existing filter pattern from MidshipmanScenarios.tsx:373-391"
     },
     {
       "id": "US-018",
-      "title": "Add cultural briefing panel to SimulationBriefing",
-      "description": "As a midshipman starting a language scenario, I want to see cultural preparation content (vocabulary, tips, gotchas) before the simulation.",
+      "title": "Add proficiency level filter to scenario browser",
+      "description": "As a midshipman, I want to filter language scenarios by proficiency level.",
       "acceptanceCriteria": [
-        "Add cultural briefing section to SimulationBriefing.tsx for language scenarios",
-        "Section includes: Key Vocabulary list, Cultural Tips (do's), Cultural Gotchas (don'ts)",
-        "Section only renders when scenario has keyVocabulary field populated",
-        "Uses existing card/section patterns from SimulationBriefing",
+        "Add selectedLevels state array using useState<string[]>([])",
+        "Add Proficiency Level filter section after Language filter",
+        "Levels list: A1 (Semester 1), A2 (Semester 2), B1 (Semester 3), B1+ (Semester 4)",
+        "Add toggleLevel function",
+        "Update filteredScenarios logic to filter by cefrLevel when selectedLevels is not empty",
+        "Level filter uses same UI pattern as existing filters",
         "Typecheck passes (npm run build)",
         "UI verified with dev-browser"
       ],
@@ -289,34 +302,51 @@
     },
     {
       "id": "US-019",
-      "title": "Add proficiency tags panel to scenario detail view",
-      "description": "As an instructor or midshipman, I want to see all proficiency framework correlations when viewing a language scenario's details.",
+      "title": "Add CEFR level badge to scenario cards",
+      "description": "As a user, I want to see proficiency level badges on language scenario cards.",
       "acceptanceCriteria": [
-        "Add 'Proficiency' section to SimulationBriefing for language scenarios",
-        "Display all four frameworks in 2x2 grid layout: ACTFL, ILR, CEFR, GSE",
-        "Add info tooltip icon next to 'Proficiency' header with crosswalk explanation",
-        "Tooltip explains: ACTFL (USNA's primary), ILR (DLPT scoring), CEFR (international), GSE (Pearson scale)",
-        "Section only renders for scenarios with actflLevel field",
+        "Scenario cards conditionally display CEFR level badge when scenario.cefrLevel exists",
+        "Badge appears in the same row as difficulty badge",
+        "Badge uses difficulty badge color pattern: bg-[#ffebd6] text-[#793c00]",
+        "Badge structure matches existing badge pattern from design system",
         "Typecheck passes (npm run build)",
         "UI verified with dev-browser"
       ],
       "priority": 19,
       "passes": false,
-      "notes": ""
+      "notes": "Badge pattern from docs/DESIGN-SYSTEM.md:119-121"
     },
     {
       "id": "US-020",
-      "title": "Update instructor scenario browser with new filters",
-      "description": "As an instructor, I need the same new filters (language, proficiency) in my scenario browser.",
+      "title": "Update scenario card to use placeholder for null images",
+      "description": "As a user, I want to see placeholder images for scenarios without Figma assets.",
       "acceptanceCriteria": [
-        "Identify instructor scenario browser component",
-        "Add language filter dropdown matching midshipman implementation",
-        "Add proficiency level filter (Semester/ACTFL) matching midshipman implementation",
-        "Import scenarios from centralized data file",
+        "Import ScenarioPlaceholderImage component in MidshipmanScenarios.tsx",
+        "Update card rendering: if scenario.image is null, render ScenarioPlaceholderImage with scenario.title",
+        "If scenario.image exists, render existing img element",
+        "Placeholder displays correctly for language scenarios",
         "Typecheck passes (npm run build)",
         "UI verified with dev-browser"
       ],
       "priority": 20,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-021",
+      "title": "Add cultural briefing section to SimulationBriefing",
+      "description": "As a midshipman starting a language scenario, I want to see cultural preparation content.",
+      "acceptanceCriteria": [
+        "Add Cultural Preparation section to SimulationBriefing.tsx",
+        "Section only renders when scenario has keyVocabulary field with at least one item",
+        "Section includes Key Vocabulary subsection listing vocabulary items",
+        "Section includes Cultural Tips subsection with checkmark-style list",
+        "Section includes Cultural Gotchas subsection with warning-style list",
+        "Uses existing card/section styling patterns from SimulationBriefing",
+        "Typecheck passes (npm run build)",
+        "UI verified with dev-browser"
+      ],
+      "priority": 21,
       "passes": false,
       "notes": ""
     }

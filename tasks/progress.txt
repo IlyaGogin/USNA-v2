@@ -658,3 +658,46 @@ Added a proficiency badge to language scenario cards that displays the semester 
 - SF Mono font keeps badge text monospaced and compact
 - TypeScript build passes successfully with no errors
 
+
+---
+
+## Iteration 17 - US-017: Create placeholder image component for scenarios
+**Date:** 2026-01-22
+
+### What was implemented
+Created a ScenarioPlaceholderImage component for scenarios without Figma assets. The component renders a light purple background (#E8E6F3) with white centered text showing the scenario title. Also integrated the component into MidshipmanScenarios.tsx to use it when scenario.image === "placeholder".
+
+### Files created
+- `src/components/ScenarioPlaceholderImage.tsx` - New reusable component:
+  - Props: `title` (string, required), `className` (string, optional)
+  - Uses design system colors: `bg-[#E8E6F3]` background
+  - White text with Plus Jakarta Sans Medium font
+  - Maintains 288x180 aspect ratio (1.6:1)
+  - Supports `rounded-[8px]` border radius
+  - Text is centered with line-clamp-3 for long titles
+
+### Files changed
+- `src/components/MidshipmanScenarios.tsx` - Integrated placeholder component:
+  - Added import for ScenarioPlaceholderImage
+  - Conditional rendering: if `scenario.image === "placeholder"`, render ScenarioPlaceholderImage, otherwise render img tag
+  - Gradient overlay and course/difficulty info render on top of both
+
+### UI Verification
+- Screenshot: tmp/us-017-placeholder-images.png (Japanese scenarios showing placeholder images)
+- Elements verified:
+  - New language scenarios (98 scenarios with `image: "placeholder"`) show light purple background
+  - Gradient overlay still renders correctly on top of placeholder
+  - Course code and difficulty indicator visible at bottom of image area
+  - Card layout unchanged from scenarios with actual images
+- Interactions tested:
+  - Filter to Japanese shows scenarios with placeholder images
+  - Card click behavior unchanged
+
+### Learnings for future iterations
+- 98 scenarios in the data file use `image: "placeholder"` value
+- Placeholder component is designed for reuse - can be used standalone or in cards
+- In card context, the gradient overlay covers the title text (intentional design for visual consistency)
+- The component provides a neutral visual while maintaining the card's interactive appearance
+- TypeScript build passes successfully with no errors
+- Pattern: conditional image rendering `{scenario.image === "placeholder" ? <Placeholder /> : <img />}`
+
