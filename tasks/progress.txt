@@ -28,3 +28,37 @@ Created a centralized scenario data file (`src/data/scenarios.ts`) with an exten
 - Helper functions make it easy to filter scenarios by various dimensions (area, course, language, semester)
 - Build passes successfully with no TypeScript errors
 
+---
+
+## Iteration 2 - US-002: Add Japanese language scenarios (8 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 8 Japanese language scenarios to src/data/scenarios.ts covering all 4 semesters (FJ-101 through FJ-202), progressing from Novice Mid (S1) to Intermediate High (S4). Each scenario includes full language-specific metadata and cultural guidance.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 8 Japanese scenarios:
+  - fj101-l01-001: First Meeting (S1, Novice Mid, A1, GSE 22-29)
+  - fj101-l01-002: At the Base Cafeteria (S1, Novice Mid, A1, GSE 22-29)
+  - fj102-l02-001: The Dinner Invitation (S2, Novice High, A2, GSE 30-35)
+  - fj102-l02-002: Schedule Conflict (S2, Novice High, A2, GSE 30-35)
+  - fj201-l03-001: The Disagreement (S3, Intermediate Low, B1, GSE 36-50)
+  - fj201-l03-002: JMSDF Liaison Meeting (S3, Intermediate Mid, B1, GSE 36-50)
+  - fj202-l04-001: Crisis Communication (S4, Intermediate High, B1+, GSE 51-58)
+  - fj202-l04-002: Cross-Cultural Conflict Resolution (S4, Intermediate High, B1+, GSE 51-58)
+
+### All scenarios include
+- Language-specific fields: language="Japanese", semester (1-4), actflLevel, ilrLevel, cefrLevel, gseRange
+- Cultural preparation: keyVocabulary arrays (5-7 essential phrases with romanization and translation)
+- culturalTips arrays (5 do's for each scenario)
+- culturalGotchas arrays (5 don'ts to avoid cultural mistakes)
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+
+### Learnings for future iterations
+- Placeholder images used consistently ("placeholder") for scenarios without Figma assets
+- Proficiency progression is realistic: S1/S2 focus on survival Japanese (greetings, ordering, invitations), S3/S4 advance to professional contexts (disagreement, briefings, crisis, mediation)
+- Cultural content is authentic and operationally relevant (JMSDF partnership, joint exercises, liaison roles)
+- Difficulty levels scale appropriately: S1/S2 are EASY (1-2/5), S3 is INT (3/5), S4 is HARD (4/5)
+- ILR levels map correctly: 0+ (Novice), 1 (Novice High), 1+/2 (Intermediate), 2+ (Intermediate High)
+- Area field uses "Language" (not "Foreign Languages") to match expected domain naming
+

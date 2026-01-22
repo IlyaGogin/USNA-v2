@@ -31,8 +31,8 @@
         "Data source: docs/new-scenarios/01-foreign-languages/japanese/JAPANESE_SCENARIOS.md"
       ],
       "priority": 2,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Japanese scenarios (FJ-101 to FJ-202) with all language-specific fields, proficiency crosswalks, and cultural preparation content. TypeScript build passes."
     },
     {
       "id": "US-003",
