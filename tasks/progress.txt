@@ -701,3 +701,43 @@ Created a ScenarioPlaceholderImage component for scenarios without Figma assets.
 - TypeScript build passes successfully with no errors
 - Pattern: conditional image rendering `{scenario.image === "placeholder" ? <Placeholder /> : <img />}`
 
+
+---
+
+## Iteration 18 - US-021: Add cultural briefing section to SimulationBriefing
+**Date:** 2026-01-22
+
+### What was implemented
+Added a Cultural Preparation section to the SimulationBriefing component for language scenarios. The section displays key vocabulary, cultural tips (do's), and cultural gotchas (don'ts) to prepare midshipmen before starting a language roleplay scenario.
+
+### Files changed
+- `src/components/SimulationBriefing.tsx` - Added cultural preparation section:
+  - Updated import to use Scenario type from `../data/scenarios` (was incorrectly importing from `../App`)
+  - Added imports for lucide-react icons: `Check` (for tips), `AlertTriangle` (for gotchas)
+  - Added conditional Cultural Preparation section after Dilemma section
+  - Section only renders when `scenario.keyVocabulary` has at least one item
+  - Key Vocabulary displayed as purple badges (`bg-[#e8e6f3] text-[#512eab]`)
+  - Cultural Tips displayed with green checkmark icons (`text-[#006632]`)
+  - Cultural Gotchas displayed with red warning triangle icons (`text-[#b20900]`)
+
+### Design Patterns Used
+- Key Vocabulary: Badge pattern matching existing course code badges
+- Cultural Tips: Green checkmark list (matching Published status color)
+- Cultural Gotchas: Red warning icon list (matching Error status color)
+- Section styling follows existing SimulationBriefing patterns
+
+### UI Verification
+Note: SimulationBriefing page requires navigating through the scenario flow (scenario card → briefing page).
+Build verification confirms:
+- TypeScript types are correct
+- Conditional rendering logic compiles correctly
+- No type errors for optional fields (keyVocabulary?, culturalTips?, culturalGotchas?)
+
+### Learnings for future iterations
+- SimulationBriefing imports Scenario type - was incorrectly importing from '../App' (which didn't export it)
+- Fixed to import from '../data/scenarios' where the extended Scenario interface lives
+- Conditional rendering: `{scenario.keyVocabulary && scenario.keyVocabulary.length > 0 && (...)}`
+- Nested conditionals for optional arrays: check existence before mapping
+- Used design system colors: purple (#512eab) for vocabulary, green (#006632) for tips, red (#b20900) for warnings
+- TypeScript build passes successfully with no errors
+

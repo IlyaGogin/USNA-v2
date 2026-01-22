@@ -347,8 +347,8 @@
         "UI verified with dev-browser"
       ],
       "priority": 21,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added Cultural Preparation section with Key Vocabulary (purple badges), Cultural Tips (green checkmark list), Cultural Gotchas (red warning list). Fixed Scenario import path. Section only renders for scenarios with keyVocabulary. TypeScript build passes."
     }
   ]
 }

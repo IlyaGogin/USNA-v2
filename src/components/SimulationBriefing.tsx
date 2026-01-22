@@ -1,5 +1,5 @@
-import { ArrowLeft, Play } from 'lucide-react';
-import { Scenario } from '../App';
+import { ArrowLeft, Play, Check, AlertTriangle } from 'lucide-react';
+import { Scenario } from '../data/scenarios';
 import imgImage18 from "figma:asset/bd3e6860d674ba070b2d1ca41444463fc811f56d.png";
 
 interface SimulationBriefingProps {
@@ -112,6 +112,70 @@ export function SimulationBriefing({ scenario, onStartRoleplay, onBack }: Simula
                 </p>
               </div>
             </div>
+
+            {/* Cultural Preparation - only for language scenarios with keyVocabulary */}
+            {scenario.keyVocabulary && scenario.keyVocabulary.length > 0 && (
+              <div className="border-t border-[rgba(13,0,77,0.15)] py-6">
+                <p className="font-['SF_Mono:Regular',sans-serif] text-[#171717] text-[16px] mb-4">
+                  [CULTURAL PREPARATION]
+                </p>
+
+                {/* Key Vocabulary */}
+                <div className="mb-4">
+                  <p className="font-['Plus_Jakarta_Sans:SemiBold',sans-serif] text-[#171717] text-[14px] mb-2">
+                    Key Vocabulary
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {scenario.keyVocabulary.map((vocab, index) => (
+                      <span
+                        key={index}
+                        className="bg-[#e8e6f3] text-[#512eab] px-3 py-1 rounded-[4px] font-['Plus_Jakarta_Sans:Medium',sans-serif] text-[12px]"
+                      >
+                        {vocab}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Cultural Tips */}
+                {scenario.culturalTips && scenario.culturalTips.length > 0 && (
+                  <div className="mb-4">
+                    <p className="font-['Plus_Jakarta_Sans:SemiBold',sans-serif] text-[#171717] text-[14px] mb-2">
+                      Cultural Tips
+                    </p>
+                    <ul className="space-y-2">
+                      {scenario.culturalTips.map((tip, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <Check className="size-[16px] text-[#006632] mt-0.5 shrink-0" />
+                          <span className="font-['Plus_Jakarta_Sans:Regular',sans-serif] text-[#171717] text-[14px]">
+                            {tip}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Cultural Gotchas */}
+                {scenario.culturalGotchas && scenario.culturalGotchas.length > 0 && (
+                  <div>
+                    <p className="font-['Plus_Jakarta_Sans:SemiBold',sans-serif] text-[#171717] text-[14px] mb-2">
+                      Cultural Gotchas
+                    </p>
+                    <ul className="space-y-2">
+                      {scenario.culturalGotchas.map((gotcha, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <AlertTriangle className="size-[16px] text-[#b20900] mt-0.5 shrink-0" />
+                          <span className="font-['Plus_Jakarta_Sans:Regular',sans-serif] text-[#171717] text-[14px]">
+                            {gotcha}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Action Buttons */}
