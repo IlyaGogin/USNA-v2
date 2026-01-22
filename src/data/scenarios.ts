@@ -1509,6 +1509,435 @@ export const scenarios: Scenario[] = [
       "Don't treat as just transactional",
       "Don't forget the personal relationship aspect"
     ]
+  },
+
+  // ============================================
+  // RUSSIAN LANGUAGE SCENARIOS (FR)
+  // 8 scenarios across 4 semesters
+  // ============================================
+
+  // FR-101 (Semester 1, GSE 22-29, A1, Novice Mid)
+  {
+    id: "fr101-l01-001",
+    title: "Academic Conference",
+    subtitle: "Meeting Russian Academics",
+    course: "FR-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice formal Russian introductions at an academic security conference where Russian scholars are present.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR101: Russian I",
+    situation: "Dr. Petrov (Петров) from a Russian maritime research institute approaches you during a break. He's curious about American midshipmen's perspectives on naval strategy. The interaction is friendly but requires appropriate formality.",
+    dilemma: "You want to engage meaningfully, but conversation could drift toward sensitive topics. You must maintain appropriate boundaries while building genuine rapport.",
+    briefing: "This scenario tests basic Russian self-introduction and the ability to navigate initial professional interactions with appropriate formality.",
+    frameworks: ["Formal Introductions", "Academic Register", "Professional Boundaries", "Cultural Formality"],
+    primaryMission: "Complete a proper Russian introduction that demonstrates cultural awareness and appropriate use of formal language (вы forms).",
+    successCriteria: [
+      "Use formal \"вы\" (vy) forms correctly",
+      "Navigate small talk about studies/interests",
+      "Show respect for Russian academic tradition",
+      "Avoid political topics gracefully",
+      "Leave positive impression"
+    ],
+    tags: ["FR-101", "Semester 1", "GSE 22-29", "A1", "Novice", "Academic", "Formal Introduction"],
+    language: "Russian",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "Здравствуйте (Zdravstvuyte) - Hello (formal)",
+      "Очень приятно (Ochen' priyatno) - Very pleased (to meet you)",
+      "Как вас зовут? (Kak vas zovut?) - What is your name (formal)",
+      "Спасибо (Spasibo) - Thank you",
+      "До свидания (Do svidaniya) - Goodbye"
+    ],
+    culturalTips: [
+      "Use formal \"вы\" (vy) forms with strangers and professionals",
+      "Maintain appropriate formality at academic events",
+      "Show genuine interest in their research",
+      "Russians appreciate intellectual conversations",
+      "Let them guide conversation topics"
+    ],
+    culturalGotchas: [
+      "Don't use informal \"ты\" (ty) with strangers",
+      "Don't be overly familiar or casual",
+      "Don't bring up sensitive political topics",
+      "Don't dismiss Soviet-era accomplishments",
+      "Don't make assumptions about their politics"
+    ]
+  },
+  {
+    id: "fr101-l01-002",
+    title: "Arctic Encounter",
+    subtitle: "Search and Rescue Communication",
+    course: "FR-101",
+    difficulty: "EASY",
+    difficultyLevel: 1,
+    description: "Practice basic emergency communication phrases during a simulated Arctic search and rescue scenario.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR101: Russian I",
+    situation: "During an Arctic training exercise, you establish radio contact with a Russian Coast Guard vessel assisting with search and rescue. Basic Russian communication enhances coordination.",
+    dilemma: "Communication must be clear and precise for safety, but your Russian is limited. You need to convey critical information while managing language gaps.",
+    briefing: "This scenario tests basic emergency communication phrases and the ability to coordinate professionally across language barriers in high-stakes situations.",
+    frameworks: ["Emergency Communication", "Maritime Coordination", "SAR Protocol", "Language Clarity"],
+    primaryMission: "Successfully coordinate with Russian Coast Guard using basic Russian, maintaining professional tone while ensuring clear communication.",
+    successCriteria: [
+      "Communicate basic coordination information",
+      "Use maritime terminology correctly",
+      "Maintain professional tone",
+      "Express gratitude appropriately",
+      "Bridge communication gaps with gestures/repetition"
+    ],
+    tags: ["FR-101", "Semester 1", "GSE 22-29", "A1", "Novice", "SAR", "Arctic", "Emergency"],
+    language: "Russian",
+    semester: 1,
+    actflLevel: "Novice Mid",
+    ilrLevel: "0+",
+    cefrLevel: "A1",
+    gseRange: "22-29",
+    keyVocabulary: [
+      "Помощь (Pomoshch') - Help",
+      "Координаты (Koordinaty) - Coordinates",
+      "Понятно (Ponyatno) - Understood",
+      "Повторите (Povtorite) - Repeat",
+      "Спасибо за помощь (Spasibo za pomoshch') - Thank you for help"
+    ],
+    culturalTips: [
+      "Russians respect professional competence",
+      "Clear communication is more important than perfect grammar",
+      "Express gratitude for cooperation",
+      "Arctic cooperation has long precedent",
+      "Focus on shared mission, not politics"
+    ],
+    culturalGotchas: [
+      "Don't let pride prevent asking for clarification",
+      "Don't make political statements on official channels",
+      "Don't forget to thank them for assistance",
+      "Don't assume English is preferred",
+      "Don't rush critical safety communications"
+    ]
+  },
+
+  // FR-102 (Semester 2, GSE 30-35, A2, Novice High)
+  {
+    id: "fr102-l02-001",
+    title: "Cultural Evening",
+    subtitle: "Russian Hospitality & Toasting",
+    course: "FR-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Navigate Russian hospitality including elaborate toasting traditions at a formal dinner.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR102: Russian II",
+    situation: "You've been invited to a cultural reception at the Russian Consulate. The evening includes formal toasting traditions, and you'll be expected to participate appropriately.",
+    dilemma: "Russian toasting culture involves multiple rounds with vodka or wine. You must participate respectfully while managing consumption and maintaining professional composure.",
+    briefing: "This scenario tests understanding of Russian hospitality customs, particularly the elaborate toasting traditions central to Russian social gatherings.",
+    frameworks: ["Toasting Traditions", "Russian Hospitality", "Social Protocol", "Alcohol Culture"],
+    primaryMission: "Navigate the formal dinner successfully, participating appropriately in toasts while demonstrating respect for Russian cultural traditions.",
+    successCriteria: [
+      "Deliver thoughtful toast in Russian",
+      "Make eye contact during toasting",
+      "Participate in multiple rounds appropriately",
+      "Manage alcohol consumption professionally",
+      "Show genuine warmth and appreciation"
+    ],
+    tags: ["FR-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Toasting", "Hospitality", "Cultural"],
+    language: "Russian",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "За здоровье! (Za zdorov'ye!) - To health! (toast)",
+      "За дружбу (Za druzhbu) - To friendship",
+      "Горько! (Gor'ko!) - Bitter! (wedding tradition)",
+      "Душевный (Dushevniy) - Soulful/heartfelt",
+      "Тост (Tost) - Toast"
+    ],
+    culturalTips: [
+      "Russians take toasting seriously - prepare thoughtful words",
+      "Look people in eyes during toast",
+      "Don't put empty bottle on table",
+      "Don't toast with water",
+      "\"Na zdorov'ye\" is NOT the toast (it's \"you're welcome\")"
+    ],
+    culturalGotchas: [
+      "Don't refuse to participate in toasts",
+      "Don't break eye contact during toast",
+      "Don't leave glasses on table during toast",
+      "Don't give shallow or insincere toasts",
+      "Don't forget to reciprocate with your own toast"
+    ]
+  },
+  {
+    id: "fr102-l02-002",
+    title: "Train Journey",
+    subtitle: "Everyday Conversation",
+    course: "FR-102",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Practice extended casual conversation with Russian civilians during a long train journey.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR102: Russian II",
+    situation: "You're sharing a train compartment with Nikolai, a retired Russian naval officer now working as an engineer. He's curious about America and enjoys practicing his limited English while you practice Russian.",
+    dilemma: "The conversation may drift toward topics that require careful navigation - historical events, politics, or sensitive comparisons between countries. You must maintain genuine connection while being thoughtful.",
+    briefing: "This scenario tests the ability to sustain extended casual conversation in Russian, navigating cultural topics while building genuine human connection.",
+    frameworks: ["Extended Conversation", "Cultural Exchange", "Sensitive Topics", "Human Connection"],
+    primaryMission: "Build genuine rapport through extended conversation, sharing about American culture while showing interest in Russian perspectives.",
+    successCriteria: [
+      "Sustain extended conversation on everyday topics",
+      "Share about American culture appropriately",
+      "Show genuine interest in Russian perspectives",
+      "Handle topics that drift toward sensitive areas",
+      "Build genuine human connection"
+    ],
+    tags: ["FR-102", "Semester 2", "GSE 30-35", "A2", "Novice High", "Conversation", "Cultural Exchange"],
+    language: "Russian",
+    semester: 2,
+    actflLevel: "Novice High",
+    ilrLevel: "1",
+    cefrLevel: "A2",
+    gseRange: "30-35",
+    keyVocabulary: [
+      "Расскажите о... (Rasskazhite o...) - Tell me about...",
+      "Интересно (Interesno) - Interesting",
+      "В России (V Rossii) - In Russia",
+      "В Америке (V Amerike) - In America",
+      "Я думаю (Ya dumayu) - I think"
+    ],
+    culturalTips: [
+      "Russians enjoy deep, philosophical conversations",
+      "Personal stories are valued over statistics",
+      "Show genuine curiosity about their experiences",
+      "It's okay to discuss differences respectfully",
+      "Russians appreciate when you challenge stereotypes"
+    ],
+    culturalGotchas: [
+      "Don't be defensive about American issues",
+      "Don't dismiss Soviet era as all negative",
+      "Don't make everything about politics",
+      "Don't assume they love or hate their government",
+      "Don't forget they're individuals, not representatives"
+    ]
+  },
+
+  // FR-201 (Semester 3, GSE 36-50, B1, Intermediate Low-Mid)
+  {
+    id: "fr201-l03-001",
+    title: "Joint Operations Brief",
+    subtitle: "Formal Military Communication",
+    course: "FR-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Practice formal military Russian during a hypothetical joint operations briefing (CUES implementation).",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR201: Russian III",
+    situation: "You're participating in a Code for Unplanned Encounters at Sea (CUES) communication exercise. Your Russian counterpart will communicate ship intentions and you must respond appropriately using formal military terminology.",
+    dilemma: "Military communication requires precision, but using Russian demonstrates commitment to international protocols. You must balance clarity with appropriate use of Russian terminology.",
+    briefing: "This scenario tests formal military Russian vocabulary and the ability to communicate clearly in professional naval contexts.",
+    frameworks: ["Military Russian", "CUES Protocol", "Bridge-to-Bridge Communication", "Professional Precision"],
+    primaryMission: "Successfully execute bridge-to-bridge communication using appropriate military Russian while maintaining professional protocol.",
+    successCriteria: [
+      "Use formal military register correctly",
+      "Communicate intentions clearly",
+      "Respond appropriately to Russian communications",
+      "Maintain professional tone throughout",
+      "Follow CUES protocols appropriately"
+    ],
+    tags: ["FR-201", "Semester 3", "GSE 36-50", "B1", "Intermediate", "CUES", "Military", "Naval"],
+    language: "Russian",
+    semester: 3,
+    actflLevel: "Intermediate Low",
+    ilrLevel: "1+",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "Боевой корабль (Boyevoy korabl') - Warship",
+      "Намерения (Namereniya) - Intentions",
+      "Курс и скорость (Kurs i skorost') - Course and speed",
+      "Безопасное расстояние (Bezopasnoe rasstoyaniye) - Safe distance",
+      "Подтверждаю (Podtverzhdayu) - I confirm"
+    ],
+    culturalTips: [
+      "Russian military values precision and professionalism",
+      "Using Russian shows respect for protocols",
+      "CUES provides common framework",
+      "Focus on safety, not politics",
+      "Professional competence builds mutual respect"
+    ],
+    culturalGotchas: [
+      "Don't be casual in military communications",
+      "Don't mix military and political language",
+      "Don't hesitate to clarify if unclear",
+      "Don't forget proper radio protocol",
+      "Don't assume hostile intent from formality"
+    ]
+  },
+  {
+    id: "fr201-l03-002",
+    title: "Historical Discussion",
+    subtitle: "WWII Shared History",
+    course: "FR-201",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Engage in discussion about shared WWII history (convoys, Lend-Lease), building rapport through historical appreciation.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR201: Russian III",
+    situation: "You're at a ceremony honoring WWII convoy veterans. Retired Admiral Sokolov (Соколов) shares memories of his father who served on convoy duty. This is an opportunity for meaningful connection through shared history.",
+    dilemma: "WWII history evokes deep emotions for Russians who lost millions. You must show genuine respect without inadvertently minimizing their sacrifices or creating awkward Cold War references.",
+    briefing: "This scenario tests the ability to engage with sensitive historical topics in Russian, building rapport through shared appreciation of WWII alliance history.",
+    frameworks: ["Shared History", "WWII Alliance", "Cultural Sensitivity", "Historical Appreciation"],
+    primaryMission: "Connect meaningfully with Russian counterparts through respectful discussion of shared WWII history, demonstrating knowledge and genuine appreciation.",
+    successCriteria: [
+      "Demonstrate knowledge of shared WWII history",
+      "Express genuine respect for Russian sacrifices",
+      "Navigate Soviet-era references appropriately",
+      "Build rapport through historical appreciation",
+      "Avoid triumphalist Cold War framing"
+    ],
+    tags: ["FR-201", "Semester 3", "GSE 36-50", "B1", "Intermediate", "WWII", "History", "Murmansk"],
+    language: "Russian",
+    semester: 3,
+    actflLevel: "Intermediate Mid",
+    ilrLevel: "2",
+    cefrLevel: "B1",
+    gseRange: "36-50",
+    keyVocabulary: [
+      "Великая Отечественная война (Velikaya Otechestvennaya voyna) - Great Patriotic War",
+      "Союзники (Soyuzniki) - Allies",
+      "Конвой (Konvoy) - Convoy",
+      "Подвиг (Podvig) - Heroic deed",
+      "Память (Pamyat') - Memory"
+    ],
+    culturalTips: [
+      "Russians call WWII \"Great Patriotic War\" (1941-1945)",
+      "Soviet losses were catastrophic (27 million dead)",
+      "Convoys and Lend-Lease are remembered positively",
+      "This is rare common ground - use it",
+      "Personal stories matter more than statistics"
+    ],
+    culturalGotchas: [
+      "Don't minimize Soviet sacrifices",
+      "Don't bring up Cold War tensions",
+      "Don't say \"we won the war\" (all allies contributed)",
+      "Don't ignore their role in defeating Hitler",
+      "Don't make it about politics"
+    ]
+  },
+
+  // FR-202 (Semester 4, GSE 51-58, B1+, Intermediate High)
+  {
+    id: "fr202-l04-001",
+    title: "Arms Control Discussion",
+    subtitle: "Track II Dialogue",
+    course: "FR-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Participate in track II dialogue on maritime arms control with Russian counterparts.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR202: Russian IV",
+    situation: "You're participating in an unofficial (track II) dialogue with Russian academics and former officials on maritime arms control. The discussion is substantive and requires nuanced engagement on complex strategic topics.",
+    dilemma: "Track II dialogues allow frank discussion, but you're not authorized to represent official policy. You must engage substantively with Russian perspectives while maintaining appropriate boundaries.",
+    briefing: "This scenario tests advanced political and strategic vocabulary in Russian and the ability to engage diplomatically on sensitive security topics.",
+    frameworks: ["Track II Diplomacy", "Arms Control", "Strategic Dialogue", "Academic Discourse"],
+    primaryMission: "Participate meaningfully in track II dialogue, demonstrating understanding of strategic concepts while building professional relationships.",
+    successCriteria: [
+      "Use strategic/diplomatic vocabulary appropriately",
+      "Engage substantively with Russian perspectives",
+      "Maintain appropriate policy boundaries",
+      "Build intellectual rapport",
+      "Navigate disagreements diplomatically"
+    ],
+    tags: ["FR-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Arms Control", "Track II"],
+    language: "Russian",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "Стратегическая стабильность (Strategicheskaya stabil'nost') - Strategic stability",
+      "Взаимное сдерживание (Vzaimnoye sderzhivaniye) - Mutual deterrence",
+      "Доверие (Doveriye) - Trust",
+      "Транспарентность (Transparentnost') - Transparency",
+      "Общие интересы (Obshchiye interesy) - Common interests"
+    ],
+    culturalTips: [
+      "Russian strategic culture emphasizes security above all",
+      "Historical context matters deeply",
+      "Russians value substantive engagement over platitudes",
+      "Track II allows more candor than Track I",
+      "Personal relationships enable policy progress"
+    ],
+    culturalGotchas: [
+      "Don't dismiss Russian security concerns",
+      "Don't speak for US government",
+      "Don't ignore historical grievances",
+      "Don't treat them as defeated Cold War adversary",
+      "Don't forget mutual vulnerability is real"
+    ]
+  },
+  {
+    id: "fr202-l04-002",
+    title: "Deconfliction",
+    subtitle: "Preventing Miscalculation",
+    course: "FR-202",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Practice communication during a potential incident at sea, using Russian to de-escalate and clarify intentions.",
+    image: "placeholder",
+    area: "Language",
+    courseCode: "FR202: Russian IV",
+    situation: "During a training exercise, your vessel has an unplanned close encounter with a Russian naval vessel. Clear communication is essential to prevent miscalculation. Using Russian can help establish rapport and reduce tension.",
+    dilemma: "The situation is tense and requires immediate, clear communication. You must balance urgency with professionalism, using Russian to demonstrate peaceful intentions while ensuring no misunderstanding occurs.",
+    briefing: "This scenario tests crisis communication skills in Russian, emphasizing clarity, professionalism, and the ability to de-escalate through effective communication.",
+    frameworks: ["Crisis Communication", "De-escalation", "CUES Protocol", "Incident Prevention"],
+    primaryMission: "Communicate clearly and professionally to prevent miscalculation, using Russian to demonstrate peaceful intentions and achieve safe resolution.",
+    successCriteria: [
+      "Communicate intentions clearly",
+      "Maintain professional, non-escalatory tone",
+      "Use CUES protocols appropriately",
+      "Navigate language gaps without frustration",
+      "Achieve safe resolution"
+    ],
+    tags: ["FR-202", "Semester 4", "GSE 51-58", "B1+", "Intermediate High", "Deconfliction", "Crisis", "CUES"],
+    language: "Russian",
+    semester: 4,
+    actflLevel: "Intermediate High",
+    ilrLevel: "2+",
+    cefrLevel: "B1+",
+    gseRange: "51-58",
+    keyVocabulary: [
+      "Не имею враждебных намерений (Ne imeyu vrazhdebnykh namereniy) - I have no hostile intentions",
+      "Прошу сохранять дистанцию (Proshu sokhranyat' distantsiyu) - Request maintain distance",
+      "Понял (Ponyal) - Understood",
+      "Следую международным правилам (Sleduyu mezhdunarodnym pravilam) - Following international rules",
+      "Готов к диалогу (Gotov k dialogu) - Ready for dialogue"
+    ],
+    culturalTips: [
+      "Russians respect calm professionalism under pressure",
+      "Using Russian demonstrates respect and peaceful intent",
+      "Reference CUES and international law",
+      "Maintain dignity while de-escalating",
+      "Clear communication prevents miscalculation"
+    ],
+    culturalGotchas: [
+      "Don't escalate through aggressive language",
+      "Don't assume hostile intent",
+      "Don't forget professional courtesy even in tension",
+      "Don't let frustration show",
+      "Don't forget they want safe resolution too"
+    ]
   }
 ];
 

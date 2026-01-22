@@ -79,8 +79,8 @@
         "Data source: docs/new-scenarios/01-foreign-languages/russian/RUSSIAN_SCENARIOS.md"
       ],
       "priority": 5,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 8 Russian scenarios (FR-101 to FR-202) with all language-specific fields, proficiency crosswalks, cultural preparation content, and Eurasia/Arctic operational contexts. TypeScript build passes."
     },
     {
       "id": "US-006",

@@ -138,3 +138,41 @@ Added 8 Arabic language scenarios to src/data/scenarios.ts covering all 4 semest
 - S4 scenarios test high-stakes communication: Arabic media environment, strategic dialogue on Gulf security
 - Area field uses "Language" (consistent with Japanese and Chinese scenarios)
 
+
+---
+
+## Iteration 5 - US-005: Add Russian language scenarios (8 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 8 Russian language scenarios to src/data/scenarios.ts covering all 4 semesters (FR-101 through FR-202), progressing from Novice Mid (S1) to Intermediate High (S4). Each scenario includes full language-specific metadata, cultural guidance, and operational contexts specific to Eurasia/Arctic operations and strategic competition understanding.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 8 Russian scenarios:
+  - fr101-l01-001: Academic Conference (S1, Novice Mid, A1, GSE 22-29) - Meeting Russian academics
+  - fr101-l01-002: Arctic Encounter (S1, Novice Mid, A1, GSE 22-29) - SAR communication with Russian Coast Guard
+  - fr102-l02-001: Cultural Evening (S2, Novice High, A2, GSE 30-35) - Russian hospitality and toasting traditions
+  - fr102-l02-002: Train Journey (S2, Novice High, A2, GSE 30-35) - Extended everyday conversation
+  - fr201-l03-001: Joint Operations Brief (S3, Intermediate Low, B1, GSE 36-50) - Formal military CUES communication
+  - fr201-l03-002: Historical Discussion (S3, Intermediate Mid, B1, GSE 36-50) - WWII shared history (convoys, Lend-Lease)
+  - fr202-l04-001: Arms Control Discussion (S4, Intermediate High, B1+, GSE 51-58) - Track II dialogue on maritime arms control
+  - fr202-l04-002: Deconfliction (S4, Intermediate High, B1+, GSE 51-58) - Crisis communication to prevent miscalculation
+
+### All scenarios include
+- Language-specific fields: language="Russian", semester (1-4), actflLevel, ilrLevel, cefrLevel, gseRange
+- Cultural preparation: keyVocabulary arrays (5 essential phrases with transliteration and translation)
+- culturalTips arrays (5 do's for each scenario)
+- culturalGotchas arrays (5 don'ts to avoid cultural mistakes)
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+
+### Learnings for future iterations
+- Russian scenarios emphasize formality (вы forms), intellectual engagement, and historical context
+- Proficiency progression realistic: S1/S2 focus on survival Russian (greetings, SAR, hospitality, conversation), S3/S4 advance to professional/strategic contexts (military protocol, historical diplomacy, arms control, crisis deconfliction)
+- Cultural content is operationally relevant for Eurasia/Arctic AOR (Arctic cooperation, WWII shared history, CUES protocol, track II diplomacy)
+- Difficulty levels scale appropriately: S1 is EASY (1/5), S2 is INT (2/5), S3 is INT (3/5), S4 is HARD (4/5)
+- ILR levels map correctly: 0+ (Novice Mid), 1 (Novice High), 1+/2 (Intermediate Low-Mid), 2+ (Intermediate High)
+- Russian scenarios highlight unique cultural elements: toasting traditions, deep philosophical conversations, WWII memory importance
+- S3 scenarios leverage positive historical touchpoints (WWII alliance, Arctic cooperation) to build rapport
+- S4 scenarios address high-stakes communication: track II arms control dialogue, at-sea incident deconfliction
+- Area field uses "Language" (consistent with previous language scenarios)
+
