@@ -142,8 +142,8 @@
         "Data source: docs/new-scenarios/02-english-communication/ENGLISH_COMMUNICATION_SCENARIOS.md"
       ],
       "priority": 9,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 9 English communication scenarios: 3 from HE-111/112 (Rhetoric & Literature) covering persuasive argument, debate rebuttal, and literary analysis presentation; 6 from NL-420 (Communicating as a Leader) covering SITREP, decision brief, bad news delivery, counseling session, media interview, and town hall. All scenarios use Communication area and placeholder images. TypeScript build passes."
     },
     {
       "id": "US-010",

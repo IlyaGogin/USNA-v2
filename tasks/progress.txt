@@ -293,3 +293,48 @@ Added 8 Spanish language scenarios to src/data/scenarios.ts covering all 4 semes
 - Historical context is critical: US interventions, Monroe Doctrine, and colonial legacy create ongoing sensitivities requiring diplomatic engagement
 - Area field uses "Language" (consistent with all language scenarios)
 
+
+---
+
+## Iteration 9 - US-009: Add English communication scenarios (9 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 9 English communication scenarios to src/data/scenarios.ts covering oral communication skills across two course areas: HE-111/112 (Rhetoric & Literature) and NL-420 (Communicating as a Leader). These scenarios address USNA's identified need to strengthen midshipman oral communication skills, which were noted as "weak" compared to written communication.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 9 English communication scenarios:
+
+  **HE-111/112: Rhetoric & Literature (3 scenarios)**
+  - he111-w05-001: The Persuasive Argument (INT 2/5) - Constructing and defending logical arguments under Socratic questioning
+  - he111-w08-001: The Counterpoint (INT 3/5) - Lincoln-Douglas debate with active listening and rebuttal construction
+  - he112-w10-001: The Literary Analysis Brief (INT 3/5) - Oral presentation of written literary analysis with Q&A
+
+  **NL-420: Communicating as a Leader (6 scenarios)**
+  - nl420-w03-001: The SITREP (INT 3/5) - Situation report to CO using BLUF (Bottom Line Up Front)
+  - nl420-w05-001: The Decision Brief (INT 3/5) - Presenting recommendation with BLUF to time-constrained senior leader
+  - nl420-w07-001: The Bad News (HARD 4/5) - Delivering difficult news (advancement denial) with dignity and motivation
+  - nl420-w09-001: The Counseling Session (HARD 4/5) - Performance counseling addressing specific behaviors and root causes
+  - nl420-w11-001: The Media Interview (HARD 4/5) - Handling press questions with message discipline and bridging techniques
+  - nl420-w13-001: The Town Hall (HARD 5/5) - All-hands meeting during deployment extension addressing skeptical crew
+
+### All scenarios include
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+- Area field: "Communication" (new domain for scenario filtering)
+- Course codes: HE111, HE112, NL420
+- Placeholder images ("placeholder" for all scenarios without Figma assets)
+- Appropriate difficulty progression: HE-111/112 scenarios are INT (2-3/5), NL-420 scenarios escalate from INT (3/5) to HARD (4-5/5)
+
+### Learnings for future iterations
+- English communication scenarios focus exclusively on oral skills (not written), addressing identified USNA weakness
+- HE-111/112 scenarios emphasize classical rhetoric: logos (logic), ethos (credibility), pathos (emotional appeal), active listening, academic discourse
+- NL-420 scenarios emphasize military communication frameworks: BLUF, SALUTE reports, decision briefs, difficult conversations, media relations, transparent leadership
+- Communication scenarios do NOT use language-specific fields (no semester, actflLevel, etc.) - those are only for foreign language scenarios
+- Difficulty levels appropriately reflect communication challenge: academic debate (INT 2-3/5), operational briefing (INT 3/5), difficult conversations (HARD 4-5/5)
+- NL-420 scenarios include specific communication frameworks in the frameworks array: "BLUF", "SALUTE Report", "5 W's", "PCE"
+- HE-111 scenarios test intellectual skills (argumentation, rebuttal, analysis) while NL-420 tests leadership communication (briefing, counseling, media, town halls)
+- Placeholder images will be used until Figma assets are created for communication scenarios
+- Area field uses "Communication" (new domain, different from "Language", "Ethics", "Leadership", "Philosophy")
+- TypeScript build passes successfully with all 9 scenarios added
+- Total scenario count: 14 existing + 56 language + 9 communication = 79 scenarios (33 more needed for 112 total)
+

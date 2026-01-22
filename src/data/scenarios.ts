@@ -3214,6 +3214,241 @@ export const scenarios: Scenario[] = [
       "Don't forget US has made mistakes in region",
       "Don't assume economic development = security"
     ]
+  },
+
+  // ========================================
+  // English Communication Scenarios (9 scenarios)
+  // HE-111/112 (Rhetoric & Literature) and NL-420 (Communicating as a Leader)
+  // ========================================
+
+  // HE-111: Rhetoric (3 scenarios)
+  {
+    id: "he111-w05-001",
+    title: "The Persuasive Argument",
+    subtitle: "Building and Delivering Logical Arguments",
+    course: "HE-111",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Practice constructing and delivering a persuasive argument on a controversial topic, demonstrating logical structure and rhetorical skill.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "HE111: Rhetoric and Introduction to Literature I",
+    situation: "Your professor has assigned you to argue for a position you may or may not personally hold. You must construct a logical argument with clear claims, evidence, and reasoning, then defend it against Socratic questioning from Professor Williams.",
+    dilemma: "The position is defensible but controversial. You must make the strongest possible case using logical reasoning and rhetorical techniques, then respond to counterarguments without becoming defensive or abandoning logical rigor.",
+    briefing: "This scenario tests classical rhetorical skills: logos (logic), ethos (credibility), and pathos (emotional appeal), with emphasis on logos. Success requires structured argument, acknowledgment of counterpoints, and grace under questioning.",
+    frameworks: ["Logos (Logic)", "Ethos (Credibility)", "Pathos (Emotional Appeal)", "Toulmin Model", "Argument Structure"],
+    primaryMission: "Deliver a persuasive argument that demonstrates command of rhetorical structure and ability to defend your position through logical reasoning.",
+    successCriteria: [
+      "Clear thesis statement and argument structure",
+      "Use of evidence and logical reasoning",
+      "Anticipation and address of counterarguments",
+      "Maintain composure under Socratic questioning",
+      "Demonstrate intellectual honesty when point is valid"
+    ],
+    tags: ["HE-111", "Rhetoric", "Persuasion", "Argumentation", "Critical Thinking"]
+  },
+  {
+    id: "he111-w08-001",
+    title: "The Counterpoint",
+    subtitle: "Responding to Opposing Viewpoints",
+    course: "HE-111",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Practice listening to, understanding, and effectively responding to opposing viewpoints in a structured debate format.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "HE111: Rhetoric and Introduction to Literature I",
+    situation: "You are participating in a Lincoln-Douglas style debate. Your opponent (another midshipman played by AI) has just made their opening argument. You must listen carefully, identify weaknesses, and construct a compelling rebuttal.",
+    dilemma: "Your opponent has made several strong points. You must acknowledge what's valid while finding weaknesses to exploit, all within time constraints and debate rules.",
+    briefing: "This scenario tests active listening, critical thinking, and the ability to construct rebuttals on the fly while maintaining respectful discourse.",
+    frameworks: ["Active Listening", "Critical Analysis", "Rebuttal Structure", "Lincoln-Douglas Debate Format"],
+    primaryMission: "Deliver an effective rebuttal that demonstrates careful listening, identifies logical weaknesses, and advances your position persuasively.",
+    successCriteria: [
+      "Demonstrate active listening",
+      "Accurately summarize opponent's position",
+      "Identify logical weaknesses",
+      "Construct coherent rebuttal",
+      "Maintain respectful discourse"
+    ],
+    tags: ["HE-111", "Debate", "Rebuttal", "Active Listening", "Critical Thinking"]
+  },
+  {
+    id: "he112-w10-001",
+    title: "The Literary Analysis Brief",
+    subtitle: "Oral Presentation of Written Work",
+    course: "HE-112",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Present a literary analysis orally, translating written analytical skills to verbal communication.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "HE112: Rhetoric and Introduction to Literature II",
+    situation: "You're presenting your literary analysis to Professor Williams and classmates. You must translate written arguments into compelling oral presentation and handle questions about your interpretation.",
+    dilemma: "Written analysis can be dense and complex, but oral presentation requires clarity and engagement. You must simplify without losing sophistication, and defend your interpretation under questioning.",
+    briefing: "This scenario tests the ability to translate written analytical skills to oral communication, including presentation delivery and handling academic questions.",
+    frameworks: ["Literary Analysis", "Oral Presentation", "Academic Discourse", "Question Handling"],
+    primaryMission: "Deliver a clear, engaging oral presentation of your literary analysis and defend your interpretation under questioning.",
+    successCriteria: [
+      "Present complex ideas clearly",
+      "Maintain audience engagement",
+      "Handle questions thoughtfully",
+      "Defend interpretation without being defensive",
+      "Demonstrate literary knowledge"
+    ],
+    tags: ["HE-112", "Literary Analysis", "Oral Presentation", "Academic Communication"]
+  },
+
+  // NL-420: Communicating as a Leader (6 scenarios)
+  {
+    id: "nl420-w03-001",
+    title: "The SITREP",
+    subtitle: "Situation Report to Superior",
+    course: "NL-420",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Deliver a clear, concise situation report to your commanding officer during an operational situation.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "NL420: Communicating as a Leader",
+    situation: "An incident is developing on the ship. You've been summoned to brief the Commanding Officer who was sleeping. You have limited information and limited time. CAPT Morrison is known for demanding clarity and hating wasted words.",
+    dilemma: "You have incomplete information but the CO needs to make decisions. You must communicate what you know, what you don't know, and what you're doing about it - all while remaining calm and organized.",
+    briefing: "This scenario tests military communication skills: BLUF (Bottom Line Up Front), clear organization, appropriate detail level, and composure under pressure.",
+    frameworks: ["BLUF (Bottom Line Up Front)", "SALUTE Report", "5 W's", "PCE (Problem, Cause, Effects)"],
+    primaryMission: "Deliver a situation report that gives the CO what they need to make decisions without wasting their time or requiring excessive follow-up questions.",
+    successCriteria: [
+      "Lead with BLUF",
+      "Organized structure (SALUTE or similar)",
+      "Distinguish facts from assessments",
+      "State unknowns clearly",
+      "Propose recommended action"
+    ],
+    tags: ["NL-420", "SITREP", "Military Communication", "Briefing", "BLUF"]
+  },
+  {
+    id: "nl420-w05-001",
+    title: "The Decision Brief",
+    subtitle: "Presenting Recommendation with BLUF",
+    course: "NL-420",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Present a decision brief to senior leadership with clear recommendation and supporting analysis.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "NL420: Communicating as a Leader",
+    situation: "You've been tasked with analyzing options for a maintenance scheduling challenge. You must present your analysis and recommendation to the Department Head, Commander Jackson. She has three minutes before her next meeting.",
+    dilemma: "You have thorough analysis but limited time. You must distill complex information into a brief presentation that gives CDR Jackson what she needs to decide quickly.",
+    briefing: "This scenario tests the ability to structure a decision brief using BLUF, present complex analysis concisely, and handle questions efficiently.",
+    frameworks: ["BLUF", "Decision Brief Format", "Options Analysis", "Risk Assessment"],
+    primaryMission: "Deliver a clear decision brief that gives CDR Jackson the information she needs to make a decision in the time available.",
+    successCriteria: [
+      "BLUF with clear recommendation",
+      "Concise analysis of alternatives",
+      "Identify risks and mitigations",
+      "Handle questions efficiently",
+      "Accept direction gracefully if recommendation rejected"
+    ],
+    tags: ["NL-420", "Decision Brief", "BLUF", "Leadership Communication"]
+  },
+  {
+    id: "nl420-w07-001",
+    title: "The Bad News",
+    subtitle: "Delivering Difficult Information",
+    course: "NL-420",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Deliver difficult news to a subordinate while maintaining their dignity and the professional relationship.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "NL420: Communicating as a Leader",
+    situation: "Petty Officer Second Class Martinez has been denied advancement for the third time. He's a good sailor who struggles with the exam. You must inform him of the result and have a productive conversation about his path forward.",
+    dilemma: "Martinez is demoralized but you need him to remain motivated. You must deliver the bad news honestly without being brutal, and help him see a path forward without making false promises.",
+    briefing: "This scenario tests the communication skill of delivering difficult news while preserving dignity, maintaining motivation, and providing genuine support.",
+    frameworks: ["Difficult Conversations", "Compassionate Communication", "Path Forward", "Dignity Preservation"],
+    primaryMission: "Deliver the difficult news in a way that maintains PO2 Martinez's dignity and motivation while being honest and helpful.",
+    successCriteria: [
+      "Deliver news directly but compassionately",
+      "Acknowledge the disappointment",
+      "Avoid false hope or empty platitudes",
+      "Provide concrete path forward",
+      "Leave relationship intact"
+    ],
+    tags: ["NL-420", "Difficult Conversations", "Counseling", "Bad News", "Leadership Communication"]
+  },
+  {
+    id: "nl420-w09-001",
+    title: "The Counseling Session",
+    subtitle: "Performance Feedback Conversation",
+    course: "NL-420",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Conduct a counseling session with a subordinate whose performance needs to improve.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "NL420: Communicating as a Leader",
+    situation: "Seaman Apprentice Johnson has been late to muster three times this month. Previous informal corrections haven't worked. You need to have a formal counseling conversation that addresses the behavior while understanding underlying causes.",
+    dilemma: "You must be firm about the behavior while not being punitive if there are legitimate underlying issues. The goal is improvement, not punishment.",
+    briefing: "This scenario tests performance counseling skills including addressing specific behaviors, seeking to understand causes, and setting clear expectations while maintaining a constructive relationship.",
+    frameworks: ["Performance Counseling", "Behavioral Feedback", "Root Cause Analysis", "Constructive Communication"],
+    primaryMission: "Conduct an effective counseling session that addresses the behavior, understands causes, and sets a clear path to improvement.",
+    successCriteria: [
+      "Address specific behaviors directly",
+      "Seek to understand root causes",
+      "Set clear expectations",
+      "Document appropriately",
+      "End with path forward"
+    ],
+    tags: ["NL-420", "Counseling", "Performance Feedback", "Leadership"]
+  },
+  {
+    id: "nl420-w11-001",
+    title: "The Media Interview",
+    subtitle: "Handle Press Questions Professionally",
+    course: "NL-420",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Handle media questions professionally during a public affairs event.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "NL420: Communicating as a Leader",
+    situation: "Your ship is hosting a media day. A reporter is asking questions about ship operations, readiness, and recent incidents. You must communicate positively while staying within public affairs guidelines.",
+    dilemma: "The reporter may ask about sensitive topics or recent incidents. You must stay on message without appearing evasive or uncooperative.",
+    briefing: "This scenario tests media relations skills including message discipline, bridging techniques, and maintaining composure during press interactions.",
+    frameworks: ["Media Relations", "Message Discipline", "Bridging Techniques", "Public Affairs Guidelines"],
+    primaryMission: "Handle the media interview professionally, staying on message while representing the Navy positively.",
+    successCriteria: [
+      "Stay on message",
+      "Bridge from difficult questions",
+      "Don't speculate or go off-topic",
+      "Represent the Navy positively",
+      "Maintain composure throughout"
+    ],
+    tags: ["NL-420", "Media Relations", "Public Affairs", "Communication"]
+  },
+  {
+    id: "nl420-w13-001",
+    title: "The Town Hall",
+    subtitle: "Address Crew Concerns Transparently",
+    course: "NL-420",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Address crew concerns at an all-hands meeting during a challenging operational period.",
+    image: "placeholder",
+    area: "Communication",
+    courseCode: "NL420: Communicating as a Leader",
+    situation: "The ship has been extended on deployment for an additional month. Morale is low, and there are rumors about further extensions. You're holding a town hall to address concerns and maintain unit cohesion.",
+    dilemma: "You can't promise things you can't deliver. Some concerns are valid and you can't fix them. You need to acknowledge reality while maintaining morale and unit cohesion.",
+    briefing: "This scenario tests the most challenging leadership communication skill: addressing a skeptical audience with limited good news while maintaining trust and motivation.",
+    frameworks: ["Transparent Leadership", "Morale Management", "Authentic Communication", "Mission Connection"],
+    primaryMission: "Address crew concerns honestly while maintaining morale and unit cohesion during a difficult period.",
+    successCriteria: [
+      "Acknowledge reality and frustrations",
+      "Be honest about what you know and don't know",
+      "Avoid empty promises",
+      "Connect to mission and purpose",
+      "Leave crew feeling heard and respected",
+      "Maintain your credibility"
+    ],
+    tags: ["NL-420", "Town Hall", "Leadership Communication", "Morale", "Transparency"]
   }
 ];
 
