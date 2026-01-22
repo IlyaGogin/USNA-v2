@@ -172,8 +172,8 @@
         "Data source: docs/new-scenarios/04-leadership-courses/LEADERSHIP_SCENARIOS.md"
       ],
       "priority": 11,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Completed 2026-01-22. Added 13 leadership scenarios covering four-year development journey: NL-110 (4 scenarios on self-knowledge and followership including Farsi Island enlisted perspective), NL-310 (4 scenarios on leading others including climate surveys, counseling, toxic leadership, change management), NL-400 (3 scenarios on leading organizations including Captain's Mast, LOAC targeting, Farsi Island legal analysis), and leadership electives NL-425 and NL-311 (2 scenarios on engineering leadership and self-reflection). All scenarios use Leadership area and placeholder images. TypeScript build passes."
     },
     {
       "id": "US-012",

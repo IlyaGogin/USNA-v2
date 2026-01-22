@@ -3762,6 +3762,349 @@ export const scenarios: Scenario[] = [
       "Build cohesive alliance team"
     ],
     tags: ["FAS", "Europe", "NATO", "Communication Styles", "Alliance"]
+  },
+
+  // ============================================================================
+  // LEADERSHIP COURSE SCENARIOS (13 scenarios)
+  // ============================================================================
+  // Courses: NL-110, NL-310, NL-400, NL-311, NL-425
+  // Focus: Four-year leadership development journey
+  // ============================================================================
+
+  // NL-110: Applied Behavioral Science (4 scenarios)
+  // Year: 4/C (Freshman) | Philosophy: "What it means to be a person"
+  {
+    id: "nl110-w03-001",
+    title: "System 1 Trap",
+    subtitle: "Recognizing Automatic Thinking Bias",
+    course: "NL-110",
+    difficulty: "EASY",
+    difficultyLevel: 2,
+    description: "Recognize when you're relying on System 1 (automatic) thinking when System 2 (deliberate) thinking is required.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL110: Applied Behavioral Science",
+    situation: "You're helping a classmate study. They ask a question that seems simple, and you give a quick, confident answer based on intuition. But your answer is wrong, and you're about to lead them astray if you don't slow down to think deliberately.",
+    dilemma: "Your first instinct feels right and you don't want to seem unsure. But System 1 thinking is leading you to an incorrect answer on a complex problem.",
+    briefing: "This scenario tests whether you can recognize when automatic thinking is insufficient and shift to deliberate analysis. Based on Kahneman's System 1/System 2 framework.",
+    frameworks: ["System 1/System 2", "Cognitive Bias", "Intellectual Humility", "Critical Thinking"],
+    primaryMission: "Recognize the limits of intuitive thinking and shift to deliberate analysis when appropriate.",
+    successCriteria: [
+      "Recognize when answer requires more thought",
+      "Demonstrate intellectual humility",
+      "Shift to deliberate System 2 processing",
+      "Arrive at correct answer through analysis",
+      "Help classmate understand the process"
+    ],
+    tags: ["NL-110", "System 1/2", "Cognitive Bias", "Freshman", "Critical Thinking"]
+  },
+  {
+    id: "nl110-w05-001",
+    title: "The Attachment Pattern",
+    subtitle: "Understanding Relationship Foundations",
+    course: "NL-110",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Recognize how your attachment style affects your leadership relationships and adjust accordingly.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL110: Applied Behavioral Science",
+    situation: "You've had repeated conflicts with your roommate about their approach to room inspections. Recognizing your attachment pattern helps you understand why you react as you do - and potentially why they react as they do.",
+    dilemma: "Your instinctive reactions may not serve you well. Understanding your patterns is the first step to managing them constructively.",
+    briefing: "This scenario tests self-awareness about attachment patterns and how they affect interpersonal dynamics in close quarters.",
+    frameworks: ["Attachment Theory", "Self-Awareness", "Interpersonal Dynamics", "Conflict Resolution"],
+    primaryMission: "Recognize how your attachment style influences your reactions and navigate the roommate conflict more constructively.",
+    successCriteria: [
+      "Recognize your own attachment patterns",
+      "Consider how they affect current relationships",
+      "Identify productive responses",
+      "Navigate conflict constructively",
+      "Build healthier relationship patterns"
+    ],
+    tags: ["NL-110", "Attachment Theory", "Self-Awareness", "Roommate Conflict"]
+  },
+  {
+    id: "nl110-w08-001",
+    title: "The Values Clarification",
+    subtitle: "Discovering What You Stand For",
+    course: "NL-110",
+    difficulty: "INT",
+    difficultyLevel: 2,
+    description: "Articulate your personal values through dialogue with a mentor figure.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL110: Applied Behavioral Science",
+    situation: "Your Company Officer has asked to discuss your personal values as part of leadership development. This isn't a test - it's an exploration. But articulating what you truly believe, especially to an authority figure, is challenging.",
+    dilemma: "It's easy to say what you think they want to hear. The challenge is articulating what you genuinely believe and why.",
+    briefing: "This scenario tests the ability to articulate personal values authentically and connect them to leadership identity.",
+    frameworks: ["Values Clarification", "Authenticity", "Leadership Identity", "Moral Development"],
+    primaryMission: "Articulate your genuine personal values and how they connect to your developing identity as a leader.",
+    successCriteria: [
+      "Articulate genuine personal values",
+      "Distinguish personal values from expected values",
+      "Connect values to leadership identity",
+      "Show growth mindset",
+      "Be authentic with authority figure"
+    ],
+    tags: ["NL-110", "Values", "Authenticity", "Leadership Development"]
+  },
+  {
+    id: "nl110-w12-001",
+    title: "Farsi Island (Enlisted)",
+    subtitle: "Junior Perspective on Dilemma",
+    course: "NL-110",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Experience the Farsi Island incident from an enlisted crew member's perspective.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL110: Applied Behavioral Science",
+    situation: "You're a junior enlisted sailor on a patrol boat that's become disabled in Iranian waters. The officer in charge seems uncertain. Iranian boats are approaching. What is your role? What should you do?",
+    dilemma: "As a junior member, your ability to influence the situation is limited, but you have responsibilities and information that could help. What's your role?",
+    briefing: "This scenario presents the same flagship case study from NL-110's perspective - focusing on followership, influence without authority, and supporting leadership under stress.",
+    frameworks: ["Followership", "Influence Without Authority", "Crisis Response", "Ethical Junior Leadership"],
+    primaryMission: "Support your leadership appropriately during the crisis while maintaining your own ethical standards and contributing what you can.",
+    successCriteria: [
+      "Understand appropriate role boundaries",
+      "Support leadership appropriately",
+      "Contribute useful information",
+      "Maintain composure and discipline",
+      "Follow lawful orders while maintaining ethics"
+    ],
+    tags: ["NL-110", "Farsi Island", "Followership", "Junior Enlisted Perspective"]
+  },
+
+  // NL-310: Organizational Behavior (4 scenarios)
+  // Year: 2/C (Junior) | Philosophy: "Lead Others"
+  {
+    id: "nl310-w06-001",
+    title: "The Climate Survey",
+    subtitle: "Reading Organizational Culture",
+    course: "NL-310",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Interpret concerning results from an organizational climate survey and determine how to address them.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL310: Organizational Behavior",
+    situation: "You've received anonymous climate survey results from your division. The results suggest sailors feel undervalued and that favoritism exists. Your Chief thinks the surveys are 'just complaints.' But patterns in the data suggest real issues.",
+    dilemma: "Do you trust the data or your Chief's interpretation? How do you address systemic issues without undermining your Chief or creating defensiveness?",
+    briefing: "This scenario tests organizational culture awareness and the skill of addressing climate issues constructively.",
+    frameworks: ["Organizational Climate", "Data Interpretation", "Culture Change", "Leadership Intervention"],
+    primaryMission: "Address the climate concerns revealed in the survey data while maintaining relationships and creating positive organizational change.",
+    successCriteria: [
+      "Interpret data accurately",
+      "Navigate relationship with Chief",
+      "Address issues constructively",
+      "Engage sailors appropriately",
+      "Create positive change without blame"
+    ],
+    tags: ["NL-310", "Organizational Climate", "Survey Data", "Leadership Intervention"]
+  },
+  {
+    id: "nl310-w09-001",
+    title: "The Counseling",
+    subtitle: "Mentoring Underperforming Sailor",
+    course: "NL-310",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Conduct a mentoring conversation with a sailor whose performance is declining due to personal issues.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL310: Organizational Behavior",
+    situation: "Petty Officer Third Class Davis was your best performer but has been declining for months. Rumors suggest family problems. You need to address performance while being supportive of whatever is happening.",
+    dilemma: "You must balance accountability with compassion. Ignoring the performance is unfair to the division, but being punitive when someone is struggling is poor leadership.",
+    briefing: "This scenario tests the difficult balance of maintaining standards while supporting sailors going through personal challenges.",
+    frameworks: ["Performance Counseling", "Accountability vs Compassion", "Supportive Leadership", "Resource Navigation"],
+    primaryMission: "Address performance issues while providing appropriate support, identifying resources, and maintaining the sailor's dignity and motivation.",
+    successCriteria: [
+      "Create safe space for disclosure",
+      "Balance accountability with support",
+      "Identify resources available",
+      "Set clear expectations",
+      "Maintain dignity and relationship"
+    ],
+    tags: ["NL-310", "Counseling", "Performance Management", "Supportive Leadership"]
+  },
+  {
+    id: "nl310-w11-001",
+    title: "Toxic Leadership Recognition",
+    subtitle: "When Superiors Are the Problem",
+    course: "NL-310",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Navigate a situation where your superior officer displays toxic leadership behaviors.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL310: Organizational Behavior",
+    situation: "Your immediate superior, a Lieutenant Commander, consistently takes credit for others' work, blames subordinates publicly, and retaliates against those who raise concerns. Others have noticed but no one acts. What do you do?",
+    dilemma: "Challenging a superior is career-risky. But enabling toxic behavior harms the organization. How do you navigate this?",
+    briefing: "This scenario tests the difficult challenge of recognizing and appropriately addressing toxic leadership when it comes from someone above you.",
+    frameworks: ["Toxic Leadership", "Organizational Ethics", "Escalation Strategy", "Professional Courage"],
+    primaryMission: "Determine the appropriate response to toxic leadership, protecting yourself and others while maintaining professional integrity.",
+    successCriteria: [
+      "Recognize toxic patterns",
+      "Document appropriately",
+      "Determine appropriate escalation",
+      "Protect others where possible",
+      "Maintain your own integrity"
+    ],
+    tags: ["NL-310", "Toxic Leadership", "Organizational Ethics", "Professional Courage"]
+  },
+  {
+    id: "nl310-w14-001",
+    title: "Change Management",
+    subtitle: "Implementing New Procedures",
+    course: "NL-310",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Lead your division through a significant procedural change that faces resistance.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL310: Organizational Behavior",
+    situation: "Fleet has mandated new maintenance procedures that your experienced technicians believe are inferior to existing practices. You must implement the change while maintaining morale and mission effectiveness.",
+    dilemma: "You may privately agree with your technicians, but you must implement the change. How do you lead authentically while executing orders?",
+    briefing: "This scenario tests change management skills including communicating the 'why,' acknowledging concerns, and maintaining team cohesion during unwelcome changes.",
+    frameworks: ["Change Management", "Authentic Leadership", "Team Cohesion", "Communication"],
+    primaryMission: "Lead the implementation of mandated changes while maintaining team morale, acknowledging concerns, and preserving mission effectiveness.",
+    successCriteria: [
+      "Communicate the 'why' effectively",
+      "Acknowledge legitimate concerns",
+      "Find ways to incorporate feedback",
+      "Maintain implementation timeline",
+      "Preserve team cohesion"
+    ],
+    tags: ["NL-310", "Change Management", "Implementation", "Team Leadership"]
+  },
+
+  // NL-400: Law for the Naval Leader (3 scenarios)
+  // Year: 1/C (Senior) | Philosophy: "Lead an Organization"
+  {
+    id: "nl400-w04-001",
+    title: "Captain's Mast",
+    subtitle: "Non-Judicial Punishment Decision",
+    course: "NL-400",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Participate in Non-Judicial Punishment proceedings, recommending appropriate disposition.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL400: Law for the Naval Leader",
+    situation: "Your sailor, Seaman Williams, was caught with a small amount of marijuana during a random urinalysis. He's a first-term sailor with otherwise good performance. The CO will ask your recommendation. What is appropriate: administrative separation, or a chance for rehabilitation?",
+    dilemma: "The sailor made a serious mistake, but they have potential. Separation ends their career; rehabilitation is uncertain. What serves justice and the Navy best?",
+    briefing: "This scenario tests understanding of NJP, UCMJ, and the judgment required to recommend appropriate consequences.",
+    frameworks: ["UCMJ", "NJP", "Justice vs Mercy", "Leadership Judgment"],
+    primaryMission: "Present the case accurately, provide a thoughtful recommendation, and support whatever decision the CO makes.",
+    successCriteria: [
+      "Present facts accurately",
+      "Provide appropriate recommendation",
+      "Consider all relevant factors",
+      "Maintain sailor's dignity",
+      "Accept CO's decision professionally"
+    ],
+    tags: ["NL-400", "UCMJ", "NJP", "Captain's Mast", "Military Justice"]
+  },
+  {
+    id: "nl400-w08-001",
+    title: "The Double Tap",
+    subtitle: "Law of Armed Conflict Application",
+    course: "NL-400",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Apply Law of Armed Conflict principles to a targeting decision in a time-sensitive situation.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL400: Law for the Naval Leader",
+    situation: "A confirmed high-value target has been struck. Intelligence suggests he survived. He's being extracted by personnel who may be medical workers or combatants. A second strike is proposed. LOAC requires analysis of distinction, necessity, proportionality, and humanity.",
+    dilemma: "Completing the mission means a second strike. But the legal analysis is unclear. Time is running out.",
+    briefing: "This scenario tests the application of Law of Armed Conflict principles to time-sensitive targeting decisions under operational pressure.",
+    frameworks: ["LOAC", "Distinction", "Proportionality", "Necessity", "Humanity"],
+    primaryMission: "Make a legally and ethically defensible recommendation under time pressure, applying LOAC principles correctly.",
+    successCriteria: [
+      "Apply LOAC principles correctly",
+      "Identify legal issues",
+      "Make defensible recommendation",
+      "Document reasoning",
+      "Accept responsibility for decision"
+    ],
+    tags: ["NL-400", "LOAC", "Targeting", "Law of Armed Conflict", "Ethics"]
+  },
+  {
+    id: "nl400-w12-001",
+    title: "Farsi Island (Legal)",
+    subtitle: "Surrender and Detention Law",
+    course: "NL-400",
+    difficulty: "HARD",
+    difficultyLevel: 4,
+    description: "Analyze the Farsi Island incident through a legal lens - rights, obligations, and consequences.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL400: Law for the Naval Leader",
+    situation: "You're analyzing the Farsi Island incident from NL-400 perspective. What were the legal obligations of the sailors? The officers? What does LOAC say about surrender? About filmed statements?",
+    dilemma: "Legal obligations may conflict with practical realities. How do you analyze competing requirements and develop defensible positions?",
+    briefing: "This scenario tests the ability to apply legal frameworks to complex real-world situations, distinguishing legal from ethical issues.",
+    frameworks: ["LOAC", "Detention Law", "Code of Conduct", "Legal Analysis"],
+    primaryMission: "Conduct rigorous legal analysis of the incident, developing defensible conclusions that distinguish legal, ethical, and policy considerations.",
+    successCriteria: [
+      "Apply relevant legal frameworks",
+      "Analyze competing obligations",
+      "Distinguish legal from ethical issues",
+      "Consider strategic legal implications",
+      "Develop defensible conclusions"
+    ],
+    tags: ["NL-400", "Farsi Island", "Legal Analysis", "LOAC", "Code of Conduct"]
+  },
+
+  // Additional Leadership Electives (2 scenarios)
+  {
+    id: "nl425-w10-001",
+    title: "Engineering Leadership Crisis",
+    subtitle: "Technical Authority Under Pressure",
+    course: "NL-425",
+    difficulty: "HARD",
+    difficultyLevel: 5,
+    description: "Exercise engineering leadership when technical concerns conflict with operational pressure.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL425: Engineering Leadership",
+    situation: "You're the CHENG on a destroyer. A critical pump has an intermittent fault. Operations wants to proceed with major evolution. Your senior technician thinks it's too risky. The CO is asking for your recommendation.",
+    dilemma: "Operational pressure is real, but so is the technical risk. How strongly do you push back on your CO's desire to proceed?",
+    briefing: "This scenario tests technical authority and the responsibility to speak truth to power on engineering matters. Connects to Challenger case.",
+    frameworks: ["Technical Authority", "Moral Courage", "Risk Assessment", "Engineering Ethics"],
+    primaryMission: "Provide your CO with an honest, defensible engineering assessment that allows them to make an informed decision about risk.",
+    successCriteria: [
+      "Assess technical risk accurately",
+      "Communicate technical concerns clearly",
+      "Resist pressure to minimize risks",
+      "Propose alternatives where possible",
+      "Accept responsibility for recommendation"
+    ],
+    tags: ["NL-425", "Engineering Leadership", "Technical Authority", "Moral Courage", "Challenger"]
+  },
+  {
+    id: "nl311-w08-001",
+    title: "Psychology of Leadership Interview",
+    subtitle: "Self-Analysis and Development",
+    course: "NL-311",
+    difficulty: "INT",
+    difficultyLevel: 3,
+    description: "Engage in structured self-reflection on leadership development with mentor figure.",
+    image: "placeholder",
+    area: "Leadership",
+    courseCode: "NL311: Psychology of Leadership",
+    situation: "Professor Hayes has asked you to discuss your leadership development journey. Based on assessments you've taken (MBTI, StrengthsFinder, etc.), she'll guide exploration of your leadership identity and growth areas.",
+    dilemma: "Self-reflection requires honesty about weaknesses, which can feel uncomfortable. Growth requires acknowledging where you need to develop.",
+    briefing: "This scenario tests self-awareness, the ability to connect assessment results to actual behavior, and intellectual humility about growth areas.",
+    frameworks: ["Self-Awareness", "Leadership Assessments", "Growth Mindset", "Development Planning"],
+    primaryMission: "Engage authentically in self-reflection, connecting assessment insights to your leadership behavior and identifying genuine growth areas.",
+    successCriteria: [
+      "Demonstrate self-awareness",
+      "Connect assessments to leadership behavior",
+      "Identify authentic growth areas",
+      "Articulate development plan",
+      "Show intellectual humility"
+    ],
+    tags: ["NL-311", "Self-Awareness", "Leadership Development", "Psychology"]
   }
 ];
 

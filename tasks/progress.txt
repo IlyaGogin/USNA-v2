@@ -390,3 +390,63 @@ Added 12 cross-cultural communication scenarios to src/data/scenarios.ts coverin
 - TypeScript build passes successfully with all 12 scenarios added
 - Total scenario count: 14 existing + 56 language + 9 communication + 12 cross-cultural = 91 scenarios (21 more needed for 112 total)
 
+
+---
+
+## Iteration 11 - US-011: Add leadership course scenarios (13 scenarios)
+**Date:** 2026-01-22
+
+### What was implemented
+Added 13 leadership course scenarios to src/data/scenarios.ts covering the four-year leadership development journey at USNA. Scenarios span from freshman year (NL-110: "Who am I?") through senior year (NL-400: "Lead an Organization") plus leadership electives.
+
+### Files changed
+- `src/data/scenarios.ts` - Added 13 leadership scenarios:
+
+  **NL-110: Applied Behavioral Science - 4/C Freshman (4 scenarios)**
+  - nl110-w03-001: System 1 Trap (EASY 2/5) - Recognizing automatic thinking bias (Kahneman framework)
+  - nl110-w05-001: The Attachment Pattern (INT 2/5) - Understanding relationship foundations and attachment theory
+  - nl110-w08-001: The Values Clarification (INT 2/5) - Articulating personal values authentically
+  - nl110-w12-001: Farsi Island (Enlisted) (INT 3/5) - Followership perspective on flagship case study
+
+  **NL-310: Organizational Behavior - 2/C Junior (4 scenarios)**
+  - nl310-w06-001: The Climate Survey (INT 3/5) - Interpreting organizational climate survey data
+  - nl310-w09-001: The Counseling (HARD 4/5) - Mentoring underperforming sailor with personal issues
+  - nl310-w11-001: Toxic Leadership Recognition (HARD 5/5) - Navigating toxic superior officer
+  - nl310-w14-001: Change Management (INT 3/5) - Implementing unwelcome procedural changes
+
+  **NL-400: Law for the Naval Leader - 1/C Senior (3 scenarios)**
+  - nl400-w04-001: Captain's Mast (HARD 4/5) - Non-judicial punishment recommendation decision
+  - nl400-w08-001: The Double Tap (HARD 5/5) - LOAC targeting decision under time pressure
+  - nl400-w12-001: Farsi Island (Legal) (HARD 4/5) - Legal analysis of flagship case (surrender, detention law)
+
+  **Leadership Electives (2 scenarios)**
+  - nl425-w10-001: Engineering Leadership Crisis (HARD 5/5) - Technical authority under operational pressure (NL-425)
+  - nl311-w08-001: Psychology of Leadership Interview (INT 3/5) - Self-reflection on leadership development (NL-311)
+
+### All scenarios include
+- Full scenario fields: situation, dilemma, briefing, frameworks, primaryMission, successCriteria, tags
+- Area field: "Leadership" (existing domain)
+- Course codes: NL110, NL310, NL400, NL425, NL311
+- Placeholder images ("placeholder" for all scenarios without Figma assets)
+- Appropriate difficulty progression: NL-110 scenarios EASY-INT (2-3/5), NL-310 scenarios INT-HARD (3-5/5), NL-400 scenarios HARD (4-5/5)
+
+### Learnings for future iterations
+- Leadership scenarios follow USNA's four-year developmental philosophy:
+  - **NL-110 (4/C Freshman):** "What it means to be a person" - Self-knowledge, followership, cognitive frameworks
+  - **NL-310 (2/C Junior):** "Lead Others" - Small team leadership, organizational behavior, climate
+  - **NL-400 (1/C Senior):** "Lead an Organization" - Authority, responsibility, law, UCMJ, LOAC
+- Farsi Island appears as flagship case across multiple years with different lenses:
+  - NL-110: Enlisted perspective (followership, influence without authority)
+  - NL-400: Legal analysis (detention law, code of conduct, LOAC)
+  - Also appears in NE-203 (ethics - four moral factors)
+- Leadership scenarios emphasize self-awareness frameworks: System 1/System 2 (Kahneman), Attachment Theory, Values Clarification, MBTI/StrengthsFinder
+- NL-310 scenarios address realistic organizational challenges: climate surveys, performance counseling, toxic leadership, change management
+- NL-400 scenarios apply military law: UCMJ/NJP (Captain's Mast), LOAC (targeting decisions), Code of Conduct (detention)
+- Engineering leadership scenario (NL-425) connects to Challenger disaster case study - technical authority and moral courage
+- Difficulty levels appropriately reflect leadership complexity: self-reflection (INT 2-3/5), organizational leadership (INT 3/5 to HARD 4/5), legal/life-or-death decisions (HARD 4-5/5)
+- Frameworks array includes leadership concepts: "System 1/System 2", "Attachment Theory", "Toxic Leadership", "LOAC", "UCMJ", "Change Management"
+- Leadership scenarios do NOT use language-specific fields - those are only for foreign language scenarios
+- Area field uses "Leadership" (existing domain from original 14 scenarios)
+- TypeScript build passes successfully with all 13 scenarios added
+- Total scenario count: 14 existing + 56 language + 9 communication + 12 cross-cultural + 13 leadership = 104 scenarios (8 more needed for 112 total)
+
