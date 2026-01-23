@@ -73,7 +73,7 @@ function ScenarioCard({ scenario, onClick }: { scenario: Scenario; onClick?: () 
           <div className="content-stretch flex flex-col items-start justify-end p-[16px] relative size-full">
             <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
               <div className="flex flex-col font-['DM_Mono:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-nowrap text-white tracking-[-0.4px]">
-                <p className="leading-[28px]">{scenario.courseCode}</p>
+                <p className="leading-[28px]">{scenario.course}</p>
               </div>
               <DifficultyBadge difficulty={scenario.difficulty} />
             </div>
