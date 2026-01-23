@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronRight, ChevronDown } from "lucide-react";
 import svgPaths from "../imports/svg-2s4vjry5ri";
 import svgPathsHeader from "../imports/svg-8ov7848mip";
 import imgScenarioCard from "figma:asset/3488fd780dd6834e569d406a4c78763511974a9c.png";
@@ -22,8 +23,21 @@ type MidshipmanScenariosProps = {
 // Extract unique areas from scenarios
 const areas = Array.from(new Set(scenarios.map(s => s.area))).sort();
 
-// Extract unique course codes from scenarios
-const courses = Array.from(new Set(scenarios.map(s => s.courseCode))).sort();
+// Build area to courses mapping
+const areaCoursesMap = new Map<string, string[]>();
+scenarios.forEach(s => {
+  if (!areaCoursesMap.has(s.area)) {
+    areaCoursesMap.set(s.area, []);
+  }
+  const courses = areaCoursesMap.get(s.area)!;
+  if (!courses.includes(s.courseCode)) {
+    courses.push(s.courseCode);
+  }
+});
+// Sort courses within each area
+areaCoursesMap.forEach((courses, area) => {
+  areaCoursesMap.set(area, courses.sort());
+});
 
 // Extract unique languages from scenarios (only for language scenarios)
 const languages = Array.from(
@@ -59,11 +73,33 @@ export default function MidshipmanScenarios({
   const [selectedSemesters, setSelectedSemesters] = useState<number[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [showProfileModal, setShowProfileModal] = useState(false);
+  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(new Set());
+
+  const toggleExpand = (area: string) => {
+    setExpandedAreas(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(area)) {
+        newSet.delete(area);
+      } else {
+        newSet.add(area);
+      }
+      return newSet;
+    });
+  };
 
   const toggleArea = (area: string) => {
-    setSelectedAreas(prev =>
-      prev.includes(area) ? prev.filter(a => a !== area) : [...prev, area]
-    );
+    setSelectedAreas(prev => {
+      const isRemoving = prev.includes(area);
+      const newAreas = isRemoving ? prev.filter(a => a !== area) : [...prev, area];
+
+      // Clear language/proficiency selections when deselecting Language area
+      if (area === "Language" && isRemoving) {
+        setSelectedLanguages([]);
+        setSelectedSemesters([]);
+      }
+
+      return newAreas;
+    });
   };
 
   const toggleCourse = (course: string) => {
@@ -84,8 +120,8 @@ export default function MidshipmanScenarios({
     );
   };
 
-  // Check if Language area is selected (for conditional proficiency filter display)
-  const showProficiencyFilter = selectedAreas.length === 0 || selectedAreas.includes("Language");
+  // Show Language/Proficiency filters only when Language area is selected
+  const showLanguageFilters = selectedAreas.includes("Language");
 
   // Filter scenarios based on selected filters and search
   const filteredScenarios = scenarios.filter(scenario => {
@@ -196,50 +232,80 @@ export default function MidshipmanScenarios({
           </button>
         </div>
 
-        {/* Area Filter */}
+        {/* Area Filter with expandable courses */}
         <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
           <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Area</p>
-          <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
             {areas.map(area => (
               <div key={area} className="relative shrink-0 w-full">
-                <div className="flex flex-row items-center size-full">
+                <div className="flex flex-row items-center">
+                  {/* Chevron for expand/collapse */}
+                  <button
+                    onClick={() => toggleExpand(area)}
+                    className="flex items-center justify-center w-[24px] h-[32px] shrink-0 hover:bg-[rgba(13,0,77,0.05)] rounded-[4px]"
+                  >
+                    {expandedAreas.has(area) ? (
+                      <ChevronDown className="w-[14px] h-[14px] text-[#5d5d5d]" />
+                    ) : (
+                      <ChevronRight className="w-[14px] h-[14px] text-[#5d5d5d]" />
+                    )}
+                  </button>
+                  {/* Area name for selection */}
                   <button
                     onClick={() => toggleArea(area)}
-                    className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
+                    className={`content-stretch flex items-center px-[8px] py-[6px] relative flex-1 rounded-[4px] transition-colors ${
                       selectedAreas.includes(area) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
                     }`}
                   >
-                    <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{area}</p>
+                    <p className="font-medium leading-[20px] text-[#171717] text-[16px] text-left">{area}</p>
                   </button>
                 </div>
+                {/* Nested courses when expanded */}
+                {expandedAreas.has(area) && areaCoursesMap.get(area) && (
+                  <div className="flex flex-col gap-[2px] pl-[24px] mt-[2px]">
+                    {areaCoursesMap.get(area)!.map(courseCode => (
+                      <button
+                        key={courseCode}
+                        onClick={() => toggleCourse(courseCode)}
+                        className={`content-stretch flex items-center px-[8px] py-[4px] relative w-full rounded-[4px] transition-colors ${
+                          selectedCourses.includes(courseCode) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                        }`}
+                      >
+                        <p className="font-medium leading-[18px] text-[#5d5d5d] text-[14px] text-left">{courseCode}</p>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Language Filter */}
-        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-          <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Language</p>
-          <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
-            {languages.map(language => (
-              <div key={language} className="relative shrink-0 w-full">
-                <div className="flex flex-row items-center size-full">
-                  <button
-                    onClick={() => toggleLanguage(language)}
-                    className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
-                      selectedLanguages.includes(language) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
-                    }`}
-                  >
-                    <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{language}</p>
-                  </button>
+        {/* Language Filter - only shown when Language area is selected */}
+        {showLanguageFilters && (
+          <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+            <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Language</p>
+            <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
+              {languages.map(language => (
+                <div key={language} className="relative shrink-0 w-full">
+                  <div className="flex flex-row items-center size-full">
+                    <button
+                      onClick={() => toggleLanguage(language)}
+                      className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
+                        selectedLanguages.includes(language) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                      }`}
+                    >
+                      <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{language}</p>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Proficiency Level Filter - contextual, shown when Language area is selected or no area filter */}
-        {showProficiencyFilter && (
+        {/* Proficiency Level Filter - only shown when Language area is selected */}
+        {showLanguageFilters && (
           <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
             <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Proficiency Level</p>
             <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
@@ -261,26 +327,6 @@ export default function MidshipmanScenarios({
           </div>
         )}
 
-        {/* Course Filter */}
-        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-          <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Course</p>
-          <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
-            {courses.map(course => (
-              <div key={course} className="relative shrink-0 w-full">
-                <div className="flex flex-row items-center size-full">
-                  <button
-                    onClick={() => toggleCourse(course)}
-                    className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
-                      selectedCourses.includes(course) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
-                    }`}
-                  >
-                    <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{course}</p>
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Main Content Area */}

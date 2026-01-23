@@ -1,211 +1,47 @@
 import { useState } from 'react';
 import svgPaths from "../imports/svg-2wasbzlws9";
-import { ChevronLeft } from 'lucide-react';
-
-// Import scenario images from Figma
-import imgInnerRing from "figma:asset/b25dac17eafb0809e8e66dfb8e38b0b478c49c3a.png";
-import imgChallenger from "figma:asset/094aa37446df343e91a51c5e6370d33a29a9117e.png";
-import imgMilgram from "figma:asset/e072d8b684744120a64985000a2e8c7945b7d891.png";
-import imgAbuGhraib from "figma:asset/ac2d5005d1b01e0b1c79cb222edb110a7ae9648c.png";
-import imgTrolley from "figma:asset/6577fdf878acc457e6a882fedb4da095ff1d4788.png";
-import imgMyLai from "figma:asset/f86ef3ae06ccf54801dec90a63ad85ef95c67f7d.png";
-import imgWhistleblowing from "figma:asset/81f017d3739b89f658f70b868744133c1c4cd42d.png";
-import imgLucifer from "figma:asset/3bd37c1241aaaab4f0493222504af7f42f8b19f9.png";
-import imgStanford from "figma:asset/6abce4617fb44ccfe048833e408277179041353b.png";
-import imgMidshipman from "figma:asset/07e7c8f77c04e0823c58852b881751af67d72e24.png";
-
-// Import new scenario images
-import imgFlightTest from "figma:asset/4ac71b9ca7ac1f8bff2625e5c11ae7cbda5b2af7.png";
-import imgQuickDecision from "figma:asset/52593c1b1eda0a0753111d28198dd73a8cdbc1ee.png";
-import imgDifficultConversation from "figma:asset/6ce5ced382fd8d29c1d4b680e27ffcbba8506e7c.png";
-import imgAccountability from "figma:asset/6393ea8d3a5fc64d2d9a630576264b8a92e2d81d.png";
+import { ChevronRight, ChevronDown } from 'lucide-react';
+import { scenarios, Scenario } from "../data/scenarios";
+import ScenarioPlaceholderImage from "./ScenarioPlaceholderImage";
 
 type ScenariosPageProps = {
   onCreateScenario: () => void;
   onScenarioClick?: (scenarioId: string) => void;
 };
 
-type Scenario = {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  courseCode: string;
-  difficulty: 'EASY' | 'INT' | 'HARD';
-  area: string;
-  course: string;
-  image: string;
-};
+// Extract unique areas from scenarios
+const areas = Array.from(new Set(scenarios.map(s => s.area))).sort();
 
-const allCourses = [
-  { code: 'NE203: Ethics and Moral Reasoning', area: 'Ethics' },
-  { code: 'NL110: Applied Behavioral Science', area: 'Leadership' },
-  { code: 'NL200: Human Behavior', area: 'Leadership' },
-  { code: 'NL310: Organizational Behavior', area: 'Leadership' },
-  { code: 'NL400: Law for the Naval Leader', area: 'Leadership' },
-  { code: 'NL311: Psychology of Leadership', area: 'Leadership' },
-  { code: 'NL411: Human Factors in Combat', area: 'Leadership' },
-  { code: 'NL340: Change Management', area: 'Leadership' }
-];
-
-const scenarios: Scenario[] = [
-  {
-    id: '11',
-    title: 'The Flight Test',
-    subtitle: 'Moral Perception Under Authority Pressure',
-    description: 'Develop moral courage to raise safety concerns with senior authority figures when facing institutional pressure to accept marginal technical decisions.',
-    courseCode: 'NE-203',
-    difficulty: 'EASY',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgFlightTest
-  },
-  {
-    id: '12',
-    title: 'The Quick Decision',
-    subtitle: 'Recognizing Rushed Thinking',
-    description: 'Recognize automatic thinking patterns under time pressure and practice slowing down to gather information before committing to action.',
-    courseCode: 'NL-110',
-    difficulty: 'EASY',
-    area: 'Leadership',
-    course: 'NL110: Applied Behavioral Science',
-    image: imgQuickDecision
-  },
-  {
-    id: '13',
-    title: 'The Difficult Conversation',
-    subtitle: 'Leading Others with Honest Feedback',
-    description: 'Build peer leadership skills by delivering honest, direct feedback that holds accountable while maintaining trust and respect.',
-    courseCode: 'NL-310',
-    difficulty: 'INT',
-    area: 'Leadership',
-    course: 'NL310: Organizational Behavior',
-    image: imgDifficultConversation
-  },
-  {
-    id: '14',
-    title: 'The Accountability Question',
-    subtitle: 'Owning Outcomes as a Leader',
-    description: 'Understand command responsibility by taking appropriate ownership for team failures while accurately assessing contributing factors without deflection or blame.',
-    courseCode: 'NL-400',
-    difficulty: 'HARD',
-    area: 'Leadership',
-    course: 'NL400: Law for the Naval Leader',
-    image: imgAccountability
-  },
-  {
-    id: '1',
-    title: 'The Authority Question',
-    subtitle: 'Authority & Moral Agency',
-    description: 'Train participants to understand the psychology of obedience and develop skills to maintain moral agency when receiving questionable orders.',
-    courseCode: 'NE-203',
-    difficulty: 'HARD',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgMilgram
-  },
-  {
-    id: '10',
-    title: 'Pressure Point',
-    subtitle: 'Moral Perception',
-    description: 'Develop ethical decision-making skills when facing pressure to compromise safety standards for operational demands.',
-    courseCode: 'NE-203',
-    difficulty: 'EASY',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgMidshipman
-  },
-  {
-    id: '2',
-    title: 'The Launch Decision',
-    subtitle: 'Organizational Ethics & Dissent',
-    description: 'Explore the ethical responsibilities of engineers and managers when faced with pressure to launch despite safety concerns.',
-    courseCode: 'NE-203',
-    difficulty: 'HARD',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgChallenger
-  },
-  {
-    id: '3',
-    title: 'Inside the Wire',
-    subtitle: 'Social Influence & Peer Pressure',
-    description: 'Train participants to recognize and resist unhealthy social pressures to belong to exclusive "inner rings" or in-groups.',
-    courseCode: 'NE-203',
-    difficulty: 'HARD',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgInnerRing
-  },
-  {
-    id: '4',
-    title: 'The Dark Hours',
-    subtitle: 'Situational Ethics & Military Conduct',
-    description: 'Analyze the breakdown of ethical standards in extreme situations and the importance of moral courage in military settings.',
-    courseCode: 'NE-203',
-    difficulty: 'EASY',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgAbuGhraib
-  },
-  {
-    id: '5',
-    title: 'The Moral Roadmap',
-    subtitle: 'Utilitarian vs. Deontological Ethics',
-    description: 'Navigate the classic ethical dilemma exploring the tension between outcome-based and duty-based moral reasoning.',
-    courseCode: 'NE-203',
-    difficulty: 'INT',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgTrolley
-  },
-  {
-    id: '6',
-    title: '2 AM Courage',
-    subtitle: 'War Crimes & Moral Courage',
-    description: 'Study the breakdown of ethical conduct in combat and examine the role of moral courage in preventing atrocities.',
-    courseCode: 'NE-203',
-    difficulty: 'HARD',
-    area: 'Ethics',
-    course: 'NE203: Ethics and Moral Reasoning',
-    image: imgMyLai
-  },
-  {
-    id: '7',
-    title: 'The Loyalty Test',
-    subtitle: 'Loyalty vs. Integrity',
-    description: 'Explore the ethical complexities of reporting misconduct while balancing organizational loyalty and personal integrity.',
-    courseCode: 'NL-110',
-    difficulty: 'INT',
-    area: 'Leadership',
-    course: 'NL110: Applied Behavioral Science',
-    image: imgWhistleblowing
-  },
-  {
-    id: '8',
-    title: 'Character in Crisis',
-    subtitle: 'Power & Moral Corruption',
-    description: 'Investigate how good people can be led to do bad things when given power in corrupt systems.',
-    courseCode: 'NL-200',
-    difficulty: 'HARD',
-    area: 'Leadership',
-    course: 'NL200: Human Behavior',
-    image: imgLucifer
-  },
-  {
-    id: '9',
-    title: 'Abu Ghraib Echo',
-    subtitle: 'Role Identity & Ethical Behavior',
-    description: 'Examine how assigned roles and situational factors can override individual moral values and behavior.',
-    courseCode: 'NL-311',
-    difficulty: 'INT',
-    area: 'Leadership',
-    course: 'NL311: Psychology of Leadership',
-    image: imgStanford
+// Build area to courses mapping
+const areaCoursesMap = new Map<string, string[]>();
+scenarios.forEach(s => {
+  if (!areaCoursesMap.has(s.area)) {
+    areaCoursesMap.set(s.area, []);
   }
+  const courses = areaCoursesMap.get(s.area)!;
+  if (!courses.includes(s.courseCode)) {
+    courses.push(s.courseCode);
+  }
+});
+// Sort courses within each area
+areaCoursesMap.forEach((courses, area) => {
+  areaCoursesMap.set(area, courses.sort());
+});
+
+// Extract unique languages from scenarios
+const languages = Array.from(
+  new Set(scenarios.filter(s => s.language).map(s => s.language))
+).sort() as string[];
+
+// Proficiency level options
+const proficiencyLevels = [
+  { semester: 1, label: "Semester 1 (Novice Mid)" },
+  { semester: 2, label: "Semester 2 (Novice High)" },
+  { semester: 3, label: "Semester 3 (Intermediate Low)" },
+  { semester: 4, label: "Semester 4 (Intermediate Mid-High)" },
 ];
 
-function DifficultyBadge({ difficulty }: { difficulty: 'EASY' | 'INT' | 'HARD' }) {
+function DifficultyBadge({ difficulty }: { difficulty: string }) {
   const bars = difficulty === 'EASY' ? 2 : difficulty === 'INT' ? 4 : 5;
   
   return (
@@ -230,13 +66,17 @@ function DifficultyBadge({ difficulty }: { difficulty: 'EASY' | 'INT' | 'HARD' }
 
 function ScenarioCard({ scenario, onClick }: { scenario: Scenario; onClick?: () => void }) {
   return (
-    <div 
+    <div
       onClick={onClick}
       className="bg-white content-stretch flex flex-col items-start overflow-clip relative rounded-[12px] shadow-[0px_1px_3px_0px_rgba(13,0,77,0.05),0px_1px_1px_0px_rgba(13,0,77,0.1),0px_2px_1px_-1px_rgba(13,0,77,0.15)] shrink-0 hover:shadow-lg transition-shadow cursor-pointer w-[288px] h-[380px]"
     >
       <div className="aspect-[288/180] relative shrink-0 w-full">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-          <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={scenario.image} />
+          {scenario.image === "placeholder" ? (
+            <ScenarioPlaceholderImage title={scenario.title} className="size-full rounded-none" />
+          ) : (
+            <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={scenario.image} />
+          )}
           <div className="absolute bg-gradient-to-b from-[rgba(21,34,56,0)] inset-0 to-[93.536%] to-[rgba(21,34,56,0.93)]" />
         </div>
         <div className="flex flex-col justify-end overflow-clip rounded-[inherit] size-full">
@@ -269,41 +109,88 @@ function ScenarioCard({ scenario, onClick }: { scenario: Scenario; onClick?: () 
 
 export default function ScenariosPage({ onCreateScenario, onScenarioClick }: ScenariosPageProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedArea, setSelectedArea] = useState<string | null>(null);
-  const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
+  const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
+  const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
+  const [selectedSemesters, setSelectedSemesters] = useState<number[]>([]);
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
-  
+  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(new Set());
+
+  const toggleExpand = (area: string) => {
+    setExpandedAreas(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(area)) {
+        newSet.delete(area);
+      } else {
+        newSet.add(area);
+      }
+      return newSet;
+    });
+  };
+
+  const toggleArea = (area: string) => {
+    setSelectedAreas(prev => {
+      const isRemoving = prev.includes(area);
+      const newAreas = isRemoving ? prev.filter(a => a !== area) : [...prev, area];
+
+      // Clear language/proficiency selections when deselecting Language area
+      if (area === "Language" && isRemoving) {
+        setSelectedLanguages([]);
+        setSelectedSemesters([]);
+      }
+
+      return newAreas;
+    });
+  };
+
+  const toggleCourse = (course: string) => {
+    setSelectedCourses(prev =>
+      prev.includes(course) ? prev.filter(c => c !== course) : [...prev, course]
+    );
+  };
+
+  const toggleLanguage = (language: string) => {
+    setSelectedLanguages(prev =>
+      prev.includes(language) ? prev.filter(l => l !== language) : [...prev, language]
+    );
+  };
+
+  const toggleSemester = (semester: number) => {
+    setSelectedSemesters(prev =>
+      prev.includes(semester) ? prev.filter(s => s !== semester) : [...prev, semester]
+    );
+  };
+
   const toggleStatus = (status: string) => {
-    setSelectedStatuses(prev => 
-      prev.includes(status) 
+    setSelectedStatuses(prev =>
+      prev.includes(status)
         ? prev.filter(s => s !== status)
         : [...prev, status]
     );
   };
-  
-  // Filter scenarios based on search query, selected area, course, and status
+
+  // Show Language/Proficiency filters only when Language area is selected
+  const showLanguageFilters = selectedAreas.includes("Language");
+
+  // Filter scenarios based on all criteria
   const filteredScenarios = scenarios.filter(scenario => {
-    const matchesSearch = !searchQuery || 
+    const matchesSearch = !searchQuery ||
       scenario.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.courseCode.toLowerCase().includes(searchQuery.toLowerCase()) ||
       scenario.area.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesArea = !selectedArea || scenario.area === selectedArea;
-    const matchesCourse = !selectedCourse || scenario.course === selectedCourse;
-    
-    // If no statuses selected, show all. Otherwise filter by selected statuses
-    // For now, assuming all scenarios are "Published" status
-    const matchesStatus = selectedStatuses.length === 0 || selectedStatuses.includes('Published');
-    
-    return matchesSearch && matchesArea && matchesCourse && matchesStatus;
-  });
 
-  // Filter courses based on selected area
-  const filteredCourses = selectedArea 
-    ? allCourses.filter(course => course.area === selectedArea)
-    : allCourses;
+    const matchesArea = selectedAreas.length === 0 || selectedAreas.includes(scenario.area);
+    const matchesCourse = selectedCourses.length === 0 || selectedCourses.includes(scenario.courseCode);
+    const matchesLanguage = selectedLanguages.length === 0 ||
+      (scenario.language && selectedLanguages.includes(scenario.language));
+    const matchesSemester = selectedSemesters.length === 0 ||
+      (scenario.semester && selectedSemesters.includes(scenario.semester));
+    const matchesStatus = selectedStatuses.length === 0 || selectedStatuses.includes('Published');
+
+    return matchesSearch && matchesArea && matchesCourse && matchesLanguage && matchesSemester && matchesStatus;
+  });
   
   return (
     <div className="flex-1 flex overflow-hidden">
@@ -329,40 +216,100 @@ export default function ScenariosPage({ onCreateScenario, onScenarioClick }: Sce
           </div>
         </button>
 
-        {/* Area Filter */}
+        {/* Area Filter with expandable courses */}
         <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-          {selectedArea ? (
-            <button
-              onClick={() => {
-                setSelectedArea(null);
-                setSelectedCourse(null);
-              }}
-              className="flex items-center gap-[8px] font-medium leading-[20px] text-[#171717] text-[16px] hover:text-[#0074dd] transition-colors"
-            >
-              <ChevronLeft className="size-[16px]" />
-              <span>{selectedArea}</span>
-            </button>
-          ) : (
-            <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Area</p>
-          )}
-          
-          {!selectedArea && (
+          <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Area</p>
+          <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
+            {areas.map(area => (
+              <div key={area} className="relative shrink-0 w-full">
+                <div className="flex flex-row items-center">
+                  {/* Chevron for expand/collapse */}
+                  <button
+                    onClick={() => toggleExpand(area)}
+                    className="flex items-center justify-center w-[24px] h-[32px] shrink-0 hover:bg-[rgba(13,0,77,0.05)] rounded-[4px]"
+                  >
+                    {expandedAreas.has(area) ? (
+                      <ChevronDown className="w-[14px] h-[14px] text-[#5d5d5d]" />
+                    ) : (
+                      <ChevronRight className="w-[14px] h-[14px] text-[#5d5d5d]" />
+                    )}
+                  </button>
+                  {/* Area name for selection */}
+                  <button
+                    onClick={() => toggleArea(area)}
+                    className={`content-stretch flex items-center px-[8px] py-[6px] relative flex-1 rounded-[4px] transition-colors ${
+                      selectedAreas.includes(area) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                    }`}
+                  >
+                    <p className="font-medium leading-[20px] text-[#171717] text-[16px] text-left">{area}</p>
+                  </button>
+                </div>
+                {/* Nested courses when expanded */}
+                {expandedAreas.has(area) && areaCoursesMap.get(area) && (
+                  <div className="flex flex-col gap-[2px] pl-[24px] mt-[2px]">
+                    {areaCoursesMap.get(area)!.map(courseCode => (
+                      <button
+                        key={courseCode}
+                        onClick={() => toggleCourse(courseCode)}
+                        className={`content-stretch flex items-center px-[8px] py-[4px] relative w-full rounded-[4px] transition-colors ${
+                          selectedCourses.includes(courseCode) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                        }`}
+                      >
+                        <p className="font-medium leading-[18px] text-[#5d5d5d] text-[14px] text-left">{courseCode}</p>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Language Filter - only shown when Language area is selected */}
+        {showLanguageFilters && (
+          <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+            <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Language</p>
             <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
-              {['Ethics', 'Leadership', 'Philosophy & Psychology', 'Language & Communication', 'Coaching'].map((area) => (
-                <div key={area} className="relative shrink-0 w-full">
+              {languages.map(language => (
+                <div key={language} className="relative shrink-0 w-full">
                   <div className="flex flex-row items-center size-full">
                     <button
-                      onClick={() => setSelectedArea(area)}
-                      className="content-stretch flex items-center px-[16px] py-[8px] relative w-full hover:bg-[rgba(13,0,77,0.05)] rounded-[4px] transition-colors"
+                      onClick={() => toggleLanguage(language)}
+                      className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
+                        selectedLanguages.includes(language) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                      }`}
                     >
-                      <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{area}</p>
+                      <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{language}</p>
                     </button>
                   </div>
                 </div>
               ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
+
+        {/* Proficiency Level Filter - only shown when Language area is selected */}
+        {showLanguageFilters && (
+          <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+            <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Proficiency Level</p>
+            <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
+              {proficiencyLevels.map(level => (
+                <div key={level.semester} className="relative shrink-0 w-full">
+                  <div className="flex flex-row items-center size-full">
+                    <button
+                      onClick={() => toggleSemester(level.semester)}
+                      className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
+                        selectedSemesters.includes(level.semester) ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
+                      }`}
+                    >
+                      <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{level.label}</p>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Status Filter */}
         <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full">
@@ -385,27 +332,6 @@ export default function ScenariosPage({ onCreateScenario, onScenarioClick }: Sce
                 </div>
                 <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{status}</p>
               </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Course Filter */}
-        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-          <p className="font-semibold leading-[20px] relative shrink-0 text-[#171717] text-[16px] text-nowrap">Course</p>
-          <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full">
-            {filteredCourses.map((course) => (
-              <div key={course.code} className="relative shrink-0 w-full">
-                <div className="flex flex-row items-center size-full">
-                  <button
-                    onClick={() => setSelectedCourse(selectedCourse === course.code ? null : course.code)}
-                    className={`content-stretch flex items-center px-[16px] py-[8px] relative w-full rounded-[4px] transition-colors ${
-                      selectedCourse === course.code ? 'bg-[rgba(13,0,77,0.1)]' : 'hover:bg-[rgba(13,0,77,0.05)]'
-                    }`}
-                  >
-                    <p className="basis-0 font-medium grow leading-[20px] min-h-px min-w-px relative shrink-0 text-[#171717] text-[16px] text-left">{course.code}</p>
-                  </button>
-                </div>
-              </div>
             ))}
           </div>
         </div>
